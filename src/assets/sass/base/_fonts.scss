@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "font-light";
+  src: url("/assets/fonts/cormorant/CormorantGaramond-Regular.woff2") format("woff2"),
+    url("/assets/fonts/cormorant/Cormorant-Regular.otf") format("otf");
+    font-display: swap;
+}
+@font-face {
+  font-family: "font-regular";
+  src: url("/assets/fonts/futura/font-light.woff2") format("woff2"),
+    url("/assets/fonts/futura/font-light.woff") format("woff");
+    font-display: swap;  
+}
+
+@font-face {
+  font-family: "font-bold";
+  src: url("/assets/fonts/futura/font-bold.woff2") format("woff2"),
+    url("/assets/fonts/futura/font-bold.woff") format("woff");
+    font-display: swap;
+}

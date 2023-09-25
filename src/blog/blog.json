@@ -1,0 +1,8 @@
+
+{
+	"layout": "blog.njk",
+	"author": "Jeremy Faucher",
+	"tags": ["blog"],
+	"tag": "post",
+	"categoryName": "Blog"
+}

@@ -1,0 +1,32 @@
+---
+layout: base.njk 
+title: TRATAMIENTOS
+subtitle: Somos Especialistas
+permalink: /tratamientos/
+image: /assets/static/tratamiento-0.webp
+eleventyComputed:
+  metaTitle: "Nuestros tratamientos | Tratamientos de medicina estética y odontología avanzada."
+  metaDescription: "Centro de medicina estética y odontología avanzada en Sant Boi. Servicios de rejuvenecimiento facial, tratamientos corporales, odontología integral y más. Equipo experto y tecnología vanguardista. ¡Visítanos hoy!"
+  metaKeywords: "tratamientos, ácido hialurónico, airflow, allonfour, botox, Body Sculpt, sedación consciente"
+  metaRobots: "index, follow"
+
+---
+
+<div class="section  ">
+  <div class="bg-dark has-light">{% include 'hero.njk' %}</div>
+
+    <div class="bg-white front-section">
+      <div class="container-3 pt-64 pb-64  ">
+        <ul role="list" class="list-clear flow">
+          {%- for tratamientos in collections.tratamientos -%}
+          {% include 'tratamientos-loop.njk' %}
+          {%- endfor %}
+        </ul>
+      
+        </div>
+    </div>
+
+
+</div>
+
+{% include "banner.njk" %}

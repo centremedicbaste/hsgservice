@@ -1,0 +1,18 @@
+<li>
+      <article class="mb-24">
+          <a href="{{ post.url }}"><img width="100%" height="100%" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="h1"></a>
+          <div class="article-text mt-24">
+              <h3 class="fluid-7-l"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+              <p class="mb-8">{{ post.data.date | postDate }}</span></p>
+
+              {% for tag in post.data.tags %}
+              <div class=" tag-info ">
+                {{ tag }}
+              </div>
+              {% endfor %}
+              <p class="mb-24">{{ post.data.description }}</p>
+
+              <a href="{{ post.url }}" class="btn link-line"> Leer más</a>
+          </div>
+      </article>
+</li>

@@ -1,0 +1,49 @@
+---
+layout: base.njk
+---
+<article class="main-article  ">
+  {% set next = collections.blog | nextInCollection(page.fileSlug) %}
+  {% set previous = collections.blog | prevInCollection(page.fileSlug) %}
+
+
+  <div class="bg-dark has-light">
+    
+    {% include 'hero.njk' %}</div>
+
+
+  <div class="container-fluid pt-32 bg-white">
+
+
+
+        <div class="container-2">
+          <div class="innermarkdown">
+     
+                {{ content | toc | safe }}
+ 
+            {{ content | safe }}
+          </div>
+        </div>
+
+
+
+  </div>
+  <div class="container-fluid l-top bg-white">
+    <div class="col-xs-12">
+  {% if next or previous%}
+  <div class="pagination">
+    {% if previous %}
+    <a href="{{ previous.url }} " class="pagination-item pagination-item-prev">
+   Previous post
+     </a>
+    {% endif %}
+    {% if next %}
+    <a href="{{ next.url }}" class="pagination-item pagination-item-next">
+ Next post
+  </a>
+    {% endif %}
+  </div>
+  {% endif %}
+    </div>
+  </div>
+  {% include "banner.njk" %}
+</article>

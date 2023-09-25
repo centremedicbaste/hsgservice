@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: contacta
+permalink: /contacta/
+
+---
+{% import '_globals.njk' as globals %}
+
+
+
+
+{% include 'hero.njk' %}
+
+<section class="hero bg-dark has-light height-full-2 front-section ptr-120 pbr-120">
+
+
+  <div class="container-2">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="fluid-3-l pl-64 pb-32">MEDICINA ESTÉTICA Y ODONTOLOGIA AVANZADA</h3>
+      </div>
+    </div>
+    <div class="row mbr-64 ">
+      <div class=" col-xs-12 col-md-6 "> <img src="{{imagen1}} " alt=""> </div>
+      <div class="col-xs-12 col-md-6 mb-24 sm:text-center">
+        <ul class="list-clear">
+          <li class="c-gray text-16-b">{{title1}} </li>
+          <li class=""> {{calle1}} </li>
+          <li class=""> {{codigo1}} </li>
+          <li class="pb-32"> {{ciudad1}} </li>
+                    <li class="pb-32"> {{telf1}} </li>
+             <li class="">
+            <a class="flipH" href="mailto:{{email1}} "> {{ email1 | reverseWords | safe }}
+            </a>
+          </li>
+          <li> <a class="flipH" href="{{link1}} "> {{link1 | reverseWords | safe }} </a> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="fluid-3-l pl-64 pb-32">CENTRO DENTAL</h3>
+      </div>
+    </div>
+    <div class="row mbr-64 ">
+
+
+
+
+      <div class=" col-xs-12 col-md-6 "> <img src="{{imagen2}} " alt=""> </div>
+      <div class="col-xs-12 col-md-6 mb-24 sm:text-center">
+        <ul class="list-clear">
+          <li class="c-gray text-16-b">{{title2}} </li>
+          <li class=""> {{calle2}} </li>
+          <li class=""> {{codigo2}} </li>
+          <li class="pb-32"> {{ciudad2}} </li>
+                    <li class="pb-32"> {{telf2}} </li>
+          <li class="">
+            <a class="flipH" href="mailto:{{email2}} "> {{ email2 | reverseWords | safe }}
+            </a>
+          </li>
+          <li> <a class="flipH" href="{{link2}} "> {{link2 | reverseWords | safe  }} </a> </li>
+        </ul>
+      </div>
+    </div>
+</section>
+<div class="container-fluid">
+  <div class="row bleed-0">
+    <div class="col-xs-12">
+      <iframe src="{{global.contacta_map}}" width="100%" height="450" style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+{% include "banner.njk" %}
