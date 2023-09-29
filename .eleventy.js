@@ -29,6 +29,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
+
+  eleventyConfig.addPairedShortcode("myShortcode", function(content) {
+    // Method A: ✅ ideal para encapsular
+    return content;
+});
+eleventyConfig.addShortcode("br", function() {
+      // Method A: ✅ ideal para tags de espacios
+  return `
+  <br><br><br>
+`;
+});
+
+
   eleventyConfig.addPlugin(embeds);
 
   eleventyConfig.setLibrary(

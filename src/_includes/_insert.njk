@@ -1,0 +1,55 @@
+{% macro comentario(empresa = '', texto = '', fecha = '',img = '') %}
+
+
+<div class="google-comment">
+  <div class="google-bubble mb-24">
+    <div class="is-flex w-100 content-sp-between mb-16">
+      <div class="google-stars">
+        <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
+        <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
+        <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
+        <img width="17px" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="">
+      </div>
+      <div class="google-logo"> <img width="20px"
+          src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt=""></div>
+    </div>
+    <div class="google-text p3 c-black"> 
+
+      {{ texto }}
+
+    </div>
+    <div class="google-seemore p3"> Leer más</div>
+  </div>
+  <div class="is-flex">
+    <div class="pr-16"> <img width="40px"
+        src="https://lh3.googleusercontent.com/a/{{img}}"
+        alt=""></div>
+    <div class="bold">
+      {{ empresa }}  <br>
+      <span class="p3">       {{ fecha }}   </span>
+    </div>
+  </div>
+</div>
+
+
+{% endmacro %}
+
+
+{% macro team(foto = '', nombre = '', texto = '') %}
+
+        <div class="card-2">
+          <div class="rat-1-1 mb-24">
+            <div class="rat-content">
+              <img src="/assets/static/colaboradores/{{foto}}.jpg" alt="">
+            </div>
+          </div>
+          <div class="fluid-9-b c-primary  p-16">
+     {{nombre}}
+          </div>
+          <div class="p3 p-16 card-2-text">
+            {{texto}}
+          </div>
+        </div>
+
+
+{% endmacro %}

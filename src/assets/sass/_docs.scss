@@ -1,0 +1,33 @@
+@import 'base/_fonts.scss';
+@import "abstract/_setup.scss";
+
+
+
+$variable-colors: (
+  c-white: #{$c-white},
+  c-black: #{$c-black},
+  c-dark-grey: #{$c-dark-grey},
+  c-middle-grey: #{$c-middle-grey},
+  c-light-grey: #{$c-light-grey},
+  c-primary: #{$c-primary},
+  c-error: #{$c-error},
+  c-info: #{$c-info},
+  c-warning: #{$c-warning},
+  c-feel: #{$c-feel},
+
+  c-success: #{$c-success},
+
+
+);
+
+$variable-list: (
+
+  container: #{$container},
+
+  font-primary: #{$font-family-a-r},
+  font-family-secondary: #{$font-family-b-r},
+
+  xl: 1500px,
+);
+
+

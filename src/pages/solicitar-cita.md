@@ -1,6 +1,8 @@
 ---
-layout: solicitar-cita
+layout: contacta.njk
 title: Solicita una cita
+permalink: /solicitar-cita/
+
 subtitle: Totalmente sin compromiso
 image: /assets/static/contacta-0.webp
 author: Kevin Powell 

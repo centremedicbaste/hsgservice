@@ -1,0 +1,30 @@
+  
+  .accordion-wrap {
+	max-width: 600px;
+	margin: 0 auto;
+	border-bottom: 1px  solid $c-light-grey;
+
+
+
+
+.accordion {
+	background-color: #fff;
+    padding: 16px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    max-height: 50px;
+	border: 1px  solid $c-light-grey;
+	border-bottom: none;
+  }
+  .active.accordion {
+	max-height: 300px;
+
+	color: $c-secondary;
+  }
+
+  
+  .accordion-header {
+	height: 40px;
+	cursor: pointer;
+  }
+}

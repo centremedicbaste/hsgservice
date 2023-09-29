@@ -17,6 +17,37 @@
     ol {
       list-style: none;
     }
+  }
+
+  li {
+    position: relative;
+    list-style: none;
+    padding-left: 50px;
+    @include fluid-text($min_width, $break-lg, 14px, 24px, 1.5);
+    margin-bottom: 40px;
+
+    &:after {
+      border-radius: 50%;
+      content: "";
+      position: absolute;
+      background-color: $c-primary;
+      width: 20px;
+      height: 20px;
+      top: 9px;
+      left: 5px;
+    }
+
+    &:before {
+      border-radius: 50%;
+      content: "";
+      position: absolute;
+      background-color: $c-primary;
+      opacity: 0.2;
+      width: 30px;
+      height: 30px;
+      top: 4px;
+      left: 0;
+    }
 
   }
   pre {
@@ -31,7 +62,7 @@
       margin: 60px 0;
       padding: 30px;
       &:after {
-        opacity: .2;
+        opacity: 0.2;
         bottom: 0;
         position: absolute;
         font-size: 132px;
@@ -49,8 +80,7 @@
     }
   }
   p {
-    font-size: 18px;
-    line-height: 1.4;
+    @include fluid-text($min_width, $break-lg, 14px, 24px, 1.5);
   }
   h2 {
     margin-top: 24px;
@@ -60,14 +90,15 @@
     width: calc(100% + 40%);
     text-align: center;
     line-height: 1;
-    @include font-light();
+    @include font-bold();
   }
   h3 {
     margin-top: 24px;
     padding-bottom: 20px;
     @include fluid-text($min_width, $break-lg, 20px, 40px, 1);
     line-height: 1;
-    @include font-light();
+    @include font-bold();
+    color: $c-primary;
   }
   h4 {
     margin-top: 24px;
@@ -82,14 +113,7 @@
     padding-bottom: 8px;
     font-size: 18px;
   }
-  h2:before,
-  h4:before,
-  h3:before {
-    display: block;
-    content: "";
-    padding-top: 120px;
-    margin-top: -120px;
-  }
+
   .eleventy-plugin-youtube-embed {
     width: 120% !important;
     transform: translateX(-8%);
@@ -113,7 +137,7 @@
     max-width: 1000px;
     &::after {
       display: block;
-      content: '';
+      content: "";
       width: 100%;
       padding-top: 56.25%;
     }
@@ -136,14 +160,34 @@
   h2,
   h3,
   h4 {
-
-    
     .anchor-link {
       position: absolute;
 
-font-size: 24px;
-opacity: .5;
+      font-size: 24px;
+      opacity: 0.5;
+    }
+  }
+
+
+
+
+
+  .toc  {
+    li{
+      padding-left: 0;
+ font-size: 16px;
+      margin-bottom: 0;
     }
 
-  }
+    li:after {
+      display: none;
+    }
+
+    li:before {
+      display: none;
+    }
+
+}
+
+
 }
