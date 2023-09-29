@@ -18,7 +18,7 @@ duracion: 30 minutos
 ##  Coaching dental
 ___
 
-
+![Descripción de la imagen](/assets/static/otros/otros-1.jpg)
 
 Actualmente los odontólogos y los directores de clínicas deben conocer las últimas técnicas y adelantos en odontología, además tienen que ser gerentes, directores, administradores, jefes de recursos humanos, etc.
 
@@ -32,6 +32,9 @@ Con el Coaching Dental les facilitaremos a ti y a tu equipo las herramientas y c
 -  Formar al personal para atender las primeras visitas y lograr un alto porcentaje de aceptaciones.
 -  Aprender a detectar las necesidades que surjan en la clínica y generar soluciones para un correcto funcionamiento.
 
+![Descripción de la imagen](/assets/static/otros/otros-2.jpg)
+
+
 {% br %} 
 ### Metodología que se aplica
 -  En primer lugar realizaremos una auditoría de la situación inicial de tu clínica.
@@ -39,5 +42,4 @@ Con el Coaching Dental les facilitaremos a ti y a tu equipo las herramientas y c
 -  Durante la ejecución del plan de acción, contará con la presencia de un coach en clínica semanal o quincenalmente que apoyará al odontólogo o gestor de la clínica.
 
 
-
-![Descripción de la imagen](/assets/static/trat.webp)
+{% br %} 
