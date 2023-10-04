@@ -14708,3 +14708,9 @@ body {
 .list-inline {
   font-size: 12px;
 }
+
+.card-formacion {
+  border-radius: 50px 50px 0 0;
+  overflow: hidden;
+  box-shadow: 0px -9px 17px 0px rgba(0, 0, 0, 0.18);
+}

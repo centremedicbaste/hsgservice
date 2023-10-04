@@ -17,16 +17,16 @@ codigopostal1: 08830 , Sant Boi de Llobregat
 ciudad1: Barcelona,
 email1: info@centremedicbaste.com
 link1:  xxxx.com
-telf1:  695 69 75 04
+telf1:  936 612 492
 
 imagen2: /assets/static/contactadental.webp
 title2: Centre Dental Basté,
 calle2: Carrer Riera Basté, 18, 20 bajos
 codigopostal2: 08830 , Sant Boi de Llobregat 
 ciudad2: Barcelona
-email2: xxxx@ 
-link2: https://centredentalbaste.com 
-telf2:  673 25 20 60
+email2: info@hsgservice.es 
+link2: https://hsgservice.es   
+telf2:  xxx xx
 
 ---
 ## CLINICA

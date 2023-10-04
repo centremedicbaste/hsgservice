@@ -14,7 +14,7 @@ description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendi
 ### PROPIEDAD DEL SITIO WEB
 Titular del Website: J.M.Chavarria SL - CIF B63395933 - Clìnica Dental Bastè
 Dirección: C/ RIERA BASTE, 18-20. 08830, SANT BOI DE LLOBREGAT (Barcelona), España
-Contacto: Tel. 936354025 - Email: xxxx@
+Contacto: Tel. 936354025 - Email: info@hsgservice.es
 Delegado de Protección de Datos:
 Email: info@adaptaliacorporacion.com
 Teléfono: 936549030
