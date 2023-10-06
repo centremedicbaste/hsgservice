@@ -1,19 +1,22 @@
-{% import '_globals.njk' as globals %} 
+{% import '_globals.njk' as globals %}
 <footer class="bg-dark has-light front-section height-xl ptr-120 ">
   <div class="container pb-64">
     <div class="row">
       <div class="col-xs-12 col-md-3 mb-24">
         <h3 class="fluid-8-b pl-64 pb-24">Menú</h3>
-           <ul class="list-clear ">
-                        <li class="pr-16"> <a  aria-label="link menu superior" class="menu-desktop " href="/">HOME </a></li>
-                        <li class="pr-16"> <a  aria-label="link menu superior" class="menu-desktop" href="/formacion">FORMACIÓN </a></li>
-                        <li class="pr-16"> <a  aria-label="link menu superior" class="menu-desktop" href="/tratamientos">PRODUCTOS </a></li>
-                                           <li> <a  aria-label="link email" class="" href="/contacta">COLABORADORES </a>   </li>
-                                   <li> <a  aria-label="link email" class="" href="/contacta">NOSOTROS </a>   </li>
-                                              <li> <a  aria-label="link email" class="" href="/tramitar-alta">TRAMITA TU ALTA </a>   </li>
-                    </ul>
+        <ul class="list-clear ">
+          <li class="pr-16"> <a aria-label="link menu superior" class="menu-desktop " href="/">HOME </a></li>
+          <li class="pr-16"> <a aria-label="link menu superior" class="menu-desktop" href="/formacion">FORMACIÓN </a>
+          </li>
+          <li class="pr-16"> <a aria-label="link menu superior" class="menu-desktop" href="/tratamientos">PRODUCTOS </a>
+          </li>
+ 
+          <li> <a aria-label="link email" class="" href="/contacta">NOSOTROS </a> </li>
+          <li> <a aria-label="link email" class="" href="/tramitar-alta">TRAMITA TU ALTA </a> </li>
+          <li> <a aria-label="link email" class="" href="/contacta">CONTACTA</a> </li>
+        </ul>
       </div>
-      <div class="col-xs-12 col-md-3 mb-24"></div>
+      <div class="col-xs-12 col-md-3 mb-24">  </div>
       <div class="col-xs-12 col-md-3 mb-24 sm:text-center">
         <h3 class="fluid-8-b pl-64 pb-24">Contacta</h3>
         <ul class="list-clear">
@@ -21,20 +24,21 @@
           <li class=""> {{globals.direcciones[0].codigopostal}} </li>
           <li class="pb-32"> {{globals.direcciones[0].ciudad}}</li>
           <li class="">
-            <a href="mailto: {{globals.direcciones[0].email}}"  aria-label="link email"> {{globals.direcciones[0].email}} </a>
+            <a href="mailto: {{globals.direcciones[0].email}}" aria-label="link email"> {{globals.direcciones[0].email}}
+            </a>
           </li>
           <li> {{globals.direcciones[0].telf}}</li>
         </ul>
       </div>
       <div class="col-xs-12 col-md-3 mb-24 sm:text-center">
-         <h3 class="fluid-8-b pl-64 pb-24">Horario</h3>
+        <h3 class="fluid-8-b pl-64 pb-24">Horario</h3>
         <ul class="list-clear">
- <li> ⏲  <b>Lunes - Jueves: </b> <br>
-  8.00 h - 14.00 h y <br> 16.00 h - 18.00 h</li>
-<li> ⏲ <b>Viernes:</b> <br>
-8.00 h - 14.00 h</li>
-<li><b>Sábado y domingo:</b>  <br>
-Cerrado</li>
+          <li> ⏲ <b>Lunes - Jueves: </b> <br>
+            8.00 h - 14.00 h y <br> 16.00 h - 18.00 h</li>
+          <li> ⏲ <b>Viernes:</b> <br>
+            8.00 h - 14.00 h</li>
+          <li><b>Sábado y domingo:</b> <br>
+            Cerrado</li>
         </ul>
       </div>
     </div>
@@ -44,15 +48,15 @@ Cerrado</li>
       <div class="col-xs-12 col-sm-4 sm:text-center text-left mb-16"> © COPYRIGHT 2023. Todos los derechos reservados
       </div>
       <div class="col-xs-12 col-sm-4 sm:text-center text-center mb-16"> CREADO POR DIGITALSTRATEGY</div>
-      <div class="col-xs-12 col-sm-4 sm:text-center  text-right mb-16"> 
-    <a href="/legal/cookies"  aria-label="link aviso legal">
-           COOKIES
-          </a>
-              <a href="/legal/politicas"  aria-label="link aviso legal">
+      <div class="col-xs-12 col-sm-4 sm:text-center  text-right mb-16">
+        <a href="/legal/cookies" aria-label="link aviso legal">
+          COOKIES
+        </a>
+        <a href="/legal/politicas" aria-label="link aviso legal">
           POLÍTICA DE PRIVACIDAD
-          </a>
-          <a href="/legal/aviso"  aria-label="link aviso legal">
-     AVISO
-          </a>
-  </div>
+        </a>
+        <a href="/legal/aviso" aria-label="link aviso legal">
+          AVISO
+        </a>
+      </div>
 </footer>
