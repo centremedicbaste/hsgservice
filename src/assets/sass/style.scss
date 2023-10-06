@@ -8,29 +8,26 @@ $padding-global: 24px;
 @import "_blog.scss";
 @import "_video.scss";
 @import "_accordion.scss";
-
-
+@import "_marquee.scss";
+@import "_google-box.scss";
 $minbreakpoints: (
   xs: 1px,
   md: 992px,
-) ;
-
+);
 $breakpoints: (
   xs: 1px,
   sm: 768px,
   md: 992px,
   lg: 1280px,
-  xl: 1500px
-) ;
+  xl: 1500px,
+);
 $breakpointscols: (
   xs: 1px,
   sm: 768px,
   md: 992px,
   lg: 1280px,
   xl: 1500px,
-) ;
-
-
+);
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
@@ -43,8 +40,6 @@ b {
   .has-light & {
     color: white;
   }
-
-  
 }
 .link-line {
   background-image: linear-gradient(
@@ -561,17 +556,13 @@ body {
   font-size: 14px;
   text-transform: uppercase;
 }
-
-.btn-start{
+.btn-start {
   position: absolute;
   right: 0;
 }
-
 .rat-21-4 {
   @include ratio(21, 4);
 }
-
-
 .container-full {
   padding-right: $padding-global;
   padding-left: $padding-global;
@@ -579,78 +570,150 @@ body {
   margin-left: auto;
   position: relative;
   max-width: $container-full;
-
   @media (min-width: $break-sm) {
     padding-right: $padding-global;
     padding-left: $padding-global;
     width: 90%;
     max-width: nth(map-values($breakpoints), 2);
   }
-
   @media (min-width: $break-md) {
     width: 80%;
     max-width: nth(map-values($breakpoints), 3);
   }
-
   @media (min-width: $break-lg) {
     width: 80%;
     max-width: nth(map-values($breakpoints), 5);
   }
 }
-
-
 .counter {
   display: table-cell;
-  font-size:50px;
- 
+  font-size: 50px;
 }
-
-.row-logos{
+.row-logos {
   display: grid;
   gap: 16px;
-  grid-template-columns: 1fr 1fr ;
-
+  grid-template-columns: 1fr 1fr;
   @media (min-width: $break-md) {
-    gap:  64px 32px;
+    gap: 64px 32px;
     grid-template-columns: 1fr 1fr 1fr;
   }
-
-
 }
-
-.box-list{
-  border: 1px solid rgba(9,9,9,.1);
+.box-list {
+  border: 1px solid rgba(9, 9, 9, 0.1);
   padding: 16px;
-  transition: .5s;
-&:hover {
-    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
-    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
-    -webkit-transition: .5s;
-    transition: .5s;
-
-  }}
-
-  .google-bubble{
-    padding: 16px;
-    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.13), 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+  transition: 0.5s;
+  &:hover {
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
-
-  .card-2{
-
-    border-radius: 15px 15px 15px 15px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    overflow: hidden;
-    .card-2-text{
-      min-height: 150px;
-    }
+}
+.card-2 {
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  .card-2-text {
+    min-height: 150px;
   }
-
-  .list-inline{
-    font-size: 12px;
-  }
-.card-formacion{
+}
+.list-inline {
+  font-size: 12px;
+}
+.card-formacion {
   border-radius: 50px 50px 0 0;
   overflow: hidden;
   box-shadow: 0px -9px 17px 0px rgba(0, 0, 0, 0.18);
+}
+
+div:empty {
+  display: none!important;
+   }
+
+.grid-central {
+  display: grid;
+  gap: 20px;
+
+  text-align: left;
+
+
+  grid-template-columns: 1fr; 
+
+
+
+
+  @media (min-width: $break-md) {
+    text-align: right;
+  }
+
+  .grid-central-text:last-child{
+    text-align: left;
+    div{
+      &:after{
+        content: '';
+    left: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+    
+      }
+    }
 
   }
+
+
+
+  .grid-central-text {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+
+  }
+
+
+  .grid-central-box {
+    padding: 0 24px;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+
+    &:after{
+      content: '';
+      width: 50px;
+      height: 50px;
+      background-color: #00cdda;
+      opacity: 0.4;
+      position: absolute;
+      top: 50%;
+      border-radius: 50%;
+      right: -25px;
+      transform: translateY(-50%);
+
+    }
+
+
+
+  }
+
+
+
+  > div:nth-child(3n - 1) {
+    text-align: center;
+  }
+
+  @media (min-width: $break-md) {
+    grid-template-columns: 3fr 1fr 3fr; 
+    .grid-central-box {
+      display: inline-block;
+      max-width: 300px;
+      padding: 16px 40px;
+      border-radius: 20px;
+
+      box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07);
+    }
+  }
+}

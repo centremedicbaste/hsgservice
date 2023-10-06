@@ -19,6 +19,13 @@
     }
   }
 
+.full-container-blog{
+  width: 100vw;
+  margin-left: calc(-50vw + 50% - 8px);
+}
+strong{
+  color: #013763;
+}
   li {
     position: relative;
     list-style: none;
@@ -83,9 +90,10 @@
     @include fluid-text($min_width, $break-lg, 14px, 24px, 1.5);
   }
   h2 {
+    color: #013763;
     margin-top: 24px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 30px, 80px, 1);
+    @include fluid-text($min_width, $break-lg, 30px, 60px, 1);
     margin-left: -20%;
     width: calc(100% + 40%);
     text-align: center;

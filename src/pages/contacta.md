@@ -15,7 +15,7 @@ codigopostal1: 08830 , Sant Boi de Llobregat
 ciudad1: Sant Boi de Llobregat  , Barcelona,
 email1: info@hsgservice.es  
 link1: https://hsgservice.es   
-telf1:  936 612 492
+telf1:  telf1
 
 
 ---

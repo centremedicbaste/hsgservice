@@ -1,0 +1,29 @@
+
+.google-bubble{
+  padding: 16px;
+  box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.13), 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+}
+.google-text{
+max-height: 58px;
+min-height: 58px;
+text-overflow: ellipsis;
+display: -webkit-box;
+margin-bottom: 16px;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden;
+transition: max-height 0.5s ease;
+
+}
+.google-open{
+.google-text{
+  max-height: 300px;
+  -webkit-line-clamp: 6;
+}
+}
+
+.google-seemore:hover{
+  cursor:pointer;
+  opacity: .6;
+
+}

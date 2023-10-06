@@ -1,0 +1,110 @@
+$marquee-altura :300px ;
+$marquee-tiempo :30s ;
+
+
+
+.marquee {
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: $marquee-altura;
+  width: 100%;
+
+  overflow: hidden;
+  background: white;
+}
+
+.marquee--inner {
+  display: block;
+  position: absolute;
+
+  
+ 
+  @media (min-width: 1px) {
+    width: 600%;
+      animation: marquee1 $marquee-tiempo linear infinite;
+  }
+  @media (min-width: 786px) {
+    width: 400%;
+      animation: marquee2 $marquee-tiempo linear infinite;
+  }
+  @media (min-width: 1280px) {
+    width: 200%;
+      animation: marquee3 $marquee-tiempo linear infinite;
+  }
+
+
+
+
+  
+
+  .marquee--inner-div  {
+  height: $marquee-altura;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 20px;
+    
+
+    .marquee--inner-div-inner  {
+      width: calc((100% / 5) - 20px); // 7 es el nombre de logos usados
+    height: $marquee-altura;
+
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+
+}
+
+.marquee--span {
+  float: left;
+  width: 50%;
+  height: $marquee-altura;
+  padding: 20px 0 20px 20px;
+
+  overflow: hidden;
+}
+
+@keyframes marquee1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+
+@keyframes marquee2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -200%;
+  }
+}
+
+
+@keyframes marquee3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+

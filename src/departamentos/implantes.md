@@ -1,5 +1,5 @@
 ---
-layout: departamentos
+layout: grid
 prename: Implantes
 title: Implantes
 subtitle: implantes
@@ -11,7 +11,17 @@ tags: ["departamentos"]
 image: /assets/static/departamentos/mini-implante.jpg
 imagemini: /assets/static/departamentos/mini-implante.jpg
 imageAlt: ácido hialurónico
-duracion: 30 minutos
+
+grid1: xx
+grid2: Hay un 38% de descuento en implantes.
+grid3: xx
+grid4: Descuento de asociados en depósito dental de material fungible y desechable.
+grid5: implantes/implantes.jpg
+grid6: Descuentos en Mis, Astra, Ankylos, Xive y Bioner.
+grid7: xx
+grid8: A través de las compras a precio de grupo obtienes mayores descuentos.
+grid9: xx
+
 ---
 
 

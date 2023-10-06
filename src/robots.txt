@@ -4,4 +4,4 @@ Disallow: /temp/
 Disallow: /private/
 Disallow: /legal/
 
-Sitemap: https://www.centremedicbaste.com/sitemap.xml
+Sitemap: https://www.hsgservice.es/sitemap.xml

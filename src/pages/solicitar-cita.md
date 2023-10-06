@@ -15,9 +15,9 @@ title1: Centre Mèdic Basté,
 calle1: Carrer Francesc Macià, 11
 codigopostal1: 08830 , Sant Boi de Llobregat
 ciudad1: Barcelona,
-email1: info@centremedicbaste.com
+email1: info@hsgservice.es
 link1:  xxxx.com
-telf1:  936 612 492
+telf1:  telf1
 
 imagen2: /assets/static/contactadental.webp
 title2: Centre Dental Basté,
@@ -26,7 +26,7 @@ codigopostal2: 08830 , Sant Boi de Llobregat
 ciudad2: Barcelona
 email2: info@hsgservice.es 
 link2: https://hsgservice.es   
-telf2:  xxx xx
+telf2:  telf2
 
 ---
 ## CLINICA

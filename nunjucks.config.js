@@ -2,7 +2,7 @@
 const nunjucks = require('nunjucks');
 const marked = require('marked');
 const data = require('./data/data.json');
-
+const env = new nunjucks.Environment();
 
 // Convierte el contenido Markdown en HTML y lo agrega al objeto `data`
 Object.keys(data).forEach((key) => {
@@ -22,3 +22,9 @@ module.exports = {
   },
   nunjucksEnv: env,
 };
+
+
+
+env.addFilter('empty', function (input) {
+  return !input || input.length === 0;
+});

@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: tratamientos
+eleventyComputed:
+  metaTitle: "Tratamientos de medicina estética y dental - Centre estètic Basté"
+  metaDescription: "Centro de medicina estética y odontología avanzada en Sant Boi. Servicios de rejuvenecimiento facial,
+  tratamientos corporales, odontología integral y más. Equipo experto y tecnología vanguardista. ¡Visítanos hoy!"
+  metaKeywords: "tratamientos, ácido hialurónico, airflow, allonfour, botox, body sculpt, sedación consciente"
+  metaRobots: "index, follow"
+---
+<article class="main-article  ">
+  <div class="bg-dark has-light">{% include 'hero.njk' %} </div>
+  <div class="front-section bg-white">
+    <div class="container-11">
+      <div class="innermarkdown pt-32 ">
+        {{ content | safe }}</div>
+    </div>
+  </div>
+  <div class="grid-central front-section bg-white pb-64">
+
+     <div class="grid-central-text">
+       {% if grid1 != 'xx'    %} <div> <div class="grid-central-box"> {{grid1}} </div> </div> {% endif %}
+       {% if grid2 != 'xx'   %}<div> <div class="grid-central-box"> {{grid2}} </div> </div> {% endif %}
+       {% if grid3 != 'xx'   %} <div> <div class="grid-central-box"> {{grid3}} </div> </div> {% endif %}
+       {% if grid4  != 'xx'  %} <div class="align-middle content-end"> <div class="grid-central-box"> {{grid4}} </div> </div> {% endif %}
+
+     </div>
+
+<div class="is-flex align-center">       {% if grid5  != 'xx'  %} <div> <img src="/assets/static/{{grid5}} " alt=""> </div> {% endif %}</div>
+<div class="grid-central-text">
+       {% if grid6  != 'xx'  %} <div class="align-middle content-start"> <div class="grid-central-box"> {{grid6}} </div> </div> {% endif %}
+       {% if grid7  != 'xx'  %} <div> <div class="grid-central-box"> {{grid7}} </div> </div> {% endif %}
+       {% if grid8 != 'xx'   %} <div> <div class="grid-central-box"> {{grid8}} </div> </div> {% endif %}
+       {% if grid9 != 'xx'    %} <div> <div class="grid-central-box"> {{grid9}} </div> </div> {% endif %}
+     </div>
+
+  </div>
+  {% include "banner.njk" %}
+</article>

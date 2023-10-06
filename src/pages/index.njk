@@ -30,20 +30,18 @@ eleventyComputed:
               Optimizar los costes de tratamientos siempre ha sido un reto.
               Sabemos que otorgar servicios clínicos de alta calidad y al mismo
               tiempo ofrecer un presupuesto cerrado y adaptado a cada paciente
-              es importante para tu clínica. En HSG contamos con los servicios
+              es importante para tu clínica.
+              
+              <br>   <br>
+               En HSG contamos con los servicios
               que necesitas para
               <b>aumentar la rentabilidad y disminuir tus gastos</b>
             </p>
-   
-    
-                            <a href="/solicitar-cita/">
-                                <div class="btn btn-secondary btn--mini">
-                                    EMPIEZA A AHORRAR
-                                </div>
-                            </a>
-              
-
-
+            <a href="/solicitar-cita/">
+              <div class="btn btn-secondary btn--mini">
+                EMPIEZA A AHORRAR
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -184,7 +182,7 @@ eleventyComputed:
     </div>
   </section>
   <section class="container ptr-64 pbr-64">
-    <div class="row align-middle text-center pbr-64">
+    <div class="row align-middle text-center">
       <div class="col-xs-12 mb-24">
         <span class="fluid-7-b accent">Ellos son la voz de nuestro trabajo
         </span>
@@ -193,16 +191,65 @@ eleventyComputed:
         <span class="p1"> Lo que opinan nuestros clientes: </span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-4">
-        {% call insert.comentario('marketing-spot' ,'Usado en cesta y checkout para mensajes de freeshiping y alerta de personalización','jjj','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
-        {% endcall %}
-      </div>
-      <div class="col-xs-4"> 
-        {% call insert.comentario('marketing-spot' ,'Usado en cesta y checkout para mensajes de freeshiping y alerta de personalización','jjj','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}        {% endcall %}
-      </div>
-      <div class="col-xs-4"> 
-        {% call insert.comentario('marketing-spot' ,'Usado en cesta y checkout para mensajes de freeshiping y alerta de personalización','jjj','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}        {% endcall %}
+  </section>
+  <section>
+    <div class="marquee">
+      <div class="marquee--inner">
+        <span class="marquee--span">
+          <div class="marquee--inner-div">
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Excelente servicio, muy profesionales recomendable 100%'
+              ,'Sonia Romera','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %}
+            </div>
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Trabajo con ellos hace casi 4 años, te ayudan en todo momento, las formaciones que ofrecen son muy buenas e interesantes. Grandes profesionales, trato excepcional, recomiendo 100%.'
+              ,'sara marrahi','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %} </div>
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Estamos encantados de trabajar con un equipo tan competente desde un punto de vista profesional; y tan amable y acogedor personalmente. Todos sus servicios son recomendables 100%'
+              ,'Dentinova Ortodoncia & Kids','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %} </div>
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Personal muy profesional, trato cercano y amable. Llevamos un par de años colaborando con ellos y estamos contentos. Es muy cómodo trabajar con HSG. Especial mención a Marisol hace que el trabajo sea sencillo, muy resolutiva ante cualquier incidencia. HSG Service lo recomiendo 100%'
+              ,'MINIM. Tu Ortodoncia Invisible','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %}
+            </div>
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Hice con ellos la formación de primeras visitas y las técnicas que me han dado las comencé a usar desde el primer día, los resultados han sido muy buenos, puedo notar a los pacientes más contentos y ya trabajamos de una manera mas organizada'
+              ,'Alesanko Martinez','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %} </div>
+          </div>
+        </span>
+
+
+        <span class="marquee--span">
+          <div class="marquee--inner-div">
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Excelente servicio, muy profesionales recomendable 100%'
+              ,'Sonia Romera','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %}
+            </div>
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Trabajo con ellos hace casi 4 años, te ayudan en todo momento, las formaciones que ofrecen son muy buenas e interesantes. Grandes profesionales, trato excepcional, recomiendo 100%.'
+              ,'sara marrahi','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %} </div>
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Estamos encantados de trabajar con un equipo tan competente desde un punto de vista profesional; y tan amable y acogedor personalmente. Todos sus servicios son recomendables 100%'
+              ,'Dentinova Ortodoncia & Kids','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %} </div>
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Personal muy profesional, trato cercano y amable. Llevamos un par de años colaborando con ellos y estamos contentos. Es muy cómodo trabajar con HSG. Especial mención a Marisol hace que el trabajo sea sencillo, muy resolutiva ante cualquier incidencia. HSG Service lo recomiendo 100%'
+              ,'MINIM. Tu Ortodoncia Invisible','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %}
+            </div>
+            <div class="marquee--inner-div-inner">
+              {% call insert.comentario('marketing-spot' ,'Hice con ellos la formación de primeras visitas y las técnicas que me han dado las comencé a usar desde el primer día, los resultados han sido muy buenos, puedo notar a los pacientes más contentos y ya trabajamos de una manera mas organizada'
+              ,'Alesanko Martinez','AATXAJw-aN4Ob64Nnu1Ojq0RpH-fyhxN4ssayUwpUfwj=s120-c-c-rp-w64-h64-mo-br100') %}
+              {% endcall %} </div>
+          </div>
+        </span>
+
       </div>
     </div>
   </section>

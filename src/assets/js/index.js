@@ -67,11 +67,15 @@ var swiper = new Swiper(".swiper-container", {
   });
 
 
+  $(".google-seemore").click(function () {
+    $(this).parent().toggleClass("google-open");
+  });
+
+
+
 
   $(document).ready(function () {
     initvideo();
-
-
 
       $(".accordion-header").click(function(){
       if($(this).parent().parent().hasClass("active")){
