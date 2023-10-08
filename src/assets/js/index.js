@@ -160,3 +160,24 @@ const handleScroll = () => {
 // Agregar el listener al evento de scroll
 window.addEventListener('scroll', handleScroll);
   
+
+$(window).on('scroll', function() {
+
+  var currentScroll = $(window).scrollTop();
+  var mainHeight = $('main.main-container').height();
+  var elemWidth = $('.slide-gallery .images-line .row-elem').width();
+  var percentageScroll = currentScroll / mainHeight;
+  var totalScroll = elemWidth * percentageScroll;
+
+  var topLine = $('.imginicio');
+  var bottomLine = $('.slide-gallery .images-line.bottom-line .inner-gallery-holder');
+
+  TweenMax.to(topLine, .8, {
+      x: totalScroll,
+  });
+
+  TweenMax.to(bottomLine, 1.0, {
+      x: -totalScroll,
+  });
+
+})

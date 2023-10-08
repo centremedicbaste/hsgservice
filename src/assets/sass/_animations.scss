@@ -1,0 +1,28 @@
+@mixin delay-anim() {
+    @for $i from 1 through 500 {
+      $delay-value: $i * 140ms;
+      .inview .word:nth-child(#{$i}) {
+        animation-delay: $delay-value;
+      }
+    }
+  }
+
+@keyframes fadein {
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.is-inview .word {
+  animation: fadein 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.word {
+  display: inline-block;
+  opacity: 0;
+}
+
+@include delay-anim;

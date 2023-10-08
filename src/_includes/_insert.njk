@@ -53,3 +53,19 @@
 
 
 {% endmacro %}
+
+
+
+
+{% macro splitenpalabras(frase = '') %}
+  {% set palabras = frase.split(" ") %}
+
+
+    <span>
+      {% for palabra in palabras %}
+        <span class="word">{{ palabra }}</span>
+      {% endfor %}
+    </span>
+
+{% endmacro %}
+
