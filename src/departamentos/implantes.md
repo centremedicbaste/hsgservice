@@ -13,11 +13,11 @@ imagemini: /assets/static/departamentos/mini-implante.jpg
 imageAlt: ácido hialurónico
 
 grid1: xx
-grid2: Hay un 38% de descuento en implantes.
+grid2: Hay un 50% de descuento en implantes.
 grid3: xx
 grid4: Descuento de asociados en depósito dental de material fungible y desechable.
 grid5: implantes/implantes.jpg
-grid6: Descuentos en Mis, Astra, Ankylos, Xive y Bioner.
+grid6: Descuentos en las mejores marcas.
 grid7: xx
 grid8: A través de las compras a precio de grupo obtienes mayores descuentos.
 grid9: xx
