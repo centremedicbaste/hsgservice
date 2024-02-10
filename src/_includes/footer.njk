@@ -19,15 +19,40 @@
       <div class="col-xs-12 col-md-3 mb-24">  </div>
       <div class="col-xs-12 col-md-3 mb-24 sm:text-center">
         <h3 class="fluid-8-b pl-64 pb-24">Contacta</h3>
-        <ul class="list-clear">
+
+
+        <ul class="list-clear mb-24">
           <li class=""> {{globals.direcciones[0].calle}} </li>
           <li class=""> {{globals.direcciones[0].codigopostal}} </li>
-          <li class="pb-32"> {{globals.direcciones[0].ciudad}}</li>
+          <li class=""> {{globals.direcciones[0].ciudad}}</li>
+  
+          <li> {{globals.direcciones[0].telf}}</li>
+        </ul>
+
+
+
+        <ul class="list-clear mb-24">
+          <li class=""> {{globals.direcciones[1].calle}} </li>
+          <li class=""> {{globals.direcciones[1].codigopostal}} </li>
+
           <li class="">
-            <a href="mailto: {{globals.direcciones[0].email}}" aria-label="link email"> {{globals.direcciones[0].email}}
+            <a href="mailto: {{globals.direcciones[1].email}}" aria-label="link email"> {{globals.direcciones[1].email}}
             </a>
           </li>
-          <li> {{globals.direcciones[0].telf}}</li>
+          <li> {{globals.direcciones[1].telf}}</li>
+        </ul>
+
+
+
+        <ul class="list-clear mb-24">
+          <li class=""> {{globals.direcciones[2].calle}} </li>
+          <li class=""> {{globals.direcciones[2].codigopostal}} </li>
+
+          <li class="">
+            <a href="mailto: {{globals.direcciones[2].email}}" aria-label="link email"> {{globals.direcciones[2].email}}
+            </a>
+          </li>
+          <li> {{globals.direcciones[2].telf}}</li>
         </ul>
       </div>
       <div class="col-xs-12 col-md-3 mb-24 sm:text-center">

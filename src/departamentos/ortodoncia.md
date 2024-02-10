@@ -15,7 +15,7 @@ duracion: 30 minutos
 ##  Ortodoncia invisible
 ___
 ![Descripción de la imagen](/assets/static/ortodoncia/orto-1.jpg)
-- Alineadores invisibles SureSmile
+- Alineadores invisibles *reveal*.
 - Descuento de hasta **45%** para los asociados de HSG.
 
 

@@ -13,6 +13,7 @@ $space-left: calc(((100vw - 1280px) / 2) + 16px);
     will-change: tranform;
     
     &::after {
+      pointer-events: none;
       content: "";
       position: absolute;
       /* top: 0; */
@@ -74,6 +75,7 @@ $space-left: calc(((100vw - 1280px) / 2) + 16px);
     transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     .slide-text {
+      pointer-events: none;
       font-weight: 600;
       font-size: 1.125em;
       padding: 0 16px 16px 16px ;
