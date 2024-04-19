@@ -19,9 +19,9 @@ document.body.onscroll = function () {
 
 var swiper = new Swiper(".swiper-container", {
     spaceBetween: 15,
-    slidesPerView: "1.5",
+    slidesPerView: "2.5",
 
-    loop: true,
+    loop: false,
     // autoHeight: true,
     pagination: {
       el: ".actuals .swiper-pagination",
