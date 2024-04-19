@@ -27,12 +27,11 @@
   width: 100vw;
   left: -100vw;
   transition: left 0.24s ease-out;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
+
+  padding-top: 100px;
   text-align: center;
+
+
   ul.list-clear li {
     list-style: none;
     margin: 24px 0;
@@ -64,6 +63,7 @@
   }
 }
 .menu-open {
+  overflow: hidden;
   .menu-mobile-wrap {
     left: 0;
   }
