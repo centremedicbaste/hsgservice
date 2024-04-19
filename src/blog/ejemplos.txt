@@ -1,7 +1,7 @@
 ---
 title: My Second Articlexx
 subtitle: Subtitle
-author: Kevin Powell
+
 date: 2021-05-15
 tags: ["post"] 
 image: /assets/static/blog/article-2.webp

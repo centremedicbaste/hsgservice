@@ -1,7 +1,7 @@
 ---
 layout: legales
 title: El primero de todos
-author: Kevin Powell
+author: Hsg Service
 date: 2021-05-01
 tags: ["legal", "aaa"]
 image: /assets/static/blog/article-1.webp
