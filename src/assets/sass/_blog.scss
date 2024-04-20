@@ -30,7 +30,7 @@ strong{
     position: relative;
     list-style: none;
     padding-left: 50px;
-    @include fluid-text($min_width, $break-lg, 14px, 24px, 1.5);
+
     margin-bottom: 40px;
 
     &:after {
@@ -87,13 +87,13 @@ strong{
     }
   }
   p {
-    @include fluid-text($min_width, $break-lg, 14px, 24px, 1.5);
+
   }
   h2 {
     color: #013763;
     margin-top: 24px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 30px, 60px, 1);
+
     margin-left: -20%;
     width: calc(100% + 40%);
     text-align: center;
@@ -103,7 +103,7 @@ strong{
   h3 {
     margin-top: 24px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 20px, 40px, 1);
+
     line-height: 1;
     @include font-bold();
     color: $c-primary;
