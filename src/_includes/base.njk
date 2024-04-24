@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="{{global.search_console}}"/>
-    <title>{{title}}</title>
-    <meta name="robots" content="{{ metaRobots}}">
+    <title>{{ metaTitle or eleventyComputed.metaTitle or metadata.metaTitle}} </title>
+    <meta name="robots" content="{{ metaRobots}} ">
     <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
     <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
     <link rel="icon" type="image/webp" href="https://www.hsgservice.es/assets/static/favicon.ico"/>

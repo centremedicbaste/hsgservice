@@ -1,49 +1,42 @@
 ---
 layout: base.njk
-title: Hsgservice |  Plataforma de Servicios Odontológicos
+title: Hsgservice | Plataforma de Servicios Odontológicos
 eleventyComputed:
-  metaTitle: Hsgservice |  Plataforma de Servicios Odontológicos
-  metaDescription: "Hsgservice |  Plataforma de Servicios Odontológicos"
-  metaKeywords: "tratamientos, ácido hialurónico, airflow, allonfour, botox, body sculpt, sedación consciente"
+  metaTitle: "Título SEO: Soluciones Integrales para Clínicas Dentales | Coaching, Financiación, Implantes y Más | HSG"
+  metaDescription: "En HSG, ofrecemos una gama completa de servicios diseñados para optimizar y mejorar cada aspecto de tu
+  clínica dental. Desde coaching profesional y financiación accesible hasta implantes dentales de avanzada y la última
+  tecnología en maquinaria. Descubre cómo nuestros servicios personalizados pueden elevar la eficiencia y rentabilidad de
+  tu clínica, asegurando el mejor cuidado para tus pacientes."
+  metaKeywords: "optimización clínica dental, coaching dental, financiación dental, implantes dentales, tecnología dental
+  avanzada, maquinaria dental, escáneres intraorales, rentabilidad clínica dental, servicios clínicos integrales, salud
+  dental"
   metaRobots: "index, follow"
 ---
-
 <article class="main-article  ">
-
-<div class="bg-dark has-light">{% include 'hero.njk' %} </div>
-
-
-
-<div class="front-section bg-white">
-      <div class="container-11">
-        <div class="innermarkdown pt-32 ">
-
-          {{ content  | safe }}</div>
-      </div>
-</div>
-
-
-<div class="container-fluid l-top bg-white">
-  <div class="col-xs-12">
-{% if next or previous%}
-<div class="pagination">
-  {% if previous %}
-  <a href="{{ previous.url }} " class="pagination-item pagination-item-prev">
- Previous post
-   </a>
-  {% endif %}
-  {% if next %}
-  <a href="{{ next.url }}" class="pagination-item pagination-item-next">
-Next post
-</a>
-  {% endif %}
-</div>
-{% endif %}
+  <div class="bg-dark has-light">{% include 'hero.njk' %} </div>
+  <div class="front-section bg-white">
+    <div class="container-11">
+      <div class="innermarkdown pt-32 ">
+        {{ content | safe }}</div>
+    </div>
   </div>
-</div>
-
-
-{% include "banner.njk" %}
-
-
+  <div class="container-fluid l-top bg-white">
+    <div class="col-xs-12">
+      {% if next or previous%}
+      <div class="pagination">
+        {% if previous %}
+        <a href="{{ previous.url }} " class="pagination-item pagination-item-prev">
+          Previous post
+        </a>
+        {% endif %}
+        {% if next %}
+        <a href="{{ next.url }}" class="pagination-item pagination-item-next">
+          Next post
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% include "banner.njk" %}
 </article>
