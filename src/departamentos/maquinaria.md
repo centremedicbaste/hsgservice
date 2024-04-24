@@ -6,7 +6,7 @@ subtitle: Ortodoncia
 descripcion: descripción Ortodoncia
 
 author: Centre mèdic i estètic Basté
-date: 2021-05-01
+date: 2024-02-02
 tags: ["departamentos"]
 image: /assets/static/departamentos/mini-maquinaria.jpg
 imagemini: /assets/static/departamentos/mini-maquinaria.jpg

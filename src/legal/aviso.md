@@ -2,7 +2,7 @@
 layout: legales
 title: El primero de todos
 author: Hsg Service
-date: 2021-05-01
+date: 2024-02-02
 tags: ["legal", "aaa"]
 image: /assets/static/blog/article-1.webp
 imageAlt: aviso legal

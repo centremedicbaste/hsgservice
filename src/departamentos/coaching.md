@@ -6,7 +6,7 @@ subtitle: Coaching
 descripcion: Con el Coaching Dental les facilitaremos a ti y a tu equipo las herramientas y conocimientos necesarios para que puedas ejercer de odontólogo y a la par dirigir tu clínica de una manera eficaz y profesional si ese es tu caso.
 
 author: Centre mèdic i estètic Basté
-date: 2021-05-01
+date: 2024-02-02
 tags: ["departamentos"]
 image: /assets/static/departamentos/mini-coaching.jpg
 imagemini: /assets/static/departamentos/mini-coaching.jpg
