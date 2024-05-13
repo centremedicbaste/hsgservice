@@ -3,5 +3,6 @@ Disallow: /admin/
 Disallow: /temp/
 Disallow: /private/
 Disallow: /legal/
+Disallow: /site/
 
 Sitemap: https://www.hsgservice.es/sitemap.xml
