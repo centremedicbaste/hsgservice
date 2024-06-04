@@ -6,12 +6,12 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for category in collections.categories %}
     <url>
-        <loc>https://hsgservice.es{{ category | slug }}</loc>
+        <loc>{{global.website}}{{ category | slug }}</loc>
     </url>
     {% endfor %}
     {% for page in collections.all %}
     <url>
-        <loc>https://hsgservice.es{{ page.url | url }}</loc>
+        <loc>{{global.website}}{{ page.url | url }}</loc>
         <lastmod>{{ page.date.toISOString() }}</lastmod>
     </url>
     {% endfor %}
