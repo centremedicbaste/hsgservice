@@ -3,7 +3,7 @@ layout: departamentos
 prename: Maquinaria
 title: Máquinaria y escáneres intraorales
 subtitle: Ortodoncia
-descripcion: descripción Ortodoncia
+descripcion: Vendemos maquinaria y escáneres intraorales a mayoristas a grandes precios.
 
 author: Centre mèdic i estètic Basté
 date: 2024-02-02

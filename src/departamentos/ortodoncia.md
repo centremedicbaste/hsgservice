@@ -3,7 +3,7 @@ layout: departamentos
 prename: Ortodoncia
 title: Ortodoncia
 subtitle: Ortodoncia
-descripcion: descripción Ortodoncia
+descripcion: Descubre nuestros descuentos en ortodoncia invisible.
 author: Centre mèdic i estètic Basté
 date: 2024-02-02
 tags: ["departamentos"]

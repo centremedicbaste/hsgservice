@@ -3,7 +3,8 @@ layout: grid
 prename: Implantes
 title: Implantes
 subtitle: implantes
-descripcion: descripción implantes
+
+descripcion: Ofrecemos implantes dentales de alta calidad a precios competitivos para mayoristas.
 
 author: Centre mèdic i estètic Basté
 date: 2024-02-02
