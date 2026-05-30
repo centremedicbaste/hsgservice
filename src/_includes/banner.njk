@@ -23,32 +23,34 @@
                         </div>
                         <div class="fluid-9-b mb-24 c-primary">
                             ¡Una vez te unas a nosotros tu clínica solo tendrá
-                            ganacias!
+                            ganancias!
                         </div>
                         <div class="mb-16 p-1"> <a href="mailto:{{globals.direcciones[1].email}}">{{globals.direcciones[1].email}}</a></div>
                         <div class="mb-16">M. 637 76 45 76</div>
                         <div class="mb-16">T. 93 661 24 92</div>
                     </div>
                     <div class="col-xs-12 col-md-6 pt-16">
-                        <form name="contactformulario" method="POST" action="/confirmacion.html" data-netlify="true">
+                        <form name="contactformulario" method="POST" action="/confirmacion.html" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="contactformulario">
+                            <p hidden><label>No rellenar: <input name="bot-field"></label></p>
                             <div class="row">
                                 <div class="col-xs-12 mb-16 ">
                                     <div class="form-input-label-2">
-                                        <input id="nombre" type="text" placeholder="Nombre" class="input" name="nombre">
+                                        <input id="nombre" type="text" placeholder="Nombre" class="input" name="nombre" autocomplete="name" required>
                                         <label for='nombre'>Nombre</label>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 mb-16 ">
                                     <div class="form-input-label-2">
-                                        <input id="clinica" type="text" placeholder="Clinica" class="input"
-                                            name="clinica" required>
-                                        <label for='clinica'>Nombre clinica</label>
+                                        <input id="clinica" type="text" placeholder="Nombre de tu clínica" class="input"
+                                            name="clinica" autocomplete="organization" required>
+                                        <label for='clinica'>Nombre de la clínica</label>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 mb-16 ">
                                     <div class="form-input-label-2">
                                         <div class="select ">
-                                            <select>
+                                            <select name="consulta" aria-label="Tipo de consulta">
                                                 <option value="" disabled selected hidden>Tipo de consulta</option>
                                                 <option value="Consulta general">Consulta general</option>
                                                 <option value="Masterclass Primeras visitas">Masterclass Primeras
@@ -63,16 +65,16 @@
                                 </div>
                                 <div class="col-xs-12 mb-16 ">
                                     <div class="form-input-label-2">
-                                        <input id="email" type="text" placeholder="Email" class="input" name="email"
-                                            required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                                        <label for='email'>email</label>
+                                        <input id="email" type="email" placeholder="Email" class="input" name="email"
+                                            autocomplete="email" required>
+                                        <label for='email'>Email</label>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 mb-16 ">
                                     <div class="form-input-label-2">
-                                        <input id="telefono" type="text" placeholder="Teléfono" class="input"
-                                            name="teléfono">
-                                        <label for='email'>teléfono</label>
+                                        <input id="telefono" type="tel" placeholder="Teléfono" class="input"
+                                            name="telefono" autocomplete="tel">
+                                        <label for='telefono'>Teléfono</label>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 mb-16 ">
@@ -88,7 +90,7 @@
                                     </label>
                                 </div>
                                 <div class="col-xs-12 mb-16 ">
-                                    <button aria-label="enviar email" class="btn btn-primary btn--full"
+                                    <button aria-label="Enviar formulario de contacto" class="btn btn-primary btn--full"
                                         type="submit">ENVIAR</button>
                                 </div>
                             </div>

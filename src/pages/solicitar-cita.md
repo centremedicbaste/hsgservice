@@ -3,6 +3,11 @@ layout: contacta.njk
 title: Solicita una cita
 permalink: /solicitar-cita/
 
+eleventyComputed:
+  metaTitle: "Solicita una cita con HSG Service | Sin compromiso"
+  metaDescription: "Reserva una llamada con HSG Service y descubre sin compromiso cómo mejorar la rentabilidad de tu clínica dental con financiación, material, maquinaria y formación."
+  metaRobots: "index, follow"
+
 subtitle: Empieza a ahorrar - Sin compromiso
 
 image: /assets/static/contacta-0.webp
@@ -30,5 +35,5 @@ link2: https://hsgservice.es
 telf2:  telf2
 
 ---
-## CLINICA
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque porro tenetur aspernatur harum consequatur deleniti quas cupiditate modi ducimus? Ducimus tempore odio optio nam perferendis. Doloremque consequatur exercitationem cum nulla.   
+## Solicita tu cita
+Reserva una llamada con nuestro equipo y descubre, sin compromiso, cómo HSG Service puede mejorar la rentabilidad de tu clínica. Te responderemos lo antes posible.

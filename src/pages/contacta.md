@@ -30,5 +30,5 @@ link2: https://hsgservice.es
 telf2:  telf2
 
 ---
-## CLINICA
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque porro tenetur aspernatur harum consequatur deleniti quas cupiditate modi ducimus? Ducimus tempore odio optio nam perferendis. Doloremque consequatur exercitationem cum nulla.   
+## Hablemos de tu clínica
+¿Quieres saber cuánto puede ahorrar tu clínica con HSG Service? Escríbenos o llámanos y un asesor te explicará, sin compromiso, cómo acceder a mejores precios en financiación, material, maquinaria y formación.

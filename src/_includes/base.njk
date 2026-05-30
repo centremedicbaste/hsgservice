@@ -5,20 +5,81 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="{{global.search_console}}" />
-  <title>{{ metaTitle}} </title>
-  <meta name="robots" content="{{ metaRobots}} ">
-  <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
-  <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
-  <link rel="icon" type="image/ico" href="{{global.website}}/assets/static/favicons/favicon.ico" />
+
+  {# --- Título y descripción (con fallback al global) --- #}
+  {%- set pageTitle = (metaTitle or title or global.seo_title) | trim -%}
+  {%- set pageDescription = (metaDescription or global.seo_description) | trim -%}
+  {%- set pageImage = global.website + (image or "/assets/static/about-0.webp") -%}
+  {%- set pageUrl = global.website + (page.url | url) -%}
+
+  <title>{{ pageTitle }}</title>
+  <meta name="robots" content="{{ (metaRobots or 'index, follow') | trim }}">
+  <meta name="description" content="{{ pageDescription }}">
+  {% if metaKeywords %}<meta name="keywords" content="{{ metaKeywords | trim }}">{% endif %}
+  <meta name="author" content="{{ global.empresa_legal }}">
+  <meta name="theme-color" content="#013763">
+
+  <link rel="canonical" href="{{ pageUrl }}">
+
+  {# --- Iconos --- #}
+  <link rel="icon" type="image/x-icon" href="/assets/static/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/static/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/static/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/static/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  {# --- Rendimiento: conexiones anticipadas a CDNs externos --- #}
+  <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="canonical" href="{{global.website}}{{ page.url | url }}">
-  <meta property="og:site_name" content="{{global.url}}">
-  <meta property="og:image" content="{{global.website}}/assets/static/about-0.webp">
-  <meta property="og:title" content="{{title}}">
+
+  {# --- Open Graph --- #}
+  <meta property="og:site_name" content="HSG Service">
+  <meta property="og:locale" content="es_ES">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{global.website}}">
-  <meta property="og:description"
-    content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ pageUrl }}">
+  <meta property="og:image" content="{{ pageImage }}">
+
+  {# --- Twitter Cards --- #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
+  <meta name="twitter:image" content="{{ pageImage }}">
+
+  {# --- Datos estructurados (Schema.org) --- #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HSG Service",
+    "legalName": "{{ global.empresa_legal }}",
+    "url": "{{ global.website }}",
+    "logo": "{{ global.website }}/assets/static/favicons/android-chrome-512x512.png",
+    "image": "{{ pageImage }}",
+    "description": "{{ global.seo_description }}",
+    "email": "{{ global.email | trim }}",
+    "telephone": "{{ global.telefono | trim }}",
+    "vatID": "{{ global.empresa_dni }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Diagonal, 442, 3º 2ª",
+      "addressLocality": "Barcelona",
+      "postalCode": "08037",
+      "addressRegion": "Barcelona",
+      "addressCountry": "ES"
+    },
+    "sameAs": [
+      "{{ global.social_linkedin | trim }}",
+      "{{ global.social_instagram | trim }}",
+      "{{ global.social_youtube | trim }}"
+    ]
+  }
+  </script>
+
   {% if global.googlemaps_api %}
   <script>
     (function (w, d, s, l, i) {
@@ -51,10 +112,11 @@
     {{ content | safe }}
   </main>
   {% include 'footer.njk' %}
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script type="module" src="/assets/js/index.js"></script>
   <script type="module" src="/assets/js/inview.js"></script>
   <script>
@@ -73,6 +135,5 @@
         .catch((error) => alert(error));
     };
   </script>
-  <link async rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </body>
 </html>
