@@ -8,7 +8,7 @@
 
   {# --- Título y descripción (con fallback al global) --- #}
   {%- set pageTitle = (metaTitle or title or global.seo_title) | trim -%}
-  {%- set pageDescription = (metaDescription or global.seo_description) | trim -%}
+  {%- set pageDescription = (metaDescription or description or global.seo_description) | trim -%}
   {%- set pageImage = global.website + (image or "/assets/static/about-0.webp") -%}
   {%- set pageUrl = global.website + (page.url | url) -%}
 
@@ -54,28 +54,131 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "HSG Service",
-    "legalName": "{{ global.empresa_legal }}",
-    "url": "{{ global.website }}",
-    "logo": "{{ global.website }}/assets/static/favicons/android-chrome-512x512.png",
-    "image": "{{ pageImage }}",
-    "description": "{{ global.seo_description }}",
-    "email": "{{ global.email | trim }}",
-    "telephone": "{{ global.telefono | trim }}",
-    "vatID": "{{ global.empresa_dni }}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Av. Diagonal, 442, 3º 2ª",
-      "addressLocality": "Barcelona",
-      "postalCode": "08037",
-      "addressRegion": "Barcelona",
-      "addressCountry": "ES"
-    },
-    "sameAs": [
-      "{{ global.social_linkedin | trim }}",
-      "{{ global.social_instagram | trim }}",
-      "{{ global.social_youtube | trim }}"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ global.website }}/#organization",
+        "name": "HSG Service",
+        "alternateName": ["HSG", "Grupo HSG", "HSG Services", "HSG Service Barcelona"],
+        "legalName": "{{ global.empresa_legal }}",
+        "url": "{{ global.website }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ global.website }}/assets/static/favicons/android-chrome-512x512.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "{{ global.seo_description }}",
+        "email": "{{ global.email | trim }}",
+        "telephone": "{{ global.telefono | trim }}",
+        "vatID": "{{ global.empresa_dni }}",
+        "foundingDate": "2012",
+        "areaServed": { "@type": "Country", "name": "España" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Diagonal, 442, 3º 2ª",
+          "addressLocality": "Barcelona",
+          "postalCode": "08037",
+          "addressRegion": "Barcelona",
+          "addressCountry": "ES"
+        },
+        "sameAs": [
+          "{{ global.social_linkedin | trim }}",
+          "{{ global.social_instagram | trim }}",
+          "{{ global.social_youtube | trim }}"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ global.website }}/#website",
+        "url": "{{ global.website }}",
+        "name": "HSG Service",
+        "alternateName": "HSG",
+        "inLanguage": "es-ES",
+        "publisher": { "@id": "{{ global.website }}/#organization" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "{{ global.website }}/#localbusiness",
+        "name": "HSG Service",
+        "image": "{{ global.website }}/assets/static/about-0.webp",
+        "url": "{{ global.website }}",
+        "telephone": "{{ global.telefono | trim }}",
+        "email": "{{ global.email | trim }}",
+        "priceRange": "€€",
+        "parentOrganization": { "@id": "{{ global.website }}/#organization" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Diagonal, 442, 3º 2ª",
+          "addressLocality": "Barcelona",
+          "postalCode": "08037",
+          "addressRegion": "Barcelona",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.3959,
+          "longitude": 2.1441
+        },
+        "areaServed": ["Barcelona", "Madrid", "España"],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "opens": "08:00", "closes": "14:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "opens": "16:00", "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "08:00", "closes": "14:00"
+          }
+        ]
+      }{% if faq %},
+      {
+        "@type": "FAQPage",
+        "@id": "{{ pageUrl }}#faq",
+        "mainEntity": [
+          {% for item in faq %}
+          {
+            "@type": "Question",
+            "name": {{ item.q | dump | safe }},
+            "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} }
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ]
+      }{% endif %}{% if articleSchema %},
+      {
+        "@type": "BlogPosting",
+        "@id": "{{ pageUrl }}#article",
+        "headline": {{ title | dump | safe }},
+        "description": {{ pageDescription | dump | safe }},
+        "image": "{{ pageImage }}",
+        "datePublished": "{% if page.date %}{{ page.date.toISOString() }}{% endif %}",
+        "dateModified": "{% if page.date %}{{ page.date.toISOString() }}{% endif %}",
+        "inLanguage": "es-ES",
+        "author": { "@id": "{{ global.website }}/#organization" },
+        "publisher": { "@id": "{{ global.website }}/#organization" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ pageUrl }}" }
+      }{% endif %}{% if breadcrumbs and breadcrumbs.length %},
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ pageUrl }}#breadcrumb",
+        "itemListElement": [
+          {% for crumb in breadcrumbs %}
+          {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "name": {{ crumb.name | dump | safe }},
+            "item": "{{ global.website }}{{ crumb.url }}"
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ]
+      }{% endif %}
     ]
   }
   </script>
@@ -99,7 +202,6 @@
 
 
 <body class="contain {% if page.url == '/' or page.url == '/formacion/' %}home{% endif %}">
-  {% set breadcrumbs = [] %}
   {% if global.googlemaps_api %}
   <!-- Google Tag Manager (noscript) -->
   <noscript>

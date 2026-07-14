@@ -1,0 +1,7 @@
+# Consolidación de URLs duplicadas de legales (evita indexación duplicada)
+/legal/cookies      /legal/cookies/      301!
+/legal/aviso        /legal/aviso/        301!
+/legal/politicas    /legal/politicas/    301!
+
+# Forzar dominio canónico con www -> sin www (ajusta si usas www)
+https://www.hsgservice.es/*   https://hsgservice.es/:splat   301!

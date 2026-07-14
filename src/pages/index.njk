@@ -7,6 +7,15 @@ eleventyComputed:
   metaDescription: "Financiación, materiales y maquinaria dental, ortodoncia invisible, implantes y formación para clínicas dentales y estéticas. Aumenta la rentabilidad de tu clínica con HSG Service. ¡Contáctanos hoy!"
   metaKeywords: "servicios clínicas dentales, financiación dental, materiales dentales, ortodoncia invisible, implantes dentales, formación dental"
   metaRobots: "index, follow"
+faq:
+  - q: "¿Qué es HSG Service?"
+    a: "HSG Service es una plataforma que une a clínicas dentales y estéticas privadas para que accedan, en un solo lugar, a mejores precios en financiación, material y maquinaria dental, ortodoncia invisible, implantes y formación especializada. El objetivo es aumentar la rentabilidad de tu clínica y reducir gastos."
+  - q: "¿Qué servicios ofrece HSG Service a mi clínica dental?"
+    a: "Financiación para clínicas y pacientes, compra agrupada de material y depósito dental, implantes con más de un 50% de descuento, ortodoncia invisible Suresmile, maquinaria y escáneres intraorales, coaching de gestión y formación en primeras visitas y ventas."
+  - q: "¿Cómo puedo asociar mi clínica a HSG Service?"
+    a: "Solo tienes que darte de alta como socio. Consulta la documentación necesaria para autónomos o empresas en la página 'Date de alta' y nuestro equipo te acompañará en todo el proceso, sin compromiso."
+  - q: "¿Cuánto cuesta ser socio de HSG Service?"
+    a: "Por el precio de una limpieza bucal puedes disfrutar de todos nuestros servicios. Contamos con un plan Premium para clínicas pequeñas y medianas y un plan VIP para clínicas de grandes dimensiones. Contáctanos para conocer las condiciones."
 ---
 {% import "_insert.njk" as insert %}
 <section class="container-fullpage inview">
@@ -72,6 +81,7 @@ eleventyComputed:
           <p class="p2"> Renovamos y financiamos tu maquinaria: sillón, escáner intraoral, tac dental o
                             autoclave, actualizando y digitalizando tu clínica.
                           </p>
+          <a class="c-primary bold" href="/departamentos/maquinaria/">Ver maquinaria y escáneres →</a>
         </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 mb-24 sm:mb-0">
                   <div class="ico-blue mb-16">
@@ -82,6 +92,7 @@ eleventyComputed:
                   Contamos con 4 entidades financieras a disposición de tu clínica y tus pacientes, con los intereses más bajos del mercado
                   , hasta 72 meses para financiar. Tramitación ágil a través de web.
           </p>
+          <a class="c-primary bold" href="/departamentos/financiacion/">Ver financiación dental →</a>
         </div>
                   <div class="col-xs-12 col-sm-6 col-md-3 mb-24 sm:mb-0">
                                     <div class="ico-blue mb-16">
@@ -103,6 +114,7 @@ eleventyComputed:
                   Ortodoncia invisible con  alineadores
                   Suresmile ©.
           </p>
+          <a class="c-primary bold" href="/departamentos/ortodoncia/">Ver ortodoncia invisible →</a>
         </div>
                   <div class="col-xs-12 col-sm-6 col-md-3 mb-24 sm:mb-0">
 
@@ -110,10 +122,11 @@ eleventyComputed:
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><title>tooth</title><g fill="#fff"><path fill="#fff" d="M59,13.8C59,8.9,55.1,5,50.2,5c-1.9,0-5.7,0.9-11.1,2.7c-2.3,0.8-4.7,1.1-7.1,1.1c-2.4,0-4.8-0.4-7.1-1.1 C19.5,5.9,15.7,5,13.8,5C8.9,5,5,8.9,5,13.8c0,4,2.2,11.8,2.6,13.1L5,53c0,3.3,2.7,6,6,6c1.7,0,3.4-0.9,5-2.8l10-11.9 c1.3-1.6,3.4-3.5,6-3.5c2,0,3.9,1.1,6,3.5l10,11.8c0.8,1.1,2.6,2.8,5.1,2.8c3.3,0,6-2.7,5.9-6.1l-2.6-26.1 C56.8,25.6,59,17.8,59,13.8z M40,20.3c-2.6,0.6-5.3,0.9-8,0.9c-2.7,0-5.4-0.3-8-0.9c-0.5-0.1-0.9-0.7-0.7-1.2s0.7-0.9,1.2-0.7 c2.5,0.6,5,0.9,7.6,0.9c2.6,0,5.1-0.3,7.6-0.9c0.5-0.1,1.1,0.2,1.2,0.7C40.9,19.6,40.6,20.1,40,20.3z"></path></g></svg>
 </div>
    <h4 class="h3 mb-24">Implantes dentales</h4>
-   
+
           <p class="p2">
                     Recibe más de un 50% de descuento en implantes de primera marca.
           </p>
+          <a class="c-primary bold" href="/departamentos/implantes/">Ver implantes dentales →</a>
         </div>
       </div>
 
@@ -350,5 +363,6 @@ eleventyComputed:
       </div>
     </div>
   </section> #}
+  {% include "faq.njk" %}
   {% include "banner.njk" %}
 </div>

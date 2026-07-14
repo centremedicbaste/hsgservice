@@ -2,9 +2,16 @@
 layout: base.njk
 title: tratamientos
 eleventyComputed:
-  metaTitle: "{{ title }} para clínicas dentales | HSG Service"
+  metaTitle: "{{ title }} para clínicas | HSG Service"
   metaDescription: "{{ descripcion or global.seo_description }}"
   metaRobots: "index, follow"
+  breadcrumbs:
+    - name: "Inicio"
+      url: "/"
+    - name: "Departamentos"
+      url: "/departamentos/"
+    - name: "{{ title }}"
+      url: "{{ page.url }}"
 ---
 <article class="main-article  ">
   <div class="bg-dark has-light">{% include 'hero.njk' %} </div>
@@ -33,5 +40,6 @@ eleventyComputed:
      </div>
 
   </div>
+  {% include "faq.njk" %}
   {% include "banner.njk" %}
 </article>

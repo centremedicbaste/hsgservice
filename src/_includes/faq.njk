@@ -1,0 +1,21 @@
+{% if faq %}
+<section class="container ptr-64 pbr-64">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="fluid-5-b accent mb-24">Preguntas frecuentes</h2>
+      <div class="accordion-wrap">
+        {% for item in faq %}
+        <div class="accordion">
+          <div class="accordion-inner">
+            <div class="accordion-header"><b>{{ item.q }}</b></div>
+            <div class="accordion-content">
+              <p class="p2">{{ item.a }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

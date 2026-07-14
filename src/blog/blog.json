@@ -1,8 +1,17 @@
-
 {
-	"layout": "blog.njk",
-	"author": "Jeremy Faucher",
-	"tags": ["blog"],
-	"tag": "post",
-	"categoryName": "Blog"
+  "layout": "blog.njk",
+  "author": "HSG Service",
+  "tags": ["post", "blog"],
+  "articleSchema": true,
+  "categoria": "Gestión dental",
+  "eleventyComputed": {
+    "metaTitle": "{{ title }} | Blog HSG Service",
+    "metaDescription": "{{ description }}",
+    "metaRobots": "index, follow",
+    "breadcrumbs": [
+      { "name": "Inicio", "url": "/" },
+      { "name": "Blog", "url": "/blog/" },
+      { "name": "{{ title }}", "url": "{{ page.url }}" }
+    ]
+  }
 }

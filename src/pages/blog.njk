@@ -9,6 +9,11 @@ eleventyComputed:
   metaDescription: "Noticias, consejos de gestión y novedades para clínicas dentales y estéticas. Aprende a mejorar la rentabilidad, la captación de pacientes y la eficiencia de tu clínica con HSG Service."
   metaKeywords: "blog clínicas dentales, gestión clínica dental, captación de pacientes, rentabilidad dental"
   metaRobots: "index, follow"
+  breadcrumbs:
+    - name: "Inicio"
+      url: "/"
+    - name: "Blog"
+      url: "/blog/"
 ---
 <div class="bg-dark has-light">{% include 'hero.njk' %}</div>
 
@@ -16,7 +21,16 @@ eleventyComputed:
 
   <div class="container ">
 
-    
+    <div class="row ptr-64 pbr-64">
+      <div class="col-xs-12 col-sm-8">
+        <h2 class="fluid-5-b accent mb-16">Consejos y novedades para tu clínica dental</h2>
+        <p class="p1">
+          En el blog de HSG Service compartimos consejos prácticos de gestión, financiación,
+          compra de material y formación para ayudarte a <b>aumentar la rentabilidad de tu
+          clínica dental</b> y mejorar la experiencia de tus pacientes.
+        </p>
+      </div>
+    </div>
 
     <ul role="list" class="list-clear blog-section">
       {% for post in collections.post | reverse %}

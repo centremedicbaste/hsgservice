@@ -2,15 +2,16 @@
 layout: base.njk
 title: Hsgservice | Plataforma de Servicios Odontológicos
 eleventyComputed:
-  metaTitle: "Soluciones integrales para clínicas dentales: coaching, financiación, implantes y más | HSG Service"
-  metaDescription: "En HSG, ofrecemos una gama completa de servicios diseñados para optimizar y mejorar cada aspecto de tu
-  clínica dental. Desde coaching profesional y financiación accesible hasta implantes dentales de avanzada y la última
-  tecnología en maquinaria. Descubre cómo nuestros servicios personalizados pueden elevar la eficiencia y rentabilidad de
-  tu clínica, asegurando el mejor cuidado para tus pacientes."
-  metaKeywords: "optimización clínica dental, coaching dental, financiación dental, implantes dentales, tecnología dental
-  avanzada, maquinaria dental, escáneres intraorales, rentabilidad clínica dental, servicios clínicos integrales, salud
-  dental"
+  metaTitle: "{{ title }} para clínicas | HSG Service"
+  metaDescription: "{{ descripcion or global.seo_description }}"
   metaRobots: "index, follow"
+  breadcrumbs:
+    - name: "Inicio"
+      url: "/"
+    - name: "Departamentos"
+      url: "/departamentos/"
+    - name: "{{ title }}"
+      url: "{{ page.url }}"
 ---
 <article class="main-article  ">
   <div class="bg-dark has-light">{% include 'hero.njk' %} </div>
@@ -38,5 +39,6 @@ eleventyComputed:
       {% endif %}
     </div>
   </div>
+  {% include "faq.njk" %}
   {% include "banner.njk" %}
 </article>
