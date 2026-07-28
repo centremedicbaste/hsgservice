@@ -2,7 +2,7 @@
 title: "Cómo financiar tratamientos dentales a tus pacientes"
 subtitle: Aumenta la aceptación de presupuestos con financiación
 date: 2026-06-24
-description: La financiación de tratamientos dentales ayuda a que más pacientes acepten su presupuesto. Descubre cómo ofrecer financiación en tu clínica, qué plazos ofrecer y cómo aumentar la aceptación.
+description: "La financiación de tratamientos dentales ayuda a que más pacientes acepten su presupuesto. Cómo ofrecerla en tu clínica y qué plazos funcionan."
 image: /assets/static/departamentos/mini-financiacion.jpg
 imageAlt: Cómo financiar tratamientos dentales a los pacientes
 categoria: Financiación
@@ -33,7 +33,7 @@ Lo ideal es contar con **varias entidades financieras** para poder aprobar más 
 
 ### El impacto en la rentabilidad
 
-Subir unos puntos la tasa de aceptación de presupuestos tiene un efecto directo en la facturación, sin gastar más en captación. Es una de las formas más rápidas de [aumentar la rentabilidad de la clínica](/blog/como-aumentar-rentabilidad-clinica-dental/).
+Subir unos puntos la tasa de aceptación de presupuestos tiene un efecto directo en la facturación, sin gastar más en captación. Es una de las formas más rápidas de [aumentar la rentabilidad de la clínica](/blog/como-aumentar-rentabilidad-clinica-dental/). Y recuerda: la financiación también funciona del lado de la clínica, por ejemplo para [renovar tu maquinaria dental](/blog/financiacion-maquinaria-dental/).
 
 ---
 

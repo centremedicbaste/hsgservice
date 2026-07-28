@@ -2,7 +2,7 @@
 title: "Escáner intraoral: ventajas y cómo elegirlo para tu clínica"
 subtitle: Digitaliza tu clínica y mejora la experiencia del paciente
 date: 2026-07-01
-description: "El escáner intraoral digitaliza la clínica dental, reduce el tiempo de tratamiento y mejora la experiencia del paciente. Descubre sus ventajas y las claves para elegir el adecuado."
+description: "El escáner intraoral reduce el tiempo de tratamiento y mejora la experiencia del paciente. Ventajas y claves para elegir el adecuado."
 image: /assets/static/departamentos/mini-maquinaria.jpg
 imageAlt: Escáner intraoral para la clínica dental
 categoria: Digitalización

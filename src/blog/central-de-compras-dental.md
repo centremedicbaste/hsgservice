@@ -2,7 +2,7 @@
 title: "Central de compras dental: qué es y cómo ahorra tu clínica"
 subtitle: Compra agrupada de material, implantes y maquinaria
 date: 2026-06-18
-description: Una central de compras dental agrupa el volumen de muchas clínicas para conseguir mejores precios en material, implantes y maquinaria. Descubre cómo funciona y cuánto puede ahorrar tu clínica.
+description: "Una central de compras dental agrupa el volumen de muchas clínicas para lograr mejores precios en material, implantes y maquinaria. Así funciona."
 image: /assets/static/departamentos/mini-implante.jpg
 imageAlt: Central de compras dental para clínicas
 categoria: Compra agrupada

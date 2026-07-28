@@ -2,7 +2,7 @@
 title: "Ortodoncia invisible: por qué ofrecerla en tu clínica dental"
 subtitle: Un tratamiento estético y rentable muy demandado
 date: 2026-07-02
-description: "La ortodoncia invisible es uno de los tratamientos más demandados y rentables. Descubre por qué ofrecer alineadores invisibles en tu clínica dental y cómo hacerlo a precio de grupo."
+description: "La ortodoncia invisible es de los tratamientos más demandados y rentables. Por qué ofrecer alineadores en tu clínica y cómo hacerlo a precio de grupo."
 image: /assets/static/departamentos/mini-orto.jpg
 imageAlt: Ortodoncia invisible con alineadores para clínicas dentales
 categoria: Ortodoncia

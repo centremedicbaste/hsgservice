@@ -2,7 +2,7 @@
 title: "Cómo mejorar la aceptación de primeras visitas en tu clínica"
 subtitle: Protocolo para convertir más primeras visitas en tratamientos
 date: 2026-06-30
-description: La primera visita decide si el paciente acepta el tratamiento. Aprende un protocolo práctico para mejorar la aceptación de primeras visitas en tu clínica dental y aumentar la facturación.
+description: "La primera visita decide si el paciente acepta el tratamiento. Protocolo práctico para mejorar la aceptación de primeras visitas en tu clínica."
 image: /assets/static/formacion/master1.jpg
 imageAlt: Cómo mejorar la aceptación de primeras visitas en la clínica dental
 categoria: Primeras visitas

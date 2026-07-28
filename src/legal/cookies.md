@@ -1,6 +1,6 @@
 ---
 layout: legales
-title: El primero de todos
+title: Política de cookies
 author: Hsg Service
 date: 2024-02-02
 tags: ["legal", "aaa"]

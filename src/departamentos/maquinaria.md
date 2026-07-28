@@ -46,4 +46,4 @@ Con el **escáner intraoral** tomas contacto con la primera herramienta que abre
 
 ![Resultado de la digitalización de la clínica dental](/assets/static/maquinaria/maquinaria-4.jpg)
 
-> 📖 Artículo relacionado: [Escáner intraoral: ventajas y cómo elegirlo para tu clínica](/blog/escaner-intraoral-clinica-dental/)
+> 📖 Artículos relacionados: [Escáner intraoral: ventajas y cómo elegirlo](/blog/escaner-intraoral-clinica-dental/) · [Financiación de maquinaria dental](/blog/financiacion-maquinaria-dental/)
