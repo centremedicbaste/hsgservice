@@ -13,6 +13,15 @@ eleventyComputed:
       url: "/"
     - name: "Formación"
       url: "/formacion/"
+faq:
+  - q: "¿A quién va dirigida la formación en primeras visitas?"
+    a: "A todo el equipo de la clínica dental: odontólogos, gerentes, recepción y auxiliares. La aceptación de un tratamiento no depende solo del odontólogo, sino de toda la cadena desde que el paciente llama hasta que se va."
+  - q: "¿Cuánto cuesta la masterclass de primeras visitas?"
+    a: "La masterclass de primeras visitas tiene un precio de 265€, al igual que la de técnicas avanzadas en venta de servicios sanitarios. Incluye certificado de participación y soporte de dudas durante las sesiones."
+  - q: "¿Las masterclasses son presenciales u online?"
+    a: "Las masterclasses se imparten en vivo, con soporte para preguntas y dudas durante las sesiones, certificado de participación y guías de protocolos de regalo."
+  - q: "¿Qué aprenderé en la formación de primeras visitas?"
+    a: "A identificar el perfil de cada paciente, aplicar un protocolo de actuación desde que entra en la clínica, presentar el plan de tratamiento y las formas de pago para lograr la aceptación, recuperar pacientes que no han vuelto y motivar al personal."
 ---
 <div class="video-bg">
   <video class="video-cover " width="100%" height="auto" autoplay muted loop playsinline  >
@@ -284,6 +293,19 @@ eleventyComputed:
       </div>
     </div>
   </section>
+
+  <section class="container ptr-64 pbr-64">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="fluid-7-b accent mb-24">Aprende más sobre primeras visitas</h2>
+        <ul class="list-big p1">
+          <li><a href="/blog/protocolo-primera-visita-dental/">Protocolo de primera visita dental: guía paso a paso</a></li>
+          <li><a href="/blog/mejorar-aceptacion-primeras-visitas/">Cómo mejorar la aceptación de primeras visitas</a></li>
+          <li><a href="/blog/financiar-tratamientos-dentales-pacientes/">Cómo financiar tratamientos dentales a tus pacientes</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </div>
-<script>
-</script>
+
+{% include "faq.njk" %}

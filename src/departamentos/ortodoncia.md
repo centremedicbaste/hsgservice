@@ -1,8 +1,11 @@
 ---
 layout: departamentos
 prename: Ortodoncia
-title: Ortodoncia invisible
+title: Ortodoncia invisible a precio de grupo
 subtitle: Alineadores invisibles para tu clínica
+
+eleventyComputed:
+  metaTitle: "Ortodoncia invisible para clínicas a precio de grupo | HSG Service"
 descripcion: Ortodoncia invisible con alineadores Suresmile a precio de grupo para clínicas dentales asociadas a HSG Service. Ofrece a tus pacientes un tratamiento estético, cómodo y de primera marca.
 author: HSG Service
 date: 2024-02-02

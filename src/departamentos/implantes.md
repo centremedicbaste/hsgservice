@@ -1,8 +1,11 @@
 ---
 layout: grid
 prename: Implantes
-title: Implantes dentales
+title: Implantes dentales a precio de grupo
 subtitle: Depósito dental e implantes para clínicas
+
+eleventyComputed:
+  metaTitle: "Implantes dentales para clínicas a precio de grupo | HSG Service"
 descripcion: Implantes dentales de primeras marcas con más de un 50% de descuento para clínicas asociadas, además de material fungible de depósito dental a precio de grupo. Devuelve la sonrisa a tus pacientes al mejor coste.
 author: HSG Service
 date: 2024-02-02

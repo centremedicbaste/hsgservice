@@ -1,5 +1,5 @@
 ---
-title: "Central de compras dental: qué es y cómo ahorra tu clínica"
+title: "Qué es una central de compras dental y cómo ahorra tu clínica"
 subtitle: Compra agrupada de material, implantes y maquinaria
 date: 2026-06-18
 description: "Una central de compras dental agrupa el volumen de muchas clínicas para lograr mejores precios en material, implantes y maquinaria. Así funciona."
@@ -39,3 +39,5 @@ Sí. Precisamente las clínicas pequeñas y medianas son las que más ganan, por
 ---
 
 Descubre cuánto puede ahorrar tu clínica. [Contacta con HSG Service](/contacta/) y te lo calculamos sin compromiso.
+
+> 👉 Conoce nuestra [central de compras dental](/central-de-compras-dental/): más de 360 clínicas comprando juntas.
