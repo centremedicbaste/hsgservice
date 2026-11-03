@@ -87,11 +87,69 @@ faq:
   <div class="container">
     <blockquote class="pull">
       <p class="pull__text">
-        El paciente deja de decidir sobre <em>3.200&nbsp;€</em><br>
+        El paciente deja de decidir sobre <em>el importe</em>
         y pasa a decidir sobre <em>una cuota</em>.
       </p>
       <footer class="pull__foot">Es otra pregunta. Y se responde que sí mucho más a menudo.</footer>
     </blockquote>
+  </div>
+</section>
+
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Herramienta</span>
+      <h2>Calcula la cuota antes de presentarla</h2>
+      <p class="t-lead">
+        Para que llegues a la primera visita con la cifra mensual ya hecha, no con
+        el importe total y una promesa de «se puede financiar».
+      </p>
+    </div>
+
+    <div class="sim" id="sim">
+      <div class="sim__controls">
+        <div class="sim__field">
+          <label for="sim-importe">Importe del tratamiento</label>
+          <output class="sim__value" id="sim-importe-val" for="sim-importe">3.200 €</output>
+          <input type="range" id="sim-importe" min="120" max="18000" step="20" value="3200">
+          <span class="sim__hint">De 120 € a 18.000 € por operación</span>
+        </div>
+
+        <div class="sim__field">
+          <label for="sim-plazo">Plazo</label>
+          <output class="sim__value" id="sim-plazo-val" for="sim-plazo">36 meses</output>
+          <input type="range" id="sim-plazo" min="3" max="72" step="1" value="36">
+          <span class="sim__hint">De 3 a 72 meses</span>
+        </div>
+
+        <div class="sim__field">
+          <label for="sim-tae">TAE aplicada</label>
+          <div class="sim__tae">
+            <input class="input" type="number" id="sim-tae" min="0" max="25" step="0.1" value="0">
+            <span>%</span>
+          </div>
+          <span class="sim__hint">
+            Pon la que te aplique tu entidad. A 0 % la cuota es el importe dividido
+            entre los meses.
+          </span>
+        </div>
+      </div>
+
+      <div class="sim__out" aria-live="polite">
+        <span class="sim__out-label">Cuota mensual</span>
+        <p class="sim__cuota" id="sim-cuota">88,89 €</p>
+        <dl class="sim__detalle">
+          <div><dt>Total que paga el paciente</dt><dd id="sim-total">3.200,00 €</dd></div>
+          <div><dt>Coste de la financiación</dt><dd id="sim-coste">0,00 €</dd></div>
+          <div><dt>Cobras tú, en 24-48 h</dt><dd id="sim-clinica">3.200,00 €</dd></div>
+        </dl>
+        <p class="sim__aviso">
+          Cálculo orientativo con amortización francesa. La cuota definitiva la fija
+          la entidad financiera según el plazo y el perfil del paciente.
+          <a href="/contacta/#seccioncontacta">Consúltanos las condiciones vigentes</a>.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -351,3 +409,5 @@ faq:
 
 {% include "faq.njk" %}
 {% include "banner.njk" %}
+
+<script src="/assets/js/simulador.js" defer></script>

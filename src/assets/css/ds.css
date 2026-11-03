@@ -805,13 +805,17 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
    -------------------------------------------------------------------------- */
 /* Destacado tipográfico: rompe el ritmo de tarjetas sin añadir otra caja */
 .pull {
-  max-width: 24ch;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
 .pull__text {
-  font-size: var(--t-h2);
+  /* El ancho va aquí, donde la fuente ya es grande: en .pull la unidad ch
+     se calcularía sobre los 16px heredados y saldría una columna estrecha. */
+  max-width: 20ch;
+  margin-inline: auto;
+  font-size: var(--t-h1);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -.03em;
@@ -820,6 +824,8 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 }
 .pull__text em { font-style: normal; color: var(--c-primary); }
 .pull__foot {
+  max-width: 46ch;
+  margin-inline: auto;
   margin-top: var(--s-6);
   font-size: var(--t-lead);
   color: var(--c-ink-soft);
@@ -923,3 +929,106 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
   .timeline__item::before { top: 36px; bottom: calc(var(--s-6) * -1); left: 17px; right: auto; width: 2px; height: auto; }
   .timeline__item:last-child::before { display: none; }
 }
+
+/* --------------------------------------------------------------------------
+   17. SIMULADOR DE CUOTA
+   -------------------------------------------------------------------------- */
+.sim {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: var(--s-8);
+  align-items: start;
+}
+.sim__controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-7);
+  padding: var(--s-7);
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-card);
+}
+.sim__field { display: grid; gap: var(--s-2); }
+.sim__field label { font-weight: 600; color: var(--c-ink); }
+.sim__value {
+  font-size: var(--t-h3);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--c-primary);
+}
+.sim__hint { font-size: var(--t-small); color: var(--c-ink-mute); }
+
+.sim input[type="range"] {
+  width: 100%;
+  height: 6px;
+  margin: var(--s-2) 0;
+  border-radius: var(--r-pill);
+  background: var(--c-surface-2);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.sim input[type="range"]::-webkit-slider-thumb {
+  appearance: none; -webkit-appearance: none;
+  width: 26px; height: 26px;
+  border: 3px solid #fff;
+  border-radius: var(--r-pill);
+  background: var(--c-primary);
+  box-shadow: var(--sh-1);
+}
+.sim input[type="range"]::-moz-range-thumb {
+  width: 20px; height: 20px;
+  border: 3px solid #fff;
+  border-radius: var(--r-pill);
+  background: var(--c-primary);
+}
+.sim input[type="range"]:focus-visible { outline: 3px solid var(--c-accent); outline-offset: 4px; }
+
+.sim__tae { display: flex; align-items: center; gap: var(--s-2); }
+.sim__tae .input { max-width: 7rem; }
+.sim__tae span { font-weight: 600; color: var(--c-ink-soft); }
+
+.sim__out {
+  padding: var(--s-7);
+  border-radius: var(--r-card);
+  background: var(--c-deep);
+  color: rgba(255,255,255,.88);
+}
+.sim__out-label {
+  display: block;
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+}
+.sim__cuota {
+  margin-top: var(--s-2);
+  font-size: clamp(2.5rem, 1.6rem + 3.4vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.03em;
+  color: #fff;
+}
+.sim__detalle {
+  margin: var(--s-7) 0 0;
+  padding-top: var(--s-5);
+  border-top: 1px solid rgba(255,255,255,.18);
+  font-size: var(--t-small);
+}
+.sim__detalle > div {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-3);
+  padding: var(--s-2) 0;
+}
+.sim__detalle dt { color: rgba(255,255,255,.72); margin: 0; }
+.sim__detalle dd { margin: 0; font-weight: 700; color: #fff; }
+.sim__aviso {
+  margin-top: var(--s-6);
+  font-size: var(--t-micro);
+  line-height: 1.5;
+  color: rgba(255,255,255,.65);
+}
+.sim__aviso a { color: #fff; }
+
+@media (max-width: 860px) { .sim { grid-template-columns: 1fr; } }
