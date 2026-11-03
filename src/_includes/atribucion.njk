@@ -1,0 +1,43 @@
+{# ── Atribución de primera mano ──────────────────────────────────────────
+   Guarda de dónde viene el visitante para que el dato viaje con el lead.
+
+   Va en sessionStorage y no en una cookie a propósito: no es un
+   identificador que persiga al usuario entre visitas, es el origen de la
+   consulta que él mismo va a enviar, y vive lo que dura la pestaña. Así el
+   dato llega con el lead sin depender del consentimiento de marketing.
+
+   Se queda con el primer toque de la sesión: si el visitante entra por un
+   anuncio y luego navega, el anuncio sigue siendo el origen. #}
+<script>
+(function(){
+  var CLAVE = 'baste_atrib';
+  try { if (sessionStorage.getItem(CLAVE)) return; } catch (e) { return; }
+
+  var q = new URLSearchParams(location.search);
+  var d = {};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term',
+   'gclid','fbclid','msclkid'].forEach(function (k) {
+    var v = q.get(k);
+    if (v) d[k] = String(v).slice(0, 120);
+  });
+
+  // Sin UTM ni identificador de clic hay que deducirlo del referente
+  if (!Object.keys(d).length) {
+    var propio = location.hostname.replace(/^www\./, '');
+    var host = '';
+    try { host = document.referrer ? new URL(document.referrer).hostname.replace(/^www\./, '') : ''; } catch (e) {}
+    if (!host || host === propio) {
+      d.canal = 'directo';
+    } else if (/(^|\.)(google|bing|duckduckgo|ecosia|yahoo|brave)\./.test(host) || /^search\./.test(host)) {
+      d.canal = 'organico';
+      d.buscador = host;
+    } else {
+      d.canal = 'referido';
+      d.referente = host;
+    }
+  }
+  d.entrada = location.pathname;
+
+  try { sessionStorage.setItem(CLAVE, JSON.stringify(d)); } catch (e) {}
+})();
+</script>

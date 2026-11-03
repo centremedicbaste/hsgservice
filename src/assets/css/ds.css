@@ -1091,3 +1091,55 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
   .cookies__acciones { width: 100%; }
   .cookies__acciones .btn { flex: 1 1 0; justify-content: center; }
 }
+
+/* Panel de categorías de cookies.
+   Mismas tres categorías que en las otras dos webs, con el aspecto de esta.
+   El display lo pone consentimiento.js leyendo data-display="flex". */
+.cookies-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 61;
+  padding: var(--s-5);
+  background: rgba(1,37,99,.55);
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+.cookies-panel__box {
+  width: 100%;
+  max-width: 560px;
+  padding: var(--s-6);
+  background: #fff;
+  border-radius: var(--r-card);
+  box-shadow: 0 24px 64px rgba(1,37,99,.28);
+}
+.cookies-panel__tit { margin: 0 0 var(--s-3); font-size: var(--t-h4); }
+.cookies-panel__cat {
+  padding: var(--s-4) 0;
+  border-top: 1px solid var(--c-line-soft);
+}
+.cookies-panel__cat label {
+  display: flex;
+  gap: var(--s-4);
+  align-items: flex-start;
+  cursor: pointer;
+}
+.cookies-panel__cat input { margin-top: 4px; flex: 0 0 auto; }
+.cookies-panel__cat span { display: block; }
+.cookies-panel__cat small {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--t-small);
+  color: var(--c-ink-mute);
+}
+.cookies-panel__cat input:disabled + span strong { color: var(--c-ink-mute); }
+.cookies-panel__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+  padding: var(--s-5) 0 var(--s-4);
+  border-top: 1px solid var(--c-line-soft);
+}
+@media (max-width: 560px) {
+  .cookies-panel__acciones .btn { flex: 1 1 0; justify-content: center; }
+}

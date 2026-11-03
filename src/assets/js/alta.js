@@ -256,6 +256,17 @@
         form.hidden = true;
         document.getElementById("alta-done").hidden = false;
         window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // El alta es el lead que más vale de esta web: se mide aquí, cuando
+        // n8n ya ha cerrado la solicitud, y no en el 'submit' de cada paso.
+        // Por eso el formulario no lleva data-lead.
+        if (window.siteMeasurement) {
+          window.siteMeasurement.lead({
+            form_id: "alta",
+            form_name: "solicitud_alta",
+            lead_type: "signup"
+          });
+        }
       })
       .catch(function () {
         btn.disabled = false;

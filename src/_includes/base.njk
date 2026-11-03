@@ -197,25 +197,10 @@
   }
   </script>
 
-  {# Medición. La etiqueta de Google NO se descarga hasta que el visitante
-     acepta: la AEPD exige bloqueo previo, no basta con el modo consentimiento.
-     Aquí solo se declaran los valores por defecto (todo denegado) y se deja
-     el ID a mano; quien carga el script es consentimiento.js. #}
-  {% if global.ga4 %}
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("consent", "default", {
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-      analytics_storage: "denied",
-      functionality_storage: "granted",
-      security_storage: "granted"
-    });
-    window.HSG_GA4 = "{{ global.ga4 }}";
-  </script>
-  {% endif %}
+  {% set cfg = global %}
+  {% include 'atribucion.njk' %}
+  {% include 'measurement.njk' %}
+  {% include 'pixel-meta.njk' %}
 </head>
 
 
@@ -228,7 +213,7 @@
   {% include 'footer.njk' %}
   {% include 'consentimiento.njk' %}
   <script src="/assets/js/ui.js" defer></script>
-  {% if global.ga4 %}<script src="/assets/js/consentimiento.js" defer></script>{% endif %}
+  {% if global.ga4_id %}<script src="/assets/js/consentimiento.js" defer></script>{% endif %}
   <script>
     const handleSubmit = (event) => {
       event.preventDefault();

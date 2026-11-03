@@ -1,0 +1,16 @@
+{# Identificadores de medición. Es lo ÚNICO que cambia entre las tres webs:
+   measurement.js y consentimiento.js son idénticos en todas.
+
+   delivery dice por dónde llegan los datos a GA4. 'gtag' los manda
+   measurement.js directamente; 'gtm' los pone en el dataLayer para que los
+   traduzcan las etiquetas del contenedor. Nunca las dos a la vez: si la web
+   entrega por 'gtag' y además hay una etiqueta de GA4 en el contenedor, cada
+   cosa se cuenta dos veces y eso no se puede deshacer después. #}
+{% set dominio = cfg.url | replace('https://', '') | replace('http://', '') | replace('www.', '') | replace('/', '') | trim %}
+<script>window.measurementConfig = {
+  ga4: "{{ cfg.ga4_id }}",
+  gtm: "{{ cfg.tag_manager | default('') }}",
+  delivery: "{{ cfg.ga4_delivery | default('gtag') }}",
+  hosts: ["{{ dominio }}", "www.{{ dominio }}"]
+};</script>
+<script src="/assets/js/measurement.js"></script>

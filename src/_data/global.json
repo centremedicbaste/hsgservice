@@ -4,8 +4,10 @@
   "footer": "",
   "url": "hsgservice.es",
 
-  "tag_manager": "",
-  "ga4": "G-E6MK6V95JM",
+  "tag_manager": "GTM-W9PXPCJQ",
+  "ga4_id": "G-E6MK6V95JM",
+  "ga4_delivery": "gtag",
+  "meta_pixel_id": "",
 
   "about": "la clinica",
   "services": "Tratamientos",

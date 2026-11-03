@@ -1,0 +1,33 @@
+{# ── Píxel de Meta ────────────────────────────────────────────────────────
+   Parcial idéntico en las tres webs. Espera cfg puesto por la plantilla.
+
+   Solo se carga con las cookies de marketing aceptadas. Meta no entiende el
+   Consent Mode de Google, así que aquí no hay medio camino: o se carga o no
+   se carga.
+
+   Se expone cargarPixelMeta para que el banner lo arranque en el momento de
+   aceptar, sin recargar la página. Es idempotente: si el píxel ya está, no
+   hace nada. Sin meta_pixel_id en los datos de la web no se carga nada, que
+   es el caso de las webs que todavía no hacen campañas en Meta. #}
+{% if cfg.meta_pixel_id %}
+{% set dominio = cfg.url | replace('https://', '') | replace('http://', '') | replace('www.', '') | replace('/', '') | trim %}
+<script>
+  (function () {
+    window.cargarPixelMeta = function () {
+      if (window.fbq) return;
+      // Ni en previsualizaciones ni en local, igual que la analítica
+      var d = location.hostname;
+      if (d !== '{{ dominio }}' && d !== 'www.{{ dominio }}') return;
+      if (!/(^|;\s*)cookie_marketing=true(;|$)/.test(document.cookie)) return;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '{{ cfg.meta_pixel_id }}');
+      fbq('track', 'PageView');
+    };
+    window.cargarPixelMeta();
+  })();
+</script>
+{% endif %}

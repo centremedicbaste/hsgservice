@@ -1,21 +1,64 @@
-{% if global.ga4 %}
-{# Aviso de cookies. Oculto de entrada: lo muestra consentimiento.js solo si
-   el visitante no ha decidido todavía. Así no parpadea en quien ya respondió,
-   ni aparece si el navegador no tiene almacenamiento. #}
-<div class="cookies" id="cookies" role="dialog" aria-modal="false"
-     aria-labelledby="cookies-tit" aria-describedby="cookies-txt" hidden>
+{% if cfg.ga4_id %}
+{# Aviso de cookies. Mismo contrato que en las otras dos webs: los mismos
+   identificadores, las mismas tres categorías y el mismo
+   consentimiento.js. Lo que cambia es el aspecto, que es el de esta web.
+
+   Oculto de entrada: lo muestra consentimiento.js solo si el visitante no ha
+   decidido todavía. Así no parpadea en quien ya respondió. #}
+<div class="cookies" id="cookie-banner" role="dialog" aria-modal="false"
+     aria-labelledby="cookies-tit" aria-describedby="cookies-txt" style="display: none;">
   <div class="cookies__box">
     <h2 class="cookies__tit" id="cookies-tit">Cookies</h2>
     <p class="cookies__txt" id="cookies-txt">
-      Usamos Google Analytics para saber qué páginas se visitan y mejorar la web.
-      Son cookies de análisis y solo se instalan si las aceptas: la web funciona
-      igual si las rechazas. Puedes cambiar de opinión cuando quieras.
+      Usamos cookies de análisis para saber qué páginas se visitan y mejorar
+      la web. No se instala ninguna hasta que elijas: la web funciona igual si
+      las rechazas, y puedes cambiar de opinión cuando quieras.
       <a href="/legal/cookies/">Más detalle en la política de cookies</a>.
     </p>
     <div class="cookies__acciones">
-      <button type="button" class="btn btn--sm" data-cookies="si">Aceptar</button>
-      <button type="button" class="btn btn--ghost btn--sm" data-cookies="no">Rechazar</button>
+      <button type="button" class="btn btn--sm" id="cookie-accept">Aceptar</button>
+      <button type="button" class="btn btn--ghost btn--sm" id="cookie-reject">Rechazar</button>
+      <button type="button" class="btn btn--ghost btn--sm" id="cookie-settings">Configurar</button>
     </div>
+  </div>
+</div>
+
+{# Panel de categorías. Lo abre «Configurar» y también cualquier enlace a
+   #cookies, que es lo que lleva el pie: así retirar el consentimiento cuesta
+   lo mismo que darlo. #}
+<div class="cookies-panel" id="cookie-settings-panel" role="dialog" aria-modal="true"
+     aria-labelledby="cookies-panel-tit" data-display="flex" style="display: none;">
+  <div class="cookies-panel__box">
+    <h2 class="cookies-panel__tit" id="cookies-panel-tit">Configuración de cookies</h2>
+    <p class="t-small">Activa o desactiva cada categoría según lo que prefieras.</p>
+
+    <div class="cookies-panel__cat">
+      <label>
+        <input type="checkbox" id="cookie-necessary" checked disabled>
+        <span><strong>Técnicas</strong><small>Necesarias para que la web funcione. No se pueden desactivar.</small></span>
+      </label>
+    </div>
+
+    <div class="cookies-panel__cat">
+      <label>
+        <input type="checkbox" id="cookie-analytics">
+        <span><strong>Análisis</strong><small>Nos dicen qué páginas se visitan, para mejorar la web.</small></span>
+      </label>
+    </div>
+
+    <div class="cookies-panel__cat">
+      <label>
+        <input type="checkbox" id="cookie-marketing">
+        <span><strong>Publicidad</strong><small>Para medir las campañas. Hoy esta web no las usa: la casilla queda preparada.</small></span>
+      </label>
+    </div>
+
+    <div class="cookies-panel__acciones">
+      <button type="button" class="btn btn--sm" id="cookie-save">Guardar preferencias</button>
+      <button type="button" class="btn btn--ghost btn--sm" id="cookie-settings-close">Cerrar</button>
+    </div>
+
+    <p class="t-small"><a href="/legal/cookies/">Leer la política de cookies completa</a></p>
   </div>
 </div>
 {% endif %}

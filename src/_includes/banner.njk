@@ -20,7 +20,10 @@
       </div>
 
       <div class="form-card">
+        {# data-lead: este formulario hace un POST nativo y se lleva la página
+           por delante, así que measurement.js mide el lead en el 'submit'. #}
         <form name="contactformulario" method="POST" action="/gracias/"
+              data-lead="contacto"
               data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contactformulario">
           <p hidden><label>No rellenar: <input name="bot-field"></label></p>
