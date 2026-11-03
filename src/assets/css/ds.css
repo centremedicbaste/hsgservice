@@ -400,6 +400,18 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
   transition: background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
 }
 a.card:hover { background: var(--c-surface-2); text-decoration: none; transform: translateY(-3px); box-shadow: var(--sh-2); }
+
+/* Sobre fondo de superficie, una tarjeta con ese mismo fondo es invisible:
+   pasa a blanco con borde y una sombra suave que la despegue. */
+.bg-surface .card:not(.card--outline) {
+  background: #fff;
+  border: 1px solid var(--c-line);
+  box-shadow: var(--sh-1);
+}
+.bg-surface a.card:not(.card--outline):hover {
+  background: #fff;
+  border-color: var(--c-primary);
+}
 a.card:hover .arrow-dot { background: var(--c-primary-dk); transform: translateX(3px); }
 
 .card__icon {
