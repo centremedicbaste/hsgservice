@@ -424,12 +424,21 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 
 /* Muro de logos */
 .logo-wall {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--s-8) var(--s-7);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: var(--s-8) var(--s-9);
 }
-.logo-wall img { margin-inline: auto; max-height: 62px; width: auto; filter: grayscale(1); opacity: .62; transition: all .25s var(--ease); }
+.logo-wall img {
+  /* Los archivos miden 197x87: ese es su tamaño nativo, no los ampliamos más */
+  width: 197px;
+  max-width: 44vw;
+  height: auto;
+  filter: grayscale(1);
+  opacity: .7;
+  transition: filter .25s var(--ease), opacity .25s var(--ease);
+}
 .logo-wall img:hover { filter: none; opacity: 1; }
 
 /* --------------------------------------------------------------------------
