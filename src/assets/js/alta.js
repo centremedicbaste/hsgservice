@@ -133,7 +133,7 @@
     fd.append("archivo", file, file.name);
 
     fetch(API + "/hsg-alta-documento", { method: "POST", body: fd })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json().catch(function () { return {}; }); })
+      .then(leerOk)
       .then(function () {
         subidos[clave] = file.name;
         estado(d, "Enviado: " + file.name, "ok");
@@ -184,6 +184,16 @@
     mostrar(paso + 1);
   });
 
+  // Un 200 no basta: si el flujo de n8n se para a mitad, responde 200 sin
+  // cuerpo. Exigimos que la respuesta diga explícitamente ok:true.
+  function leerOk(r) {
+    if (!r.ok) throw new Error(r.status);
+    return r.json().then(function (j) {
+      if (!j || j.ok !== true) throw new Error("respuesta sin ok");
+      return j;
+    });
+  }
+
   function crearSolicitud(cb) {
     if (solicitudId) return cb(true);
     aviso("Creando tu solicitud…", "wait");
@@ -201,7 +211,7 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(datos)
     })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(leerOk)
       .then(function (res) {
         if (!res || !res.id) throw new Error("sin id");
         solicitudId = res.id;
@@ -239,7 +249,7 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: solicitudId })
     })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json().catch(function () { return {}; }); })
+      .then(leerOk)
       .then(function () {
         document.getElementById("alta-ref").textContent = solicitudId;
         document.getElementById("steps").hidden = true;

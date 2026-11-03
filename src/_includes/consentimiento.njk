@@ -1,0 +1,21 @@
+{% if global.ga4 %}
+{# Aviso de cookies. Oculto de entrada: lo muestra consentimiento.js solo si
+   el visitante no ha decidido todavía. Así no parpadea en quien ya respondió,
+   ni aparece si el navegador no tiene almacenamiento. #}
+<div class="cookies" id="cookies" role="dialog" aria-modal="false"
+     aria-labelledby="cookies-tit" aria-describedby="cookies-txt" hidden>
+  <div class="cookies__box">
+    <h2 class="cookies__tit" id="cookies-tit">Cookies</h2>
+    <p class="cookies__txt" id="cookies-txt">
+      Usamos Google Analytics para saber qué páginas se visitan y mejorar la web.
+      Son cookies de análisis y solo se instalan si las aceptas: la web funciona
+      igual si las rechazas. Puedes cambiar de opinión cuando quieras.
+      <a href="/legal/cookies/">Más detalle en la política de cookies</a>.
+    </p>
+    <div class="cookies__acciones">
+      <button type="button" class="btn btn--sm" data-cookies="si">Aceptar</button>
+      <button type="button" class="btn btn--ghost btn--sm" data-cookies="no">Rechazar</button>
+    </div>
+  </div>
+</div>
+{% endif %}

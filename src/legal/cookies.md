@@ -1,30 +1,126 @@
 ---
 layout: legales
 title: Política de cookies
-author: Hsg Service
-date: 2024-02-02
-tags: ["legal", "aaa"]
+author: HSG Service
+date: 2026-11-04
+tags: ["legal"]
 image: /assets/static/blog/article-1.webp
-imageAlt: cookies
+imageAlt: Política de cookies de HSG Service
 description: "Información legal de HSG Service."
 ---
 
-## COOKIES
-En cumplimiento con lo dispuesto en el artículo 22.2 de la Ley 34/2002, de 11 de julio, de Services de la Sociedad de la Información y de Comercio Electrónico, {{global.empresa_corto}}, titular y propietario del website {{global.website}}, le informa en esta sección la política de recogida y tratamiento de cookies propias y de terceros con fines de Análisis, Personalización, de Marketing y Técnicos en dicho website. Las cookies son pequeños archivos de texto que las páginas web almacenan en el navegador del usuario que las visita para hacer más eficiente la experiencia del usuario.
+## Política de cookies
 
- Esta página web utiliza cookies propias y de terceros para personalizar el contenido y los anuncios, ofrecer funciones de redes sociales y analizar el tráfico. Además, compartimos información sobre el uso que haga del sitio web con Our partners de redes sociales, publicidad y análisis web, quienes pueden combinarla con otra información que les haya proporcionado o que hayan recopilado a partir del uso que haya hecho de sus servicios. Algunas cookies son esenciales para el funcionamiento del sitio, por ejemplo el buscador incorporado. Otras se usan para para recopilar información con fines estadísticos y de uso de la web. 
- 
- El uso del website implica la aceptación del uso de cookies para los fines y usos que se citan en la presente Política de Cookies. En este enlace puede consultar cómo usa Google los datos cuando utilizas las aplicaciones o los sitios web sus partners.
+**Última actualización:** 4 de noviembre de 2026
 
-### USO DE COOKIES SEGÚN LA GESTIÓN Y EL TIEMPO ACTIVAS
-Esta página web utiliza servicios de terceros para recopilar información con fines estadísticos y de uso de la web. En concreto, Cookies propias, Cookies de terceros, de sesión y activas para fines de Análisis, Personalización, de Marketing y Técnicos. La siguiente información de los tipos de cookies que contiene esta página ayuda a comprender mejor las funciones que hacen posible: Según el tiempo de permanencia en el navegador, se dividen en:
-### Cookies de sesión:
-Son cookies temporales que permanecen en el espacio de cookies de su equipo hasta que cierra el navegador, por lo que ninguna queda registrada en el disco del usuario. La información obtenida por medio de estas cookies sirve para hacer posible la gestión operativa con cada uno de los usuarios que está accediendo de forma simultánea a la web.
-### Cookies persistentes: 
-Son cookies que permanecen almacenadas en el espacio de cookies de su equipo una vez cerrado el navegador, y que volverá a consultar dicha página web la próxima vez que acceda a ella para recordar información que facilite la navegación (acceder directamente al servicio sin necesidad de hacer el proceso de login) o la prestación de un servicio comercial (ofrecer aquellos productos o servicios relacionados con anteriores visitas). Además, las cookies intercambiadas al navegar por una página web pueden ser: Cookies de origen o propias: Son cookies generadas por la propia página web que se está visitando.
+### 1. Qué es una cookie
 
-### Cookies de terceros: 
-Son cookies que se reciben al navegar por esa página web, pero que han sido generadas por un tercer servicio que se encuentra hospedado en ella. Un ejemplo puede ser la cookie empleada por un anuncio o banner de publicidad que se encuentra en la página web que visitamos. Otro puede ser la cookie empleada por un contador de visitantes contratado por la página web que visitamos.
+Una cookie es un pequeño archivo que un sitio web guarda en tu navegador
+cuando lo visitas. Sirve para reconocer tu equipo en visitas posteriores.
+Junto a las cookies, esta política cubre también otras tecnologías de
+almacenamiento del navegador, como el almacenamiento local, porque la ley las
+trata igual.
 
-### SEGÚN SU FINALIDAD 
-En virtud de su finalidad, utilizamos cookies de Análisis, Personalización, de Marketing y Técnicas (o necesarias): Necesarias: Permiten al usuario la navegación a través de una página web, plataforma o aplicación y la utilización de las diferentes opciones o servicios que en ella existan como, por ejemplo, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido, recordar los elementos que integran un pedido, realizar el proceso de compra de un pedido, realizar la solicitud de inscripción o participación en un evento, utilizar elementos de seguridad durante la navegación, almacenar contenidos para la difusión de videos o sonido o compartir contenidos a través de redes sociales.
+Esta política cumple el artículo 22.2 de la Ley 34/2002 (LSSI) y el Reglamento
+General de Protección de Datos. El responsable es
+{{ global.empresa_legal }}, con NIF {{ global.empresa_dni }} y domicilio en
+{{ global.empresa_legal_direccion }}.
+
+### 2. Qué cookies usa esta web
+
+Solo dos cosas, y una de ellas depende de ti.
+
+#### a) Tu propia decisión sobre las cookies
+
+Cuando aceptas o rechazas en el aviso, guardamos esa respuesta en el
+almacenamiento local de tu navegador. Es lo único que nos permite no volver a
+preguntarte en cada página.
+
+| | |
+|---|---|
+| **Nombre** | `hsg-cookies` |
+| **Tipo** | Almacenamiento local, propio |
+| **Finalidad** | Recordar si has aceptado o rechazado la medición |
+| **Duración** | Hasta que borres los datos del navegador |
+| **Consentimiento** | No lo necesita: es imprescindible para respetar tu elección (art. 22.2 LSSI) |
+
+#### b) Medición del uso de la web — solo si la aceptas
+
+Usamos **Google Analytics 4** para saber cuántas personas visitan la web, qué
+páginas leen y desde dónde llegan. Nos sirve para decidir qué contenido
+ampliar.
+
+**Estas cookies no se instalan hasta que pulsas «Aceptar».** Si rechazas, o si
+no respondes, el script de Google no se descarga y no se envía ningún dato. La
+web funciona exactamente igual.
+
+| Nombre | Tipo | Finalidad | Duración |
+|---|---|---|---|
+| `_ga` | De tercero (Google) | Distinguir un visitante de otro | 2 años |
+| `_ga_E6MK6V95JM` | De tercero (Google) | Mantener el estado de la sesión de medición | 2 años |
+
+**Quién trata los datos:** Google Ireland Limited, como encargado del
+tratamiento. Google Analytics 4 **no almacena tu dirección IP**: la usa para
+deducir el país y la descarta. No cruzamos esos datos con los que nos das en
+los formularios, ni los usamos para publicidad: las categorías de publicidad y
+personalización están denegadas de forma permanente en nuestra configuración.
+
+**Cuánto se conservan:** hemos fijado la retención en **14 meses**, el máximo
+que permite la herramienta.
+
+**Transferencias internacionales:** Google puede tratar los datos en Estados
+Unidos, al amparo del Marco de Privacidad de Datos UE-EE. UU., del que Google
+LLC está certificada.
+
+### 3. Lo que esta web no hace
+
+Para que quede claro, porque muchas políticas de cookies dicen lo contrario
+por copiar plantillas:
+
+- **No usamos cookies de publicidad** ni de perfilado comercial.
+- **No compartimos** datos de navegación con redes sociales ni con anunciantes.
+- **No hay botones ni contenidos incrustados** de redes sociales que te
+  rastreen.
+- **No vendemos** datos a nadie.
+
+La web carga tipografías desde Google Fonts, que no instala cookies pero sí
+recibe tu dirección IP al servir el archivo. Estamos trabajando para servirlas
+desde nuestro propio dominio y eliminar también esa conexión.
+
+### 4. Cómo aceptar, rechazar o cambiar de opinión
+
+Al entrar por primera vez verás un aviso con dos botones, **Aceptar** y
+**Rechazar**, con el mismo peso: rechazar es igual de fácil y de rápido que
+aceptar.
+
+Para cambiar tu decisión en cualquier momento, usa el enlace
+**[Preferencias de cookies](#cookies)** que hay en el pie de todas las
+páginas. Volverá a aparecer el aviso y tu nueva respuesta sustituirá a la
+anterior.
+
+Si retiras el consentimiento, dejamos de cargar Google Analytics de inmediato.
+Las cookies que ya estuvieran puestas puedes borrarlas desde tu navegador:
+
+- [Chrome](https://support.google.com/chrome/answer/95647)
+- [Firefox](https://support.mozilla.org/es/kb/Borrar%20cookies)
+- [Safari](https://support.apple.com/es-es/guide/safari/sfri11471/mac)
+- [Edge](https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09)
+
+También puedes configurar tu navegador para bloquear cookies de terceros con
+carácter general. Hacerlo no afecta al funcionamiento de esta web.
+
+### 5. Tus derechos
+
+Puedes ejercer los derechos de acceso, rectificación, supresión, oposición,
+limitación y portabilidad escribiéndonos a
+[{{ global.email }}](mailto:{{ global.email }}), y reclamar ante la **Agencia
+Española de Protección de Datos** (C/ Jorge Juan, 6, 28001 Madrid —
+[www.aepd.es](https://www.aepd.es)) si consideras que no te hemos atendido
+bien. Lo tienes desarrollado en nuestra
+[política de privacidad](/legal/politicas/).
+
+### 6. Cambios en esta política
+
+Si añadimos o quitamos alguna cookie, actualizaremos esta página y volveremos
+a pedirte el consentimiento cuando la ley lo exija. La fecha de la última
+actualización figura al principio.

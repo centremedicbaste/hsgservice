@@ -1036,3 +1036,58 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 .sim__aviso a { color: #fff; }
 
 @media (max-width: 860px) { .sim { grid-template-columns: 1fr; } }
+
+/* ---------------------------------------------------------------- 18. cookies */
+/* Barra inferior, no modal: no tapa el contenido ni secuestra el foco, que es
+   lo que hace que un banner parezca coacción. Rechazar pesa igual que aceptar. */
+.cookies {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 60;
+  padding: var(--s-5);
+  padding-bottom: calc(var(--s-5) + env(safe-area-inset-bottom, 0px));
+  background: var(--c-deep);
+  color: #fff;
+  box-shadow: 0 -8px 32px rgba(1,37,99,.22);
+}
+.cookies__box {
+  max-width: var(--container);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-5) var(--s-8);
+}
+.cookies__tit {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: var(--t-h4);
+  color: #fff;
+}
+.cookies__txt {
+  flex: 1 1 420px;
+  min-width: 0;
+  margin: 0;
+  font-size: var(--t-small);
+  color: rgba(255,255,255,.88);
+}
+.cookies__txt a { color: #fff; text-decoration: underline; }
+.cookies__acciones {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+}
+.cookies__acciones .btn--ghost {
+  border-color: rgba(255,255,255,.55);
+  color: #fff;
+}
+.cookies__acciones .btn--ghost:hover {
+  background: rgba(255,255,255,.12);
+  border-color: #fff;
+}
+@media (max-width: 760px) {
+  .cookies__box { gap: var(--s-4); }
+  .cookies__acciones { width: 100%; }
+  .cookies__acciones .btn { flex: 1 1 0; justify-content: center; }
+}

@@ -197,39 +197,38 @@
   }
   </script>
 
-  {% if global.googlemaps_api %}
+  {# Medición. La etiqueta de Google NO se descarga hasta que el visitante
+     acepta: la AEPD exige bloqueo previo, no basta con el modo consentimiento.
+     Aquí solo se declaran los valores por defecto (todo denegado) y se deja
+     el ID a mano; quien carga el script es consentimiento.js. #}
+  {% if global.ga4 %}
   <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "{{global.tag_manager}}");
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+      functionality_storage: "granted",
+      security_storage: "granted"
+    });
+    window.HSG_GA4 = "{{ global.ga4 }}";
   </script>
   {% endif %}
-  <!-- End Google Tag Manager -->
 </head>
 
 
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  {% if global.googlemaps_api %}
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id={{ global.tag_manager }}" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe>
-  </noscript>
-  {% endif %}
   {% include 'header.njk' %}
   <main id="contenido">
     {{ content | safe }}
   </main>
   {% include 'footer.njk' %}
+  {% include 'consentimiento.njk' %}
   <script src="/assets/js/ui.js" defer></script>
+  {% if global.ga4 %}<script src="/assets/js/consentimiento.js" defer></script>{% endif %}
   <script>
     const handleSubmit = (event) => {
       event.preventDefault();

@@ -2,7 +2,7 @@
 layout: legales
 title: Política de privacidad
 author: HSG Service
-date: 2026-11-03
+date: 2026-11-04
 tags: ["legal"]
 image: /assets/static/blog/article-1.webp
 imageAlt: Política de privacidad de HSG Service
@@ -11,7 +11,7 @@ description: "Información legal de HSG Service."
 
 ## Política de privacidad
 
-**Última actualización:** 3 de noviembre de 2026
+**Última actualización:** 4 de noviembre de 2026
 
 ### 1. Quién trata tus datos
 
@@ -109,6 +109,9 @@ conforme al artículo 28 del RGPD:
   **OVH**, con centro de datos en **Gravelines (Francia)**.
 - **Mantenimiento técnico y automatizaciones.** Proveedor de servicios
   informáticos que da soporte a los sistemas anteriores.
+- **Medición del uso de la web.** Google Ireland Limited (Google Analytics 4),
+  únicamente si aceptas las cookies de análisis. Se detalla en la
+  [política de cookies](/legal/cookies/).
 
 Además, podemos comunicar tus datos a las **Administraciones públicas,
 juzgados y tribunales** cuando exista una obligación legal.
@@ -123,6 +126,10 @@ la dirección IP del visitante y está sujeto a transferencias internacionales
 amparadas en el Marco de Privacidad de Datos UE-EE. UU. Estamos trabajando para
 servir esas tipografías desde nuestro propio dominio y eliminar esa
 transferencia.
+
+Si aceptas las cookies de análisis, Google puede tratar los datos de medición
+en Estados Unidos al amparo de ese mismo marco. Si las rechazas, no se produce
+ninguna transferencia por este motivo.
 
 ### 5. Cómo protegemos tus datos
 
