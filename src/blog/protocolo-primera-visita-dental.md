@@ -5,9 +5,20 @@ date: 2026-07-20
 description: "Protocolo de primera visita dental paso a paso: desde la llamada inicial hasta el seguimiento. Las 7 fases que determinan si el paciente acepta el tratamiento."
 eleventyComputed:
   metaTitle: "Protocolo de primera visita dental paso a paso"
-image: /assets/static/formacion/master1.jpg
+image: /assets/static/formacion/master1.webp
 imageAlt: Protocolo de primera visita en la clínica dental
 categoria: Primeras visitas
+faq:
+  - q: "¿Cuánto debe durar una primera visita dental?"
+    a: "El tiempo suficiente para explorar, diagnosticar, explicar y presentar el plan sin prisa. Comprimir la primera visita para encajar más pacientes en la agenda suele salir caro: se gana un hueco y se pierde un tratamiento completo."
+  - q: "¿Quién debe presentar el presupuesto, el odontólogo o recepción?"
+    a: "El plan de tratamiento lo presenta quien lo ha diagnosticado, porque es quien puede explicar el porqué de cada partida. Recepción acompaña después en la parte administrativa y en la financiación. Delegar la explicación clínica en recepción baja la aceptación."
+  - q: "¿Hay que hacer radiografías en la primera visita?"
+    a: "Siempre que el motivo de consulta lo justifique. Un diagnóstico sin pruebas obliga a citar otra vez al paciente antes de poder presentar nada, y ese intervalo es donde se pierden muchos casos."
+  - q: "¿Qué hago si el paciente solo quiere saber el precio?"
+    a: "Atender la pregunta sin convertirla en el centro de la visita. Explicar que el precio depende del diagnóstico, hacer la exploración y después dar una cifra con su justificación. Dar un precio antes del diagnóstico deja al paciente con una cifra sin contexto."
+  - q: "¿Conviene llamar a los pacientes que no cerraron?"
+    a: "Sí, y es de las acciones con mejor retorno que tiene una clínica. Buena parte de los pacientes que dijeron que se lo pensarían no dijeron que no: simplemente nadie volvió a contactarles."
 ---
 
 ## Protocolo de primera visita dental, paso a paso

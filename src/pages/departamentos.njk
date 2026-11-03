@@ -14,6 +14,15 @@ eleventyComputed:
       url: "/"
     - name: "Servicios"
       url: "/departamentos/"
+faq:
+  - q: "¿Hay que contratar todos los servicios o puedo usar solo uno?"
+    a: "El alta como socio da acceso a todos, pero los usas según te convenga. Hay clínicas que entran solo por la compra de material y nunca usan la formación, y otras que entran por la financiación. No hay consumos mínimos por servicio."
+  - q: "¿Qué servicio suele dar resultado antes?"
+    a: "La compra de material e implantes, porque reduce coste desde el primer pedido y no exige cambiar nada de cómo trabaja la clínica. La formación y la consultoría tardan más en verse, pero su efecto sobre el margen suele ser mayor a medio plazo."
+  - q: "¿Los servicios valen para clínicas que no son dentales?"
+    a: "Sí. Trabajamos también con clínicas estéticas, capilares y de fecundación humana asistida. La compra agrupada, la financiación a pacientes y la formación comercial funcionan igual en cualquier sector sanitario privado con tratamientos de importe medio alto."
+  - q: "¿Tengo que cambiar de proveedor para usar la central de compras?"
+    a: "No. No exigimos exclusividad: mantienes tus marcas de confianza y usas las condiciones de grupo en los pedidos donde te compensen."
 
 ---
 {% set heroSmall = true %}
@@ -25,8 +34,32 @@ eleventyComputed:
     <div class="section-head">
       <h2>Todo lo que tu clínica necesita</h2>
       <p class="t-lead">
-        Cada departamento resuelve una parte del coste o de la gestión de tu clínica.
+        Cada servicio resuelve una parte del coste o de la gestión de tu clínica.
         Juntos, el ahorro es estructural.
+      </p>
+    </div>
+
+    <div class="prose mb-10" style="margin-inline:auto">
+      <p>
+        Una clínica independiente pierde margen por tres sitios a la vez: compra peor que
+        una cadena porque no tiene volumen, pierde tratamientos porque el paciente no puede
+        pagarlos de una vez, y gestiona a ojo porque nadie le enseñó a hacerlo de otra
+        manera. Los servicios del grupo están pensados para cerrar esas tres vías, y
+        funcionan mejor combinados que por separado.
+      </p>
+      <p>
+        <strong>La compra agrupada</strong> es la que antes se nota: baja el coste desde el
+        primer pedido sin que tengas que cambiar nada. <strong>La financiación</strong>
+        actúa sobre el otro lado de la cuenta, el de los ingresos, convirtiendo presupuestos
+        rechazados en tratamientos aceptados. Y <strong>la formación y la consultoría</strong>
+        son las que más tardan en verse y las que más efecto acumulado tienen, porque
+        cambian cómo trabaja el equipo todos los días.
+      </p>
+      <p>
+        Entrar en el grupo no te obliga a usarlos todos ni a cambiar de proveedor: no hay
+        exclusividad ni volúmenes mínimos de compra. Si quieres el panorama completo antes
+        de decidir, empieza por
+        <a href="/blog/como-aumentar-rentabilidad-clinica-dental/">cómo aumentar la rentabilidad de una clínica dental</a>.
       </p>
     </div>
     <div class="grid grid--3">
@@ -41,4 +74,36 @@ eleventyComputed:
   </div>
 </section>
 
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Para quién</span>
+      <h2>No solo clínicas dentales</h2>
+      <p class="t-lead">
+        Los mismos servicios funcionan en cualquier centro sanitario privado con
+        tratamientos de importe medio alto y decisión aplazada.
+      </p>
+    </div>
+    <div class="grid grid--2">
+      <a class="card" href="/central-de-compras-dental/">
+        <h3 class="card__title">Clínicas dentales</h3>
+        <p class="card__text">
+          Material, implantes, maquinaria y ortodoncia a precio de grupo, más financiación
+          y formación.
+        </p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/clinicas-esteticas/">
+        <h3 class="card__title">Clínicas estéticas y capilares</h3>
+        <p class="card__text">
+          Compra agrupada de material y aparatología, financiación a pacientes y formación
+          comercial.
+        </p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% include "faq.njk" %}
 {% include "banner.njk" %}

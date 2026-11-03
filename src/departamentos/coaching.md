@@ -12,10 +12,10 @@ descripcion: "Consultoría y gestión para clínicas dentales: auditoría, plan 
 eleventyComputed:
   metaTitle: "Consultoría y gestión de clínicas dentales | HSG Service"
 author: HSG Service
-date: 2024-02-02
+date: 2026-11-03
 tags: ["departamentos"]
-image: /assets/static/departamentos/mini-coaching.jpg
-imagemini: /assets/static/departamentos/mini-coaching.jpg
+image: /assets/static/departamentos/mini-coaching.webp
+imagemini: /assets/static/departamentos/mini-coaching.webp
 imageAlt: Coaching dental para la gestión de clínicas
 duracion: 30 minutos
 faq:
@@ -31,7 +31,7 @@ faq:
 ##  Consultoría y gestión para clínicas dentales
 ___
 
-![Consultoría y coaching dental para la gestión de la clínica](/assets/static/otros/otros-1.jpg)
+![Consultoría y coaching dental para la gestión de la clínica](/assets/static/otros/otros-1.webp)
 
 Hoy los **odontólogos y directores de clínica** no solo deben dominar las últimas técnicas de odontología: también tienen que ser gerentes, administradores y responsables de recursos humanos. Con la **consultoría y el coaching dental** de HSG Service te damos, a ti y a tu equipo, las herramientas y conocimientos necesarios para **dirigir tu clínica de forma eficaz y profesional**.
 
@@ -44,7 +44,7 @@ Hoy los **odontólogos y directores de clínica** no solo deben dominar las últ
 - Formar al personal para atender las primeras visitas y lograr un **alto porcentaje de aceptaciones**.
 - Detectar las necesidades de la clínica y generar soluciones para su correcto funcionamiento.
 
-![Equipo de clínica dental en sesión de coaching](/assets/static/otros/otros-2.jpg)
+![Equipo de clínica dental en sesión de coaching](/assets/static/otros/otros-2.webp)
 
 {% br %}
 

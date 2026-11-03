@@ -12,10 +12,10 @@ eleventyComputed:
   metaTitle: "Implantes dentales para clínicas | HSG Service"
 descripcion: "Implantes dentales de primeras marcas con más de un 50% de descuento para clínicas asociadas, y material fungible de depósito a precio de grupo."
 author: HSG Service
-date: 2024-02-02
+date: 2026-11-03
 tags: ["departamentos"]
-image: /assets/static/departamentos/mini-implante.jpg
-imagemini: /assets/static/departamentos/mini-implante.jpg
+image: /assets/static/departamentos/mini-implante.webp
+imagemini: /assets/static/departamentos/mini-implante.webp
 imageAlt: Implantes dentales de primeras marcas para clínicas
 
 grid1: xx

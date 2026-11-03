@@ -12,10 +12,10 @@ eleventyComputed:
   metaTitle: "Ortodoncia invisible para clínicas | HSG Service"
 descripcion: "Ortodoncia invisible con alineadores Suresmile a precio de grupo para clínicas dentales asociadas. Un tratamiento de primera marca a mejor coste."
 author: HSG Service
-date: 2024-02-02
+date: 2026-11-03
 tags: ["departamentos"]
-image: /assets/static/departamentos/mini-orto.jpg
-imagemini: /assets/static/departamentos/mini-orto.jpg
+image: /assets/static/departamentos/mini-orto.webp
+imagemini: /assets/static/departamentos/mini-orto.webp
 imageAlt: Ortodoncia invisible con alineadores Suresmile
 duracion: 30 minutos
 faq:
@@ -35,12 +35,12 @@ La **ortodoncia invisible** es uno de los tratamientos más demandados por los p
 - Precios de grupo exclusivos para clínicas asociadas.
 - Un tratamiento de **alto valor** que amplía tu cartera de servicios.
 
-![Ortodoncia invisible con alineadores Suresmile](/assets/static/ortodoncia/orto-1.jpg)
+![Ortodoncia invisible con alineadores Suresmile](/assets/static/ortodoncia/orto-1.webp)
 
 {% myShortcode %}
- <img src="/assets/static/ortodoncia/orto-2.jpg" alt="Caso de ortodoncia invisible" loading="lazy">
-  <img src="/assets/static/ortodoncia/orto-3.jpg" alt="Alineadores invisibles Suresmile" loading="lazy">
-   <img src="/assets/static/ortodoncia/orto-4.jpg" alt="Resultado de ortodoncia invisible" loading="lazy">
+ <img src="/assets/static/ortodoncia/orto-2.webp" alt="Caso de ortodoncia invisible" loading="lazy">
+  <img src="/assets/static/ortodoncia/orto-3.webp" alt="Alineadores invisibles Suresmile" loading="lazy">
+   <img src="/assets/static/ortodoncia/orto-4.webp" alt="Resultado de ortodoncia invisible" loading="lazy">
 {% endmyShortcode %}
 
 > 📖 Artículo relacionado: [Ortodoncia invisible: por qué ofrecerla en tu clínica dental](/blog/ortodoncia-invisible-clinica-dental/)

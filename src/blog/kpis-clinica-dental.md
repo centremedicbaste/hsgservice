@@ -5,7 +5,7 @@ date: 2026-07-24
 description: "Los KPIs clave de una clínica dental: coste de material, tasa de aceptación, ticket medio y ocupación de agenda. Qué medir y cómo interpretarlo."
 eleventyComputed:
   metaTitle: "KPIs de una clínica dental: qué medir cada mes"
-image: /assets/static/home/inicio-2.jpg
+image: /assets/static/home/inicio-2.webp
 imageAlt: KPIs y rentabilidad de una clínica dental
 categoria: Gestión dental
 faq:

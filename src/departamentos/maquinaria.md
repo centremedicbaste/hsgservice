@@ -9,10 +9,10 @@ service:
 subtitle: Digitaliza tu clínica dental
 descripcion: "Maquinaria dental a precio de grupo con financiación para clínicas asociadas: sillones, TAC, autoclave y escáner intraoral para digitalizar tu clínica."
 author: HSG Service
-date: 2024-02-02
+date: 2026-11-03
 tags: ["departamentos"]
-image: /assets/static/departamentos/mini-maquinaria.jpg
-imagemini: /assets/static/departamentos/mini-maquinaria.jpg
+image: /assets/static/departamentos/mini-maquinaria.webp
+imagemini: /assets/static/departamentos/mini-maquinaria.webp
 imageAlt: Maquinaria dental y escáneres intraorales para clínicas
 duracion: 30 minutos
 faq:
@@ -34,20 +34,20 @@ Nuestros socios pueden **renovar la maquinaria dental** a precios competitivos y
 - **TAC dental**
 - **Autoclave**
 
-![Maquinaria dental de última generación](/assets/static/maquinaria/maquinaria-11.jpg)
+![Maquinaria dental de última generación](/assets/static/maquinaria/maquinaria-11.webp)
 
 ### De la clínica analógica a la clínica digital
 
 Con el **escáner intraoral** tomas contacto con la primera herramienta que abre un sinfín de posibilidades. Consigue el flujo digital de tu clínica dental siendo socio de HSG Service.
 
 {% br %}
-![Escáner intraoral en la clínica dental](/assets/static/maquinaria/maquinaria-3.jpg)
+![Escáner intraoral en la clínica dental](/assets/static/maquinaria/maquinaria-3.webp)
 {% br %}
 
 ### La rentabilidad de la clínica está en el tiempo de tratamiento
 
 **La rapidez, la autonomía** y las menores visitas del paciente hacen que la digitalización sea hoy una herramienta de trabajo y de marketing: el paciente percibe que su tratamiento lo realizan profesionales con las mejores máquinas de última generación, en tiempo récord.
 
-![Resultado de la digitalización de la clínica dental](/assets/static/maquinaria/maquinaria-4.jpg)
+![Resultado de la digitalización de la clínica dental](/assets/static/maquinaria/maquinaria-4.webp)
 
 > 📖 Artículos relacionados: [Escáner intraoral: ventajas y cómo elegirlo](/blog/escaner-intraoral-clinica-dental/) · [Financiación de maquinaria dental](/blog/financiacion-maquinaria-dental/)
