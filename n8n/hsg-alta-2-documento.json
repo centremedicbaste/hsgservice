@@ -1,0 +1,110 @@
+{
+  "name": "HSG · Alta · documento",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hsg-alta-documento",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://hsgservice.es"
+        }
+      },
+      "id": "77d90fb1-ae09-49ad-9af9-44cd5b688e4d",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -460,
+        0
+      ],
+      "webhookId": "6b6b7451-c764-4a8d-9a4f-a6b290e6a90b"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first();\nconst b = item.json.body ?? item.json;\nconst bin = Object.values(item.binary ?? {})[0];\n\nif (!bin) throw new Error('Sin archivo');\nif (!/^ALTA-\\d{4}-[A-Z0-9]{4}$/.test(b.id || '')) throw new Error('id no valido');\n\nconst OK = ['application/pdf','image/jpeg','image/png'];\nif (!OK.includes(bin.mimeType)) throw new Error('Tipo no permitido');\nif ((bin.fileSize ?? 0) > 10 * 1024 * 1024) throw new Error('Demasiado grande');\n\nconst doc = String(b.documento || '').replace(/[^a-z0-9-]/gi,'').slice(0,40);\nif (!doc) throw new Error('documento no valido');\nconst ext = {'application/pdf':'pdf','image/jpeg':'jpg','image/png':'png'}[bin.mimeType];\n\nconst prop = Object.keys(item.binary)[0];\nreturn [{ json: { ruta: `/data/expedientes/${b.id}/${doc}.${ext}`, prop }, binary: item.binary }];"
+      },
+      "id": "92cf3eb3-ad89-4ee5-88b1-3eff4c1322bf",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $json.ruta }}",
+        "options": {},
+        "dataPropertyName": "={{ $json.prop }}"
+      },
+      "id": "313143c0-9729-4f11-b8e9-d6b0bd461126",
+      "name": "Guardar documento",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        200,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: true } }}",
+        "options": {}
+      },
+      "id": "a9ebc43a-d2ea-4ab1-bbe9-1eb8a4af93c7",
+      "name": "Responder",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        420,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Guardar documento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guardar documento": {
+      "main": [
+        [
+          {
+            "node": "Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {}
+}

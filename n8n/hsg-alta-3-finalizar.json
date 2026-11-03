@@ -1,0 +1,135 @@
+{
+  "name": "HSG · Alta · finalizar",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hsg-alta-finalizar",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://hsgservice.es"
+        }
+      },
+      "id": "11fb374c-4e7d-4f72-9e07-0536d9a6db32",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -460,
+        0
+      ],
+      "webhookId": "bf3465f1-f965-4d4c-9a84-0c4d23bc0fb5"
+    },
+    {
+      "parameters": {
+        "jsCode": "const b = $input.first().json.body ?? {};\nif (!/^ALTA-\\d{4}-[A-Z0-9]{4}$/.test(b.id || '')) throw new Error('id no valido');\nreturn [{ json: { id: b.id, estado: 'recibida', finalizado: new Date().toISOString() } }];"
+      },
+      "id": "b50d7d21-430c-4c73-bc90-85058393e2f7",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "mode": "all",
+        "options": {}
+      },
+      "id": "8751ffd2-cc22-4dba-89ad-044446085ff8",
+      "name": "A fichero",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -20,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/data/expedientes/{{ $('Code').first().json.id }}/finalizada.json",
+        "options": {}
+      },
+      "id": "d5090987-1a75-4f36-8e39-448fe06464f0",
+      "name": "Marcar finalizada",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        200,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: true, id: $('Code').first().json.id } }}",
+        "options": {}
+      },
+      "id": "23c13fb2-70f7-49f1-ae83-c94ec6803218",
+      "name": "Responder",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        420,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "A fichero",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A fichero": {
+      "main": [
+        [
+          {
+            "node": "Marcar finalizada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Marcar finalizada": {
+      "main": [
+        [
+          {
+            "node": "Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {}
+}

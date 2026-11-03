@@ -1,0 +1,135 @@
+{
+  "name": "HSG · Alta · crear",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hsg-alta-crear",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://hsgservice.es"
+        }
+      },
+      "id": "3c0f524a-15a9-4835-be72-b6141bea1b97",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -460,
+        0
+      ],
+      "webhookId": "ceb63a9d-e3e5-4f51-94fb-d06f4261cde1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const d = $input.first().json.body ?? $input.first().json;\nconst req = ['tipo','titular','clinica','nif','localidad','email','telefono'];\nfor (const k of req) {\n  if (!d[k] || String(d[k]).trim() === '') throw new Error('Falta ' + k);\n}\nif (!['autonomo','sociedad'].includes(d.tipo)) throw new Error('tipo no valido');\n\nconst rnd = Math.random().toString(36).slice(2, 6).toUpperCase();\nconst id = `ALTA-${new Date().getFullYear()}-${rnd}`;\n\nreturn [{ json: {\n  id,\n  ...Object.fromEntries(req.map(k => [k, String(d[k]).trim().slice(0, 200)])),\n  estado: 'pendiente',\n  creado: new Date().toISOString()\n}}];"
+      },
+      "id": "ca74cf31-d279-4141-a8d5-cc3a1bef5f56",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "mode": "all",
+        "options": {}
+      },
+      "id": "8a5e6522-6489-4432-ad54-2baa1f42ea89",
+      "name": "A fichero",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -20,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/data/expedientes/{{ $('Code').first().json.id }}/solicitud.json",
+        "options": {}
+      },
+      "id": "51b0ca95-c405-4d9e-b408-6f8679b63337",
+      "name": "Guardar solicitud",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        200,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: true, id: $('Code').first().json.id } }}",
+        "options": {}
+      },
+      "id": "d5e5a933-f47a-49c4-831b-4fc6f494c2fd",
+      "name": "Responder",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        420,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "A fichero",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A fichero": {
+      "main": [
+        [
+          {
+            "node": "Guardar solicitud",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guardar solicitud": {
+      "main": [
+        [
+          {
+            "node": "Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {}
+}
