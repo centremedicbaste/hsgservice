@@ -161,6 +161,7 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
 }
 .container--narrow { max-width: 980px; }
 .prose-width { max-width: var(--container-prose); }
+.prose--center { margin-inline: auto; }
 
 .section { padding-block: var(--section-y); }
 .section--tight { padding-block: calc(var(--section-y) * .6); }
@@ -419,7 +420,7 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 /* --------------------------------------------------------------------------
    9. CIFRAS / BANDA DE DATOS
    -------------------------------------------------------------------------- */
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-8); text-align: center; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--s-8); text-align: center; }
 .stat__num { font-size: clamp(2.25rem, 1.5rem + 3vw, 3.5rem); font-weight: 700; line-height: 1; letter-spacing: -.03em; }
 .stat__label { margin-top: var(--s-3); font-size: var(--t-small); color: rgba(255,255,255,.78); }
 .bg-white .stat__label, .bg-surface .stat__label { color: var(--c-ink-soft); }
@@ -601,6 +602,12 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 .mt-4 { margin-top: var(--s-4); }
 .mt-6 { margin-top: var(--s-6); }
 .mt-8 { margin-top: var(--s-8); }
+.mt-10 { margin-top: var(--s-10); }
+.mt-auto { margin-top: auto; }
+.mb-4 { margin-bottom: var(--s-4); }
+.mb-6 { margin-bottom: var(--s-6); }
+.mb-8 { margin-bottom: var(--s-8); }
+.mb-10 { margin-bottom: var(--s-10); }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0;
   margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
@@ -727,3 +734,180 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 }
 .alta-cta h3 { color: #fff; }
 .alta-cta p { color: rgba(255,255,255,.85); }
+
+/* --------------------------------------------------------------------------
+   15. CARRUSEL DE LOGOS
+   -------------------------------------------------------------------------- */
+/* Dos pasadas idénticas de la misma lista. La animación desplaza el carril
+   justo la mitad, así que al reiniciar el fotograma coincide con el inicial y
+   no se ve el corte. */
+.marquee {
+  overflow: hidden;
+  /* Los logos se desvanecen en los bordes en vez de cortarse en seco */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+.marquee__group {
+  display: flex;
+  align-items: center;
+  gap: var(--s-10);
+  padding: 0 calc(var(--s-10) / 2);
+  margin: 0;
+  list-style: none;
+}
+.marquee__group > li { flex: none; }
+.marquee__group img {
+  display: block;
+  width: 197px;
+  height: auto;
+  filter: grayscale(1);
+  opacity: .7;
+  transition: filter .25s var(--ease), opacity .25s var(--ease);
+}
+.marquee__group img:hover { filter: none; opacity: 1; }
+
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Se detiene al pasar el ratón, para poder mirar un logo concreto */
+.marquee:hover .marquee__track { animation-play-state: paused; }
+
+/* En escritorio los logos crecen hasta donde da el archivo sin perder nitidez */
+@media (min-width: 961px) {
+  .marquee__group img { width: 240px; }
+  .marquee__group { gap: var(--s-11); padding: 0 calc(var(--s-11) / 2); }
+}
+
+/* Sin animación para quien la ha desactivado: se puede desplazar a mano */
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .marquee__track { animation: none; }
+}
+
+/* --------------------------------------------------------------------------
+   16. DESTACADO, DIAGRAMA DE FLUJO Y LÍNEA DE TIEMPO
+   -------------------------------------------------------------------------- */
+/* Destacado tipográfico: rompe el ritmo de tarjetas sin añadir otra caja */
+.pull {
+  max-width: 24ch;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.pull__text {
+  font-size: var(--t-h2);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+  color: var(--c-ink);
+  text-wrap: balance;
+}
+.pull__text em { font-style: normal; color: var(--c-primary); }
+.pull__foot {
+  margin-top: var(--s-6);
+  font-size: var(--t-lead);
+  color: var(--c-ink-soft);
+}
+
+/* Diagrama del recorrido del dinero */
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--s-4);
+}
+.flow__node {
+  flex: 1 1 200px;
+  padding: var(--s-6);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-card);
+  background: #fff;
+}
+.flow__node--mid { border-color: var(--c-primary); box-shadow: var(--sh-1); }
+.flow__tag {
+  display: block;
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+}
+.flow__text { margin-top: var(--s-3); color: var(--c-ink-soft); }
+.flow__node--mid .flow__text strong { color: var(--c-ink); }
+.flow__link {
+  flex: 0 1 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  text-align: center;
+}
+.flow__label { font-size: var(--t-micro); color: var(--c-ink-mute); line-height: 1.3; }
+.flow__arrow { font-size: 1.5rem; color: var(--c-accent); line-height: 1; }
+.flow__nota {
+  max-width: 62ch;
+  margin-top: var(--s-7);
+  padding-left: var(--s-5);
+  border-left: 3px solid var(--c-accent);
+  color: var(--c-ink-soft);
+}
+@media (max-width: 860px) {
+  .flow { flex-direction: column; }
+  .flow__link { flex: none; }
+  .flow__arrow { transform: rotate(90deg); }
+}
+
+/* Línea de tiempo numerada: cuatro pasos sin cuatro cajas iguales */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-7);
+  counter-reset: paso;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.timeline__item {
+  position: relative;
+  counter-increment: paso;
+  padding-top: var(--s-8);
+}
+/* La línea que une los pasos */
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0;
+  right: calc(var(--s-7) * -1);
+  height: 2px;
+  background: var(--c-line);
+}
+.timeline__item:last-child::before { right: 0; }
+.timeline__item::after {
+  content: counter(paso);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-pill);
+  background: var(--c-deep);
+  color: #fff;
+  font-size: var(--t-small);
+  font-weight: 700;
+}
+.timeline__title { font-size: var(--t-h4); }
+.timeline__text { margin-top: var(--s-3); color: var(--c-ink-soft); font-size: var(--t-small); }
+@media (max-width: 860px) {
+  .timeline { grid-template-columns: 1fr; gap: var(--s-6); }
+  .timeline__item { padding-top: 0; padding-left: 56px; }
+  .timeline__item::before { top: 36px; bottom: calc(var(--s-6) * -1); left: 17px; right: auto; width: 2px; height: auto; }
+  .timeline__item:last-child::before { display: none; }
+}
