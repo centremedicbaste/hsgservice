@@ -627,3 +627,100 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* --------------------------------------------------------------------------
+   14. SOLICITUD DE ALTA
+   -------------------------------------------------------------------------- */
+.steps {
+  display: flex; flex-wrap: wrap; gap: var(--s-2);
+  margin-bottom: var(--s-9); padding: 0; list-style: none;
+  font-size: var(--t-small); font-weight: 600;
+}
+.steps__item {
+  display: flex; align-items: center; gap: var(--s-2);
+  padding: var(--s-2) var(--s-4);
+  border-radius: var(--r-pill);
+  background: var(--c-surface); color: var(--c-ink-mute);
+}
+.steps__item > span {
+  display: grid; place-items: center;
+  width: 22px; height: 22px; flex: none;
+  border-radius: var(--r-pill);
+  background: var(--c-line); color: var(--c-ink-soft);
+  font-size: var(--t-micro);
+}
+.steps__item.is-current { background: var(--c-deep); color: #fff; }
+.steps__item.is-current > span { background: var(--c-accent); color: var(--c-deep-2); }
+.steps__item.is-done { background: #E7F1EC; color: var(--c-ok); }
+.steps__item.is-done > span { background: var(--c-ok); color: #fff; }
+
+.alta__step { display: none; border: 0; padding: 0; margin: 0; }
+.alta__step.is-active { display: block; }
+.alta__step legend { padding: 0; }
+.alta__nav {
+  display: flex; flex-wrap: wrap; gap: var(--s-4);
+  margin-top: var(--s-9); padding-top: var(--s-7);
+  border-top: 1px solid var(--c-line);
+}
+
+.alta__msg { margin-top: var(--s-6); font-weight: 600; }
+.alta__msg--no { color: var(--c-no); }
+.alta__msg--wait { color: var(--c-ink-mute); }
+
+.alta__done { max-width: var(--container-prose); }
+
+/* Tarjetas de elección (autónomo / sociedad) */
+.pick { position: relative; display: block; cursor: pointer; }
+.pick input { position: absolute; opacity: 0; width: 0; height: 0; }
+.pick__body {
+  display: block; height: 100%;
+  padding: var(--s-7);
+  border: 2px solid var(--c-line); border-radius: var(--r-card);
+  transition: border-color .2s var(--ease), background .2s var(--ease);
+}
+.pick__title { display: block; font-size: var(--t-h4); font-weight: 700; color: var(--c-ink); }
+.pick__text { display: block; margin-top: var(--s-2); color: var(--c-ink-soft); }
+.pick:hover .pick__body { border-color: var(--c-primary); }
+.pick input:checked + .pick__body { border-color: var(--c-primary); background: var(--c-surface); }
+.pick input:focus-visible + .pick__body { outline: 3px solid var(--c-accent); outline-offset: 2px; }
+
+/* Lista de documentos */
+.docs { display: flex; flex-direction: column; gap: var(--s-3); margin-top: var(--s-8); }
+.doc {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--s-4);
+  padding: var(--s-5) var(--s-6);
+  border: 1px solid var(--c-line); border-radius: var(--r-card);
+  background: #fff;
+  transition: border-color .2s var(--ease), background .2s var(--ease);
+}
+.doc__info { min-width: 0; flex: 1 1 15rem; }
+.doc__name { display: block; font-weight: 600; color: var(--c-ink); cursor: pointer; }
+.doc__opt { font-weight: 400; color: var(--c-ink-mute); }
+.doc__hint { margin-top: 2px; font-size: var(--t-small); color: var(--c-ink-mute); }
+.doc__action { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); }
+.doc__input { position: absolute; opacity: 0; width: 0; height: 0; }
+.doc__input:focus-visible + label { outline: 3px solid var(--c-accent); outline-offset: 2px; }
+.doc__state { font-size: var(--t-small); color: var(--c-ink-mute); }
+.doc__state--ok { color: var(--c-ok); font-weight: 600; }
+.doc__state--no { color: var(--c-no); font-weight: 600; }
+.doc.is-done { border-color: var(--c-ok); background: #F4FAF7; }
+.doc.is-busy { opacity: .7; }
+.doc.is-missing { border-color: var(--c-no); }
+@media (max-width: 620px) {
+  .doc { flex-direction: column; align-items: stretch; }
+  .doc__action { justify-content: space-between; }
+}
+
+.btn--sm { min-height: 40px; padding: 8px 20px; font-size: var(--t-small); }
+.btn--ghost.btn--sm { padding: 6px 18px; }
+
+.alta-cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--s-6); margin-bottom: var(--s-8);
+  padding: var(--s-7);
+  background: var(--c-deep); color: #fff;
+  border-radius: var(--r-card);
+}
+.alta-cta h3 { color: #fff; }
+.alta-cta p { color: rgba(255,255,255,.85); }

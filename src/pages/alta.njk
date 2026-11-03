@@ -1,0 +1,197 @@
+---
+layout: base.njk
+title: Solicitud de alta
+subtitle: Envía tu documentación en unos minutos, sin descargar nada
+permalink: /alta/
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  metaTitle: "Solicitud de alta como socio | HSG Service"
+  metaDescription: "Formulario de alta para asociar tu clínica a HSG Service. Envía tus datos y tu documentación de forma segura."
+  metaRobots: "noindex, follow"
+  breadcrumbs:
+    - name: "Inicio"
+      url: "/"
+    - name: "Date de alta"
+      url: "/tramitar-alta/"
+    - name: "Solicitud"
+      url: "/alta/"
+---
+{% set heroSmall = true %}
+{% set eyebrow = "Alta de socio" %}
+{% include 'hero.njk' %}
+
+<section class="section bg-white">
+  <div class="container">
+
+    <ol class="steps" id="steps" aria-label="Progreso de la solicitud">
+      <li class="steps__item is-current" data-step="1"><span>1</span> Tipo de alta</li>
+      <li class="steps__item" data-step="2"><span>2</span> Datos</li>
+      <li class="steps__item" data-step="3"><span>3</span> Documentación</li>
+    </ol>
+
+    <form id="alta"
+          class="alta"
+          data-endpoint="https://n8n.digitalstrategy.es/webhook"
+          novalidate>
+
+      <!-- Paso 1 ---------------------------------------------------------- -->
+      <fieldset class="alta__step is-active" data-step="1">
+        <legend class="t-h3">¿Cómo está constituida tu clínica?</legend>
+        <p class="t-lead mt-4">
+          De esto depende la documentación que te pediremos después.
+        </p>
+
+        <div class="grid grid--2 mt-8">
+          <label class="pick">
+            <input type="radio" name="tipo" value="autonomo" required>
+            <span class="pick__body">
+              <span class="pick__title">Autónomo</span>
+              <span class="pick__text">La clínica está a nombre de una persona física.</span>
+            </span>
+          </label>
+          <label class="pick">
+            <input type="radio" name="tipo" value="sociedad" required>
+            <span class="pick__body">
+              <span class="pick__title">Sociedad</span>
+              <span class="pick__text">La clínica está constituida como empresa.</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="alta__nav">
+          <button type="button" class="btn" data-next>Continuar</button>
+        </div>
+      </fieldset>
+
+      <!-- Paso 2 ---------------------------------------------------------- -->
+      <fieldset class="alta__step" data-step="2">
+        <legend class="t-h3">Datos de la clínica</legend>
+        <p class="t-lead mt-4">Para poder preparar tu alta y contactar contigo.</p>
+
+        <div class="grid grid--2 mt-8">
+          <div class="field">
+            <label for="a-titular">Nombre y apellidos del titular</label>
+            <input class="input" id="a-titular" name="titular" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="a-clinica">Nombre de la clínica</label>
+            <input class="input" id="a-clinica" name="clinica" type="text" autocomplete="organization" required>
+          </div>
+          <div class="field">
+            <label for="a-nif">NIF o CIF</label>
+            <input class="input" id="a-nif" name="nif" type="text" required>
+          </div>
+          <div class="field">
+            <label for="a-localidad">Localidad</label>
+            <input class="input" id="a-localidad" name="localidad" type="text" autocomplete="address-level2" required>
+          </div>
+          <div class="field">
+            <label for="a-email">Email</label>
+            <input class="input" id="a-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="a-telefono">Teléfono</label>
+            <input class="input" id="a-telefono" name="telefono" type="tel" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="alta__nav">
+          <button type="button" class="btn btn--ghost" data-prev>Atrás</button>
+          <button type="button" class="btn" data-next>Continuar</button>
+        </div>
+      </fieldset>
+
+      <!-- Paso 3 ---------------------------------------------------------- -->
+      <fieldset class="alta__step" data-step="3">
+        <legend class="t-h3">Documentación</legend>
+        <p class="t-lead mt-4">
+          Cada documento se envía en cuanto lo seleccionas. Admitimos PDF, JPG y PNG,
+          hasta 10&nbsp;MB por archivo.
+        </p>
+
+        <div id="docs-autonomo" class="docs" hidden>
+          <div class="doc" data-doc="alta-seguridad-social" data-req="1"></div>
+          <div class="doc" data-doc="alta-hacienda" data-req="1"></div>
+          <div class="doc" data-doc="dni-titular" data-req="1"></div>
+          <div class="doc" data-doc="tarjeta-colegial" data-req="1"></div>
+          <div class="doc" data-doc="certificado-cuenta" data-req="1"></div>
+          <div class="doc" data-doc="recibo-autonomo" data-req="1"></div>
+          <div class="doc" data-doc="irpf" data-req="1"></div>
+        </div>
+
+        <div id="docs-sociedad" class="docs" hidden>
+          <div class="doc" data-doc="escrituras-constitucion" data-req="1"></div>
+          <div class="doc" data-doc="escrituras-poderes" data-req="0"></div>
+          <div class="doc" data-doc="cif-empresa" data-req="1"></div>
+          <div class="doc" data-doc="dni-administrador" data-req="1"></div>
+          <div class="doc" data-doc="tarjeta-colegial" data-req="1"></div>
+          <div class="doc" data-doc="certificado-cuenta" data-req="1"></div>
+          <div class="doc" data-doc="impuesto-sociedades" data-req="1"></div>
+        </div>
+
+        <div class="field mt-8">
+          <label class="check">
+            <input type="checkbox" name="politicas" required>
+            <span>
+              He leído y acepto la <a href="/legal/politicas/">política de privacidad</a>
+              y el tratamiento de mis datos para tramitar el alta como socio.
+            </span>
+          </label>
+        </div>
+
+        <div class="alta__nav">
+          <button type="button" class="btn btn--ghost" data-prev>Atrás</button>
+          <button type="submit" class="btn btn--lg">Enviar solicitud</button>
+        </div>
+      </fieldset>
+
+      <p class="alta__msg" id="alta-msg" role="status" aria-live="polite" hidden></p>
+    </form>
+
+    <!-- Pantalla final ---------------------------------------------------- -->
+    <div class="alta__done" id="alta-done" hidden>
+      <span class="eyebrow">Solicitud enviada</span>
+      <h2>Ya la tenemos</h2>
+      <p class="t-lead mt-4">
+        Revisaremos la documentación y te escribiremos a tu correo. Si falta algo o
+        algún documento no se lee bien, te lo diremos en el mismo mensaje.
+      </p>
+      <p class="mt-6">
+        Tu referencia es <strong id="alta-ref"></strong>. Guárdala por si necesitas
+        escribirnos sobre esta solicitud.
+      </p>
+      <p class="mt-8"><a class="btn" href="/">Volver al inicio</a></p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section bg-surface">
+  <div class="container">
+    <div class="grid grid--2">
+      <div>
+        <h2 class="t-h3">Qué hacemos con tu documentación</h2>
+        <ul class="list-check mt-6">
+          <li>Se envía cifrada y se guarda en un servidor propio, en la Unión Europea.</li>
+          <li>Solo accede el equipo que tramita tu alta.</li>
+          <li>Se usa únicamente para dar de alta a tu clínica como socia.</li>
+          <li>Si la solicitud no sigue adelante, se elimina.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="t-h3">¿Prefieres hacerlo por tu cuenta?</h2>
+        <p class="mt-4">
+          Puedes consultar la lista completa de documentación y descargar el documento
+          de alta en papel desde la página de
+          <a href="/tramitar-alta/">darse de alta</a>.
+        </p>
+        <p class="mt-4">
+          Si tienes dudas antes de empezar,
+          <a href="/contacta/#seccioncontacta">escríbenos</a> y te las resolvemos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="/assets/js/alta.js" defer></script>
