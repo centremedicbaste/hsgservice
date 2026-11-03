@@ -514,6 +514,17 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 .check input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--c-primary); flex: none; }
 
 .form-card { padding: var(--s-8); background: #fff; border-radius: var(--r-card); box-shadow: var(--sh-2); }
+
+/* El formulario es bastante más alto que el texto que lo acompaña. En escritorio
+   el texto se queda fijo bajo la cabecera mientras se rellena, en lugar de
+   perderse por arriba. Por debajo de 961px las dos columnas ya se apilan. */
+@media (min-width: 961px) {
+  .banner__intro {
+    position: sticky;
+    top: calc(var(--header-h) + var(--s-8));
+    align-self: start;
+  }
+}
 @media (max-width: 620px) { .form-card { padding: var(--s-5); } }
 
 /* --------------------------------------------------------------------------
