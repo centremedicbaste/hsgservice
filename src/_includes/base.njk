@@ -178,6 +178,20 @@
           }{% if not loop.last %},{% endif %}
           {% endfor %}
         ]
+      }{% endif %}{% if service %},
+      {
+        "@type": "Service",
+        "@id": "{{ pageUrl }}#service",
+        "name": {{ service.name | dump | safe }},
+        "serviceType": {{ service.tipo | dump | safe }},
+        "description": {{ pageDescription | dump | safe }},
+        "url": "{{ pageUrl }}",
+        "provider": { "@id": "{{ global.website }}/#organization" },
+        "areaServed": { "@type": "Country", "name": "España" },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": {{ service.publico | dump | safe }}
+        }
       }{% endif %}
     ]
   }

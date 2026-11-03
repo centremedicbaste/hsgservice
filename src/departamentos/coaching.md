@@ -2,11 +2,15 @@
 layout: departamentos
 prename: Coaching
 title: Consultoría y gestión de clínicas dentales
+service:
+  name: "Consultoría y gestión de clínicas dentales"
+  tipo: "Consultoría de gestión para clínicas"
+  publico: "Clínicas dentales"
 subtitle: Coaching dental para dirigir tu clínica
-descripcion: "Consultoría y gestión para clínicas dentales: auditoría, plan de acción y coaching en clínica para dirigirla de forma eficaz, motivar al equipo y aumentar la aceptación."
+descripcion: "Consultoría y gestión para clínicas dentales: auditoría, plan de acción y coaching en clínica para dirigirla mejor y aceptar más presupuestos."
 
 eleventyComputed:
-  metaTitle: "Consultoría y gestión de clínicas dentales | Coaching | HSG Service"
+  metaTitle: "Consultoría y gestión de clínicas dentales | HSG Service"
 author: HSG Service
 date: 2024-02-02
 tags: ["departamentos"]

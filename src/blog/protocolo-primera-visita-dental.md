@@ -3,6 +3,8 @@ title: "Protocolo de primera visita dental: guía paso a paso"
 subtitle: Las 7 fases de una primera visita que cierra
 date: 2026-07-20
 description: "Protocolo de primera visita dental paso a paso: desde la llamada inicial hasta el seguimiento. Las 7 fases que determinan si el paciente acepta el tratamiento."
+eleventyComputed:
+  metaTitle: "Protocolo de primera visita dental paso a paso"
 image: /assets/static/formacion/master1.jpg
 imageAlt: Protocolo de primera visita en la clínica dental
 categoria: Primeras visitas
@@ -57,7 +59,7 @@ Aquí se pierde la mayoría de los casos. Tres reglas:
 
 1. **Nunca dejes el precio para el final por email.** Se presenta en la visita, en persona.
 2. **Traduce el importe a cuota mensual.** El paciente decide sobre la cuota, no sobre el total.
-3. **Ten la [financiación](/departamentos/financiacion/) preparada y tramitable en el momento.** Si el paciente tiene que "pensárselo" e ir al banco, lo has perdido.
+3. **Ten la [financiación](/financiacion-para-clinicas/) preparada y tramitable en el momento.** Si el paciente tiene que "pensárselo" e ir al banco, lo has perdido.
 
 ### Fase 7 — El seguimiento de las visitas sin cierre
 

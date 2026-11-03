@@ -3,6 +3,8 @@ title: "Cómo mejorar la aceptación de primeras visitas en tu clínica"
 subtitle: Protocolo para convertir más primeras visitas en tratamientos
 date: 2026-06-30
 description: "La primera visita decide si el paciente acepta el tratamiento. Protocolo práctico para mejorar la aceptación de primeras visitas en tu clínica."
+eleventyComputed:
+  metaTitle: "Cómo mejorar la aceptación de primeras visitas"
 image: /assets/static/formacion/master1.jpg
 imageAlt: Cómo mejorar la aceptación de primeras visitas en la clínica dental
 categoria: Primeras visitas
@@ -27,7 +29,7 @@ Explica el tratamiento y su beneficio antes que el precio. El paciente debe ente
 
 ### 4. Traduce el presupuesto a cuota mensual
 
-Ten la [financiación](/departamentos/financiacion/) preparada y presenta el importe como una cuota asumible. Es una de las formas más eficaces de evitar el rechazo por precio.
+Ten la [financiación](/financiacion-para-clinicas/) preparada y presenta el importe como una cuota asumible. Es una de las formas más eficaces de evitar el rechazo por precio.
 
 ### 5. Implica a todo el equipo
 

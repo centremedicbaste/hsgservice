@@ -3,6 +3,8 @@ title: "Cuánto cuesta abrir una clínica dental: guía de costes"
 subtitle: Inversión inicial, partidas y cómo financiarla
 date: 2026-07-22
 description: "Guía de costes para abrir una clínica dental: obra, equipamiento, licencias, software y circulante. Partidas orientativas y cómo financiar la inversión inicial."
+eleventyComputed:
+  metaTitle: "Cuánto cuesta abrir una clínica dental | HSG Service"
 image: /assets/static/maquinaria/maquinaria-1.jpg
 imageAlt: Cuánto cuesta abrir una clínica dental
 categoria: Abrir clínica
@@ -97,7 +99,7 @@ Pagar todo al contado es la peor decisión financiera posible: te quedas sin mar
 
 - **Financiación bancaria**: los bancos financian una parte del proyecto, normalmente exigiendo aportación propia y plan de negocio.
 - **Renting o leasing de equipamiento**: pagas una cuota mensual mientras el equipo ya está produciendo. La cuota de renting es, además, gasto deducible.
-- **Financiación a precio de grupo**: si formas parte de una agrupación de clínicas, las condiciones mejoran. Los socios de HSG Service acceden a [financiación para clínicas](/departamentos/financiacion/) y a [maquinaria a precio de grupo](/departamentos/maquinaria/). Lo desarrollamos en la guía de [financiación de maquinaria dental](/blog/financiacion-maquinaria-dental/).
+- **Financiación a precio de grupo**: si formas parte de una agrupación de clínicas, las condiciones mejoran. Los socios de HSG Service acceden a [financiación para clínicas](/financiacion-para-clinicas/) y a [maquinaria a precio de grupo](/departamentos/maquinaria/). Lo desarrollamos en la guía de [financiación de maquinaria dental](/blog/financiacion-maquinaria-dental/).
 
 ---
 

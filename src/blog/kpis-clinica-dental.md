@@ -2,7 +2,9 @@
 title: "KPIs de una clínica dental: qué medir y qué es normal"
 subtitle: Los indicadores que dicen si tu clínica es rentable
 date: 2026-07-24
-description: "Los KPIs clave de una clínica dental: coste de material sobre facturación, tasa de aceptación, ticket medio y ocupación de agenda. Qué medir y cómo interpretarlo."
+description: "Los KPIs clave de una clínica dental: coste de material, tasa de aceptación, ticket medio y ocupación de agenda. Qué medir y cómo interpretarlo."
+eleventyComputed:
+  metaTitle: "KPIs de una clínica dental: qué medir cada mes"
 image: /assets/static/home/inicio-2.jpg
 imageAlt: KPIs y rentabilidad de una clínica dental
 categoria: Gestión dental
@@ -57,7 +59,7 @@ Es el indicador de la salud comercial de tu clínica. Si es baja, estás pagando
 Las dos palancas para subirla:
 
 - **[Un protocolo de primera visita](/blog/protocolo-primera-visita-dental/)** que todo el equipo siga igual.
-- **[Financiación](/departamentos/financiacion/) lista y tramitable en el momento**: el paciente decide sobre la cuota, no sobre el importe total.
+- **[Financiación](/financiacion-para-clinicas/) lista y tramitable en el momento**: el paciente decide sobre la cuota, no sobre el importe total.
 
 Mide también **por qué** no se acepta. "Es caro" casi nunca es la razón real; suele ser falta de comprensión o de confianza.
 

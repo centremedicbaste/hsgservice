@@ -3,6 +3,8 @@ title: "Financiación de maquinaria dental: cómo renovar sin descapitalizarte"
 subtitle: Renueva sillón, escáner o TAC sin gran inversión inicial
 date: 2026-07-03
 description: "¿Necesitas renovar el sillón, el escáner o el TAC de tu clínica? Opciones para financiar maquinaria dental y renovar equipos sin descapitalizar la clínica."
+eleventyComputed:
+  metaTitle: "Financiación de maquinaria dental para clínicas"
 image: /assets/static/maquinaria/maquinaria-1.jpg
 imageAlt: Financiación de maquinaria dental para clínicas
 categoria: Financiación
@@ -29,7 +31,7 @@ Renovar la maquinaria de una clínica dental —sillón, escáner intraoral, TAC
 
 ### Financiación con condiciones de grupo
 
-Negociar la financiación de un equipo tú solo no es lo mismo que hacerlo con la fuerza de cientos de clínicas. Los socios de HSG Service acceden a [financiación para clínicas dentales](/departamentos/financiacion/) y a [maquinaria a precio de grupo](/departamentos/maquinaria/) con condiciones que no conseguirían de forma individual:
+Negociar la financiación de un equipo tú solo no es lo mismo que hacerlo con la fuerza de cientos de clínicas. Los socios de HSG Service acceden a [financiación para clínicas dentales](/financiacion-para-clinicas/) y a [maquinaria a precio de grupo](/departamentos/maquinaria/) con condiciones que no conseguirían de forma individual:
 
 - Precios de grupo en la compra del equipo.
 - **Financiación asequible** adaptada a la clínica.

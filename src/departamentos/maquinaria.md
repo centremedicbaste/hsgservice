@@ -2,8 +2,12 @@
 layout: departamentos
 prename: Maquinaria
 title: Maquinaria y escáneres intraorales
+service:
+  name: "Maquinaria dental a precio de grupo"
+  tipo: "Suministro y financiación de equipamiento dental"
+  publico: "Clínicas dentales"
 subtitle: Digitaliza tu clínica dental
-descripcion: "Maquinaria dental y escáneres intraorales a precio de grupo con financiación asequible para clínicas asociadas: sillones dentales, TAC, autoclave y escáner intraoral para digitalizar tu clínica."
+descripcion: "Maquinaria dental a precio de grupo con financiación para clínicas asociadas: sillones, TAC, autoclave y escáner intraoral para digitalizar tu clínica."
 author: HSG Service
 date: 2024-02-02
 tags: ["departamentos"]

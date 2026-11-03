@@ -5,3 +5,11 @@
 
 # Forzar dominio canónico con www -> sin www (ajusta si usas www)
 https://www.hsgservice.es/*   https://hsgservice.es/:splat   301!
+
+# Migración de la página de financiación a una URL con la palabra clave
+/departamentos/financiacion/   /financiacion-para-clinicas/   301!
+/departamentos/financiacion    /financiacion-para-clinicas/   301!
+
+# Página huérfana duplicada de /contacta/ (mismo layout y mismo contenido)
+/solicitar-cita/   /contacta/   301!
+/solicitar-cita    /contacta/   301!

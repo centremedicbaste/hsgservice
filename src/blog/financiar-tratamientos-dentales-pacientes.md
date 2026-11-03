@@ -3,6 +3,8 @@ title: "Cómo financiar tratamientos dentales a tus pacientes"
 subtitle: Aumenta la aceptación de presupuestos con financiación
 date: 2026-06-24
 description: "La financiación de tratamientos dentales ayuda a que más pacientes acepten su presupuesto. Cómo ofrecerla en tu clínica y qué plazos funcionan."
+eleventyComputed:
+  metaTitle: "Cómo financiar tratamientos dentales a pacientes"
 image: /assets/static/departamentos/mini-financiacion.jpg
 imageAlt: Cómo financiar tratamientos dentales a los pacientes
 categoria: Financiación
@@ -22,7 +24,7 @@ El precio es la principal razón por la que un paciente no acepta un tratamiento
 
 ### ¿Qué plazos y condiciones ofrecer?
 
-Lo ideal es contar con **varias entidades financieras** para poder aprobar más solicitudes y ofrecer plazos flexibles. Con [la financiación de HSG Service](/departamentos/financiacion/) las clínicas trabajan con 4 entidades, plazos de **3 a 72 meses** e importes desde 120€ hasta 18.000€, con abono de la liquidación en 24-48 horas.
+Lo ideal es contar con **varias entidades financieras** para poder aprobar más solicitudes y ofrecer plazos flexibles. Con [la financiación de HSG Service](/financiacion-para-clinicas/) las clínicas trabajan con 4 entidades, plazos de **3 a 72 meses** e importes desde 120€ hasta 18.000€, con abono de la liquidación en 24-48 horas.
 
 ### Cómo presentar la financiación en la primera visita
 

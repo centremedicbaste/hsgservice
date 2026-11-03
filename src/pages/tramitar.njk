@@ -13,6 +13,19 @@ eleventyComputed:
       url: "/"
     - name: "Date de alta"
       url: "/tramitar-alta/"
+faq:
+  - q: "¿Qué documentación necesito para asociar mi clínica?"
+    a: "Si eres autónomo: alta de autónomo en la Seguridad Social, alta en Hacienda (modelo 036 o 037), DNI del administrador, tarjeta del Colegio Oficial de Odontólogos, justificante del número de cuenta, último recibo de autónomo y copia del IRPF del último ejercicio. Si eres sociedad: escrituras de constitución y de poderes, CIF, DNI del administrador, tarjeta colegial, justificante de cuenta y copia del último Impuesto de Sociedades."
+  - q: "¿Darme de alta me obliga a cambiar de proveedor?"
+    a: "No. No exigimos exclusividad. Puedes mantener tus marcas y tus proveedores de confianza y usar las condiciones de grupo solo en los pedidos en los que te compensen."
+  - q: "¿Hay volumen mínimo de compra?"
+    a: "No. No hay compromisos de volumen ni penalizaciones por comprar poco. Las condiciones del grupo son las mismas para cualquier socio, al margen de cuánto compre cada uno."
+  - q: "¿HSG Service es una franquicia?"
+    a: "No. Es una agrupación de clínicas privadas independientes. Tu clínica mantiene su nombre, su identidad y su forma de trabajar; lo que se comparte es la fuerza de compra y los servicios del grupo."
+  - q: "¿Qué incluye el alta como socio?"
+    a: "Acceso a la central de compras (material, implantes, maquinaria y ortodoncia a precio de grupo), a la financiación para pacientes y para la clínica, a la formación en primeras visitas y técnicas de venta, y a la consultoría de gestión."
+  - q: "¿Puede asociarse una clínica que no sea dental?"
+    a: "Sí. Trabajamos también con clínicas estéticas, capilares y de fecundación humana asistida, que comparten la misma estructura de costes y el mismo problema de aceptación de presupuestos."
 ---
 {% set heroSmall = true %}
 {% set eyebrow = "Hazte socio" %}
@@ -60,4 +73,50 @@ eleventyComputed:
   </div>
 </section>
 
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">El proceso</span>
+      <h2>Cómo es el alta, paso a paso</h2>
+      <p class="t-lead">
+        Hay dos planes de socio, Premium y VIP, según el tamaño de la clínica.
+        En ninguno de los dos hay exclusividad de proveedor ni volumen mínimo de compra.
+      </p>
+    </div>
+    <div class="grid grid--4">
+      <div class="card">
+        <h3 class="card__title">1 · Hablamos</h3>
+        <p class="card__text">
+          Nos cuentas cómo compra tu clínica hoy y en qué partidas se te va el margen.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="card__title">2 · Reúnes papeles</h3>
+        <p class="card__text">
+          La documentación de arriba, según seas autónomo o sociedad, más el documento de alta.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="card__title">3 · Te damos de alta</h3>
+        <p class="card__text">
+          Tramitamos el alta con los proveedores y las entidades financieras del grupo.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="card__title">4 · Empiezas a comprar</h3>
+        <p class="card__text">
+          Pides con las condiciones de grupo, sin cambiar tus marcas ni tu forma de trabajar.
+        </p>
+      </div>
+    </div>
+    <p class="mt-8">
+      ¿Aún no lo tienes claro? Mira qué es una
+      <a href="/central-de-compras-dental/">central de compras dental</a>, cómo funciona la
+      <a href="/financiacion-para-clinicas/">financiación para clínicas</a> o
+      <a href="/contacta/#seccioncontacta">pregúntanos sin compromiso</a>.
+    </p>
+  </div>
+</section>
+
+{% include "faq.njk" %}
 {% include "banner.njk" %}
