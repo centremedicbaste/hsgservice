@@ -1,50 +1,30 @@
 ---
 layout: base.njk
 ---
-<article class="main-article  ">
-  {% set next = collections.blog | nextInCollection(page.fileSlug) %}
-  {% set previous = collections.blog | prevInCollection(page.fileSlug) %}
+{% set heroSmall = true %}
+{% set eyebrow = categoria %}
+{% include 'hero.njk' %}
 
-
-  <div class="bg-dark has-light">
-    
-    {% include 'hero.njk' %}</div>
-
-
-  <div class="container-fluid pt-32 bg-white">
-
-
-
-        <div class="container-2">
-          <div class="innermarkdown">
-     
-                {{ content | toc | safe }}
- 
-            {{ content | safe }}
-          </div>
-        </div>
-
-
-
-  </div>
-  <div class="container-fluid l-top bg-white">
-    <div class="col-xs-12">
-  {% if next or previous%}
-  <div class="pagination">
-    {% if previous %}
-    <a href="{{ previous.url }} " class="pagination-item pagination-item-prev">
-   Previous post
-     </a>
-    {% endif %}
-    {% if next %}
-    <a href="{{ next.url }}" class="pagination-item pagination-item-next">
- Next post
-  </a>
-    {% endif %}
-  </div>
-  {% endif %}
+<article class="section bg-white">
+  <div class="container">
+    <div class="prose">
+      <p class="t-small t-mute">{{ page.date | postDate }}{% if author %} · {{ author }}{% endif %}</p>
+      {{ content | safe }}
     </div>
+
+    {% set next = collections.blog | nextInCollection(page.fileSlug) %}
+    {% set previous = collections.blog | prevInCollection(page.fileSlug) %}
+    {% if next or previous %}
+    <nav class="prose mt-8" aria-label="Más artículos">
+      <hr>
+      <div class="grid grid--2">
+        {% if previous %}<a class="link-arrow" href="{{ previous.url }}">{{ previous.data.title }}</a>{% endif %}
+        {% if next %}<a class="link-arrow" href="{{ next.url }}">{{ next.data.title }}</a>{% endif %}
+      </div>
+    </nav>
+    {% endif %}
   </div>
-  {% include "faq.njk" %}
-  {% include "banner.njk" %}
 </article>
+
+{% include "faq.njk" %}
+{% include "banner.njk" %}

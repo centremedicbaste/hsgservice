@@ -13,33 +13,33 @@ eleventyComputed:
     - name: "{{ title }}"
       url: "{{ page.url }}"
 ---
-<article class="main-article  ">
-  <div class="bg-dark has-light">{% include 'hero.njk' %} </div>
-  <div class="front-section bg-white">
-    <div class="container-11">
-      <div class="innermarkdown pt-32 ">
-        {{ content | safe }}</div>
+{% set heroSmall = true %}
+{% include 'hero.njk' %}
+
+<article class="section bg-white">
+  <div class="container">
+    <div class="prose">{{ content | safe }}</div>
+  </div>
+</article>
+
+{% set puntos = [grid1, grid2, grid3, grid4, grid6, grid7, grid8, grid9] %}
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">En detalle</span>
+      <h2>Qué incluye</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for punto in puntos %}
+        {% if punto and punto != 'xx' %}
+        <div class="card card--outline">
+          <p>{{ punto }}</p>
+        </div>
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
-  <div class="grid-central front-section bg-white pb-64">
+</section>
 
-     <div class="grid-central-text">
-       {% if grid1 != 'xx'    %} <div> <div class="grid-central-box"> {{grid1}} </div> </div> {% endif %}
-       {% if grid2 != 'xx'   %}<div> <div class="grid-central-box"> {{grid2}} </div> </div> {% endif %}
-       {% if grid3 != 'xx'   %} <div> <div class="grid-central-box"> {{grid3}} </div> </div> {% endif %}
-       {% if grid4  != 'xx'  %} <div class="align-middle content-end"> <div class="grid-central-box"> {{grid4}} </div> </div> {% endif %}
-
-     </div>
-
-<div class="is-flex align-center">       {% if grid5  != 'xx'  %} <div> <img src="/assets/static/{{grid5}} " alt=""> </div> {% endif %}</div>
-<div class="grid-central-text">
-       {% if grid6  != 'xx'  %} <div class="align-middle content-start"> <div class="grid-central-box"> {{grid6}} </div> </div> {% endif %}
-       {% if grid7  != 'xx'  %} <div> <div class="grid-central-box"> {{grid7}} </div> </div> {% endif %}
-       {% if grid8 != 'xx'   %} <div> <div class="grid-central-box"> {{grid8}} </div> </div> {% endif %}
-       {% if grid9 != 'xx'    %} <div> <div class="grid-central-box"> {{grid9}} </div> </div> {% endif %}
-     </div>
-
-  </div>
-  {% include "faq.njk" %}
-  {% include "banner.njk" %}
-</article>
+{% include "faq.njk" %}
+{% include "banner.njk" %}

@@ -13,99 +13,48 @@ eleventyComputed:
       url: "{{ page.url }}"
 ---
 {% import '_globals.njk' as globals %}
-
-
-
-
+{% set heroSmall = true %}
 {% include 'hero.njk' %}
 
-<section class=" bg-dark has-light  front-section ptr-120 pbr-120">
-
-
-
-<div class="container">
-<div class="row">
-  <div class="col-xs-3">
-
-    <h4 class="fluid-6-b  pb-24">    <img src="/assets/static/home/contacta-map.png" alt="">   Dirección</h4>
-
-Av. Diagonal núm. 442, 3º2ª Barcelona.  <br> <br>
-C/ Riera Basté, 22-24, local 2A Sant Boi de Llobregat
-
-
-  </div>
-
-
-  <div class="col-xs-3">
-
-
-<h4 class="fluid-6-b  pb-24"> 
-  <img src="/assets/static/home/contacta-hora.png" alt="">
-  
-   Horario oficina</h4>
-<b>Lunes – jueves: </b> <br>
-08.00 h – 14.00 h y  <br>
-16.00 h – 18.00 h
-<br> <br>
-<b>Viernes:</b> <br>
-08.00 h – 14.00 h
-
-Sábado y domingo:
-Cerrado
-
-
-  </div>
-
-
-  <div class="col-xs-3">
-
-
-<h4 class="fluid-6-b  pb-24">   <img src="/assets/static/home/contacta-mail.png" alt=""> Email  </h4>
-
-<a href="mailto:info@hsgservice.es">info@hsgservice.es</a>
-
-  </div>
-
-
-  <div class="col-xs-3">
-
-
-
-<h4 class="fluid-6-b  pb-24">   <img src="/assets/static/home/contacta-telf.png" alt="">Teléfonos</h4>
-
-<a href="tel:+34936612492">936 612 492</a> <br> <br>
-<a href="tel:+34637764576">637 764 576</a>
-  </div>
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-</section>
-<div class="container-fluid">
-  <div class="row bleed-0">
-    <div class="col-xs-12">
-<div class="rat-21-4">
-        <div class="rat-content">
-
-<iframe width="100%" height="100%" loading="lazy" src="https://maps.google.com/maps?q=Avinguda%20Diagonal%2C%20442%2C%2009037%20Barcelona&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" title="Avinguda Diagonal, 442, 09037 Barcelona" aria-label="Avinguda Diagonal, 442, 09037 Barcelona"></iframe>
-
-        </div>
+<section class="section bg-white">
+  <div class="container">
+    <div class="grid grid--4">
+      <div>
+        <h3 class="t-h4">Direcciones</h3>
+        <p class="t-small mt-4">
+          {{ globals.direcciones[1].calle }}<br><br>
+          {{ globals.direcciones[0].calle }}<br><br>
+          {{ globals.direcciones[2].calle }}, Madrid
+        </p>
       </div>
-  
-  
-  
+      <div>
+        <h3 class="t-h4">Horario</h3>
+        <p class="t-small mt-4">
+          <strong>Lunes a jueves</strong><br>8:00–14:00 y 16:00–18:00<br><br>
+          <strong>Viernes</strong><br>8:00–14:00<br><br>
+          Sábado y domingo cerrado
+        </p>
+      </div>
+      <div>
+        <h3 class="t-h4">Email</h3>
+        <p class="t-small mt-4"><a href="mailto:{{ global.email }}">{{ global.email }}</a></p>
+      </div>
+      <div>
+        <h3 class="t-h4">Teléfonos</h3>
+        <p class="t-small mt-4">
+          <a href="tel:+34936612492">93 661 24 92</a><br>
+          <a href="tel:+34637764576">637 764 576</a>
+        </p>
+      </div>
     </div>
   </div>
+</section>
+
+<div aria-hidden="false">
+  <iframe title="Mapa de la sede de HSG Service en Avinguda Diagonal 442, Barcelona"
+    style="width:100%;height:380px;border:0;display:block" loading="lazy"
+    src="https://maps.google.com/maps?q=Avinguda%20Diagonal%2C%20442%2C%2008037%20Barcelona&t=m&z=15&output=embed&iwloc=near"></iframe>
 </div>
+
+{% include "faq.njk" %}
 {% include "banner.njk" %}

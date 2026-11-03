@@ -29,7 +29,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPairedShortcode("myShortcode", function (content) {
     // Method A: ✅ ideal para encapsular {% myShortcode %}  dfdfdf  {% endmyShortcode %}
-    return `<div class="is-flex full-container-blog content-center">${content}</div>`;
+    return `<div class="grid grid--3">${content}</div>`;
   });
   eleventyConfig.addShortcode("br", function () {
     // Method A: ✅ ideal para tags de espacios {% br %}

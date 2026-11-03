@@ -27,125 +27,116 @@ faq:
   - q: "¿HSG Service es una franquicia?"
     a: "No. Somos una agrupación de clínicas privadas independientes. Tu clínica mantiene su nombre, su identidad y su forma de trabajar. Solo compartimos la fuerza de compra y los servicios del grupo."
 ---
-<div class="video-bg">
-  <video class="video-cover" width="100%" height="auto" autoplay muted loop playsinline>
-    <source src="/assets/static/satin.mp4" type="video/mp4" />
-  </video>
-</div>
-<div class="container-fullpage bleed-0 bg-dark has-light">
-  {% include 'hero.njk' %}
-</div>
+{% set eyebrow = "Compra agrupada" %}
+{% set heroCta = { url: "/contacta/", text: "Solicita tus precios de grupo" } %}
+{% set heroCta2 = { url: "/tramitar-alta/", text: "Date de alta" } %}
+{% include 'hero.njk' %}
 
-<div class="bg-light front-section">
-
-  <section class="container ptr-120 pbr-64">
-    <div class="row align-middle">
-      <div class="col-xs-12 col-sm-7 mb-24">
-        <h2 class="fluid-5-b accent mb-24">Compra con la fuerza de 360 clínicas</h2>
-        <p class="p1 mb-24">
-          Una <b>central de compras dental</b> agrupa el volumen de muchas clínicas para negociar,
+<section class="section bg-white">
+  <div class="container">
+    <div class="grid grid--sidebar">
+      <div>
+        <span class="eyebrow">Cómo funciona</span>
+        <h2>Compra con la fuerza de 360 clínicas</h2>
+        <p class="t-lead mt-4">
+          Una central de compras dental agrupa el volumen de muchas clínicas para negociar,
           en su nombre, mejores condiciones con los proveedores. El principio es simple:
-          <b>a mayor volumen, mayor descuento</b>.
+          a mayor volumen, mayor descuento.
         </p>
-        <p class="p1 mb-32">
+        <p class="mt-4">
           Un proveedor no ofrece las mismas condiciones a una clínica que compra para sí misma
-          que a un grupo que compra para más de 360. En HSG Service trasladamos ese descuento
-          de grupo a cada socio, sin que tengas que cambiar tu forma de trabajar.
+          que a un grupo que compra para más de 360. Trasladamos ese descuento a cada socio,
+          sin que tengas que cambiar tu forma de trabajar.
         </p>
-        <a href="/contacta/"><span class="btn btn-primary btn-small">Solicita tus precios de grupo</span></a>
       </div>
-      <div class="col-xs-12 col-sm-5">
-        <img src="/assets/static/departamentos/mini-implante.jpg" alt="Material e implantes dentales a precio de grupo" loading="lazy">
+      <div>
+        <img src="/assets/static/departamentos/mini-implante.jpg"
+             alt="Material e implantes dentales a precio de grupo"
+             loading="lazy" style="border-radius:var(--r-card)">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container pbr-64">
-    <div class="row text-center pbr-64">
-      <div class="col-xs-12">
-        <h2 class="fluid-5-b accent">Qué compras a precio de grupo</h2>
-      </div>
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Catálogo</span>
+      <h2>Qué compras a precio de grupo</h2>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-3 mb-24">
-        <h3 class="h3 mb-16">Implantes</h3>
-        <p class="p2 mb-16">Más de un 50% de descuento en implantes de primeras marcas.</p>
-        <a class="c-primary bold" href="/departamentos/implantes/">Ver implantes →</a>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 mb-24">
-        <h3 class="h3 mb-16">Depósito dental</h3>
-        <p class="p2 mb-16">Descuentos de asociado en material fungible y desechable.</p>
-        <a class="c-primary bold" href="/departamentos/implantes/">Ver depósito →</a>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 mb-24">
-        <h3 class="h3 mb-16">Maquinaria</h3>
-        <p class="p2 mb-16">Sillones, escáneres intraorales, TAC y autoclaves con financiación.</p>
-        <a class="c-primary bold" href="/departamentos/maquinaria/">Ver maquinaria →</a>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 mb-24">
-        <h3 class="h3 mb-16">Ortodoncia invisible</h3>
-        <p class="p2 mb-16">Alineadores Suresmile a precio de grupo para tu clínica.</p>
-        <a class="c-primary bold" href="/departamentos/ortodoncia/">Ver ortodoncia →</a>
-      </div>
+    <div class="grid grid--4">
+      <a class="card" href="/departamentos/implantes/">
+        <h3 class="card__title">Implantes</h3>
+        <p class="card__text">Más de un 50% de descuento en implantes de primeras marcas.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/departamentos/implantes/">
+        <h3 class="card__title">Depósito dental</h3>
+        <p class="card__text">Descuentos de asociado en material fungible y desechable.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/departamentos/maquinaria/">
+        <h3 class="card__title">Maquinaria</h3>
+        <p class="card__text">Sillones, escáneres intraorales, TAC y autoclaves con financiación.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/departamentos/ortodoncia/">
+        <h3 class="card__title">Ortodoncia invisible</h3>
+        <p class="card__text">Alineadores Suresmile a precio de grupo para tu clínica.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="bg-dark has-light ptr-64 pbr-64">
-    <div class="container">
-      <div class="row text-center pbr-64">
-        <div class="col-xs-12">
-          <h2 class="fluid-5-b">Una agrupación, no una franquicia</h2>
-        </div>
+<section class="section bg-deep on-dark">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <h2>Una agrupación, no una franquicia</h2>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__num"><span data-count="360" data-suffix="+">360+</span></div>
+        <p class="stat__label">clínicas asociadas</p>
       </div>
-      <div class="row align-middle text-center">
-        <div class="col-xs-12 col-sm-4 mb-24 sm:mb-0">
-          <div class="fluid-8-b mb-16">+360</div>
-          <div class="fluid-9-r">clínicas asociadas</div>
-        </div>
-        <div class="col-xs-12 col-sm-4 mb-24 sm:mb-0">
-          <div class="fluid-8-b mb-16">Desde 2012</div>
-          <div class="fluid-9-r">agrupando clínicas privadas</div>
-        </div>
-        <div class="col-xs-12 col-sm-4 mb-24 sm:mb-0">
-          <div class="fluid-8-b mb-16">Sin exclusividad</div>
-          <div class="fluid-9-r">mantienes tus marcas y tu identidad</div>
-        </div>
+      <div class="stat">
+        <div class="stat__num">2012</div>
+        <p class="stat__label">agrupando clínicas privadas desde</p>
+      </div>
+      <div class="stat">
+        <div class="stat__num">Sin exclusividad</div>
+        <p class="stat__label">mantienes tus marcas y tu identidad</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container ptr-64 pbr-64">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 mb-24">
-        <h2 class="fluid-7-b accent mb-24">Ventajas de unirte</h2>
-        <ul class="list-big p1">
-          <li><b>Ahorro directo</b> en cada pedido, sin cambiar tu forma de trabajar.</li>
-          <li><b>Sin exclusividad de proveedor</b>: mantienes tus marcas de confianza.</li>
-          <li><b>Sin volúmenes mínimos</b> de compra obligatorios.</li>
-          <li><b>Servicios extra incluidos</b>: financiación, formación y coaching.</li>
-          <li><b>Más margen</b> sin subir los precios a tus pacientes.</li>
+<section class="section bg-white">
+  <div class="container">
+    <div class="grid grid--2">
+      <div>
+        <h2 class="t-h3">Ventajas de unirte</h2>
+        <ul class="list-check mt-6">
+          <li>Ahorro directo en cada pedido, sin cambiar tu forma de trabajar.</li>
+          <li>Sin exclusividad de proveedor: mantienes tus marcas de confianza.</li>
+          <li>Sin volúmenes mínimos de compra obligatorios.</li>
+          <li>Servicios extra incluidos: financiación, formación y consultoría.</li>
+          <li>Más margen sin subir los precios a tus pacientes.</li>
         </ul>
       </div>
-      <div class="col-xs-12 col-sm-6">
-        <h2 class="fluid-7-b accent mb-24">Más que compras</h2>
-        <p class="p1 mb-24">
-          A diferencia de una central de compras convencional, en HSG Service no solo negociamos
-          producto. Tu cuota incluye además:
-        </p>
-        <ul class="list-big p1">
+      <div>
+        <h2 class="t-h3">Más que compras</h2>
+        <p class="mt-4">A diferencia de una central de compras convencional, tu cuota incluye además:</p>
+        <ul class="list-check mt-6">
           <li><a href="/departamentos/financiacion/">Financiación</a> para tus pacientes y para tu clínica.</li>
           <li><a href="/formacion/">Formación</a> en primeras visitas y técnicas de venta.</li>
           <li><a href="/departamentos/coaching/">Consultoría y gestión</a> para dirigir tu clínica.</li>
         </ul>
-        <p class="p1 mb-24">
-          Por el precio de una limpieza bucal accedes a todos los servicios del grupo.
-        </p>
-        <a href="/tramitar-alta/"><span class="btn btn-secondary btn--small">Date de alta</span></a>
+        <p class="mt-6"><a class="btn" href="/tramitar-alta/">Date de alta</a></p>
       </div>
     </div>
-  </section>
-
-</div>
+  </div>
+</section>
 
 {% include "faq.njk" %}
 {% include "banner.njk" %}

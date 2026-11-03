@@ -28,12 +28,12 @@
   <link rel="apple-touch-icon" href="/assets/static/favicons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  {# --- Rendimiento: conexiones anticipadas a CDNs externos --- #}
-  <link rel="preconnect" href="https://code.jquery.com" crossorigin>
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-
-  <link rel="stylesheet" href="/assets/css/style.css">
+  {# --- Tipografía y hoja de estilos del design system --- #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300..800;1,400&display=swap">
+  <link rel="stylesheet" href="/assets/css/ds.css">
 
   {# --- Open Graph --- #}
   <meta property="og:site_name" content="HSG Service">
@@ -201,7 +201,8 @@
 </head>
 
 
-<body class="contain {% if page.url == '/' or page.url == '/formacion/' %}home{% endif %}">
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   {% if global.googlemaps_api %}
   <!-- Google Tag Manager (noscript) -->
   <noscript>
@@ -210,17 +211,11 @@
   </noscript>
   {% endif %}
   {% include 'header.njk' %}
-  <main class=" ">
+  <main id="contenido">
     {{ content | safe }}
   </main>
   {% include 'footer.njk' %}
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script type="module" src="/assets/js/index.js"></script>
-  <script type="module" src="/assets/js/inview.js"></script>
+  <script src="/assets/js/ui.js" defer></script>
   <script>
     const handleSubmit = (event) => {
       event.preventDefault();

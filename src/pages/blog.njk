@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Blog
-subtitle: Blog
+subtitle: Gestión, financiación y rentabilidad para clínicas dentales
 permalink: /blog/
 image: /assets/static/blog-0.webp
 eleventyComputed:
@@ -15,27 +15,23 @@ eleventyComputed:
     - name: "Blog"
       url: "/blog/"
 ---
-<div class="bg-dark has-light">{% include 'hero.njk' %}</div>
+{% set heroSmall = true %}
+{% set eyebrow = "Blog" %}
+{% include 'hero.njk' %}
 
-<div class="section front-section bg-light ">
-
-  <div class="container ">
-
-    <div class="row ptr-64 pbr-64">
-      <div class="col-xs-12 col-sm-8">
-        <h2 class="fluid-5-b accent mb-16">Consejos y novedades para tu clínica dental</h2>
-        <p class="p1">
-          En el blog de HSG Service compartimos consejos prácticos de gestión, financiación,
-          compra de material y formación para ayudarte a <b>aumentar la rentabilidad de tu
-          clínica dental</b> y mejorar la experiencia de tus pacientes.
-        </p>
-      </div>
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-head">
+      <h2>Consejos y novedades para tu clínica dental</h2>
+      <p class="t-lead">
+        Gestión, financiación, compra de material y formación: todo lo que ayuda a
+        aumentar la rentabilidad de tu clínica.
+      </p>
     </div>
-
-    <ul role="list" class="list-clear blog-section">
+    <ul class="grid grid--3">
       {% for post in collections.post | reverse %}
         {% include 'blog-loop.njk' %}
       {% endfor %}
     </ul>
   </div>
-</div>
+</section>

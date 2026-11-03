@@ -1,93 +1,66 @@
 {% import '_globals.njk' as globals %}
-<footer class="bg-dark has-light front-section height-xl ptr-120 ">
-  <div class="container pb-64">
-    <div class="row">
-      <div class="col-xs-12 col-md-3 mb-24">
-        <h3 class="fluid-8-b  pb-24">Menú</h3>
-        <ul class="list-clear ">
-          <li class="pr-16"> <a class="menu-desktop " href="/">Inicio</a></li>
-          <li class="pr-16"> <a class="menu-desktop" href="/formacion/">Formación</a>
-          </li>
-          <li class="pr-16"> <a class="menu-desktop" href="/departamentos/">Departamentos</a>
-          </li>
+<footer class="site-footer">
+  <div class="container section">
+    <div class="footer-grid">
 
-          <li> <a href="/central-de-compras-dental/">Central de compras dental</a> </li>
-          <li> <a href="/departamentos/financiacion/">Financiación dental</a> </li>
-          <li> <a href="/clinicas-esteticas/">Clínicas estéticas</a> </li>
-          <li> <a href="/nosotros/">Nosotros</a> </li>
-          <li> <a href="/blog/">Blog</a> </li>
-          <li> <a href="/tramitar-alta/">Tramita tu alta</a> </li>
-          <li> <a href="/contacta/">Contacta</a> </li>
+      <div>
+        <h3>HSG Service</h3>
+        <p class="t-small">
+          Agrupamos clínicas dentales y estéticas privadas para que accedan a
+          precios de grupo, financiación y formación sin perder su independencia.
+        </p>
+        <p class="t-small mt-4">
+          <a href="mailto:{{ global.email }}">{{ global.email }}</a><br>
+          <a href="tel:+34936612492">93 661 24 92</a> · <a href="tel:+34637764576">637 764 576</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Servicios</h3>
+        <ul class="list-plain t-small">
+          <li><a href="/central-de-compras-dental/">Central de compras dental</a></li>
+          <li><a href="/departamentos/financiacion/">Financiación dental</a></li>
+          <li><a href="/departamentos/implantes/">Implantes</a></li>
+          <li><a href="/departamentos/maquinaria/">Maquinaria y escáneres</a></li>
+          <li><a href="/departamentos/ortodoncia/">Ortodoncia invisible</a></li>
+          <li><a href="/departamentos/coaching/">Consultoría y gestión</a></li>
+          <li><a href="/clinicas-esteticas/">Clínicas estéticas</a></li>
         </ul>
       </div>
-      <div class="col-xs-12 col-md-3 mb-24">  </div>
-      <div class="col-xs-12 col-md-3 mb-24  ">
-        <h3 class="fluid-8-b  pb-24">Contacta</h3>
 
-
-        <ul class="list-clear mb-24">
-          <li class=""> {{globals.direcciones[0].calle}} </li>
-          <li class=""> {{globals.direcciones[0].codigopostal}} </li>
-          <li class=""> {{globals.direcciones[0].ciudad}}</li>
-  
-          <li> {{globals.direcciones[0].telf}}</li>
-        </ul>
-
-<hr>
-
-        <ul class="list-clear mb-24">
-          <li class=""> {{globals.direcciones[1].calle}} </li>
-          <li class=""> {{globals.direcciones[1].codigopostal}} </li>
-
-          <li class="">
-            <a href="mailto: {{globals.direcciones[1].email}}" aria-label="link email"> {{globals.direcciones[1].email}}
-            </a>
-          </li>
-          <li> {{globals.direcciones[1].telf}}</li>
-        </ul>
-
-        <hr>
-
-        <ul class="list-clear mb-24">
-          <li class=""> {{globals.direcciones[2].calle}} </li>
-          <li class=""> {{globals.direcciones[2].codigopostal}} </li>
-
-          <li class="">
-            <a href="mailto: {{globals.direcciones[2].email}}" aria-label="link email"> {{globals.direcciones[2].email}}
-            </a>
-          </li>
-          <li> {{globals.direcciones[2].telf}}</li>
+      <div>
+        <h3>HSG</h3>
+        <ul class="list-plain t-small">
+          <li><a href="/nosotros/">Nosotros</a></li>
+          <li><a href="/formacion/">Formación</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tramitar-alta/">Date de alta</a></li>
+          <li><a href="/contacta/">Contacta</a></li>
         </ul>
       </div>
-      <div class="col-xs-12 col-md-3 mb-24">
-        <h3 class="fluid-8-b  pb-24">Horario</h3>
-        <ul class="list-clear">
-          <li> ⏲ <b>Lunes - Jueves: </b> <br>
-            8.00 h - 14.00 h y <br> 16.00 h - 18.00 h</li>
-          <li> ⏲ <b>Viernes:</b> <br>
-            8.00 h - 14.00 h</li>
-          <li><b>Sábado y domingo:</b> <br>
-            Cerrado</li>
-        </ul>
+
+      <div>
+        <h3>Horario y sedes</h3>
+        <p class="t-small">
+          <strong>Lunes a jueves</strong><br>8:00–14:00 y 16:00–18:00<br>
+          <strong>Viernes</strong><br>8:00–14:00
+        </p>
+        <p class="t-small mt-4">
+          {{ globals.direcciones[1].calle }}<br>
+          {{ globals.direcciones[0].calle }}<br>
+          {{ globals.direcciones[2].calle }}, Madrid
+        </p>
       </div>
+
     </div>
-  </div>
-  <div class="container pt-16 pb-16 border-t">
-    <div class="row text-12-r ">
-      <div class="col-xs-12 col-sm-4  text-left mb-16"> © {{ build.year }} {{ global.empresa_copyright }}. Todos los derechos reservados.
-      </div>
-      <div class="col-xs-12 col-sm-4  mb-16"> Creado por DigitalStrategy</div>
-      <div class="col-xs-12 col-sm-4    mb-16">
-        <a href="/legal/cookies/" aria-label="Política de cookies">
-          Cookies
-        </a>
-        <a href="/legal/politicas/" aria-label="Política de privacidad">
-          Política de privacidad
-        </a>
-        <a href="/legal/aviso/" aria-label="Aviso legal">
-          Aviso legal
-        </a>
-      </div>
+
+    <div class="footer-bottom">
+      <p>© {{ build.year }} {{ global.empresa_copyright }}. Todos los derechos reservados.</p>
+      <ul>
+        <li><a href="/legal/aviso/">Aviso legal</a></li>
+        <li><a href="/legal/politicas/">Privacidad</a></li>
+        <li><a href="/legal/cookies/">Cookies</a></li>
+      </ul>
     </div>
   </div>
 </footer>

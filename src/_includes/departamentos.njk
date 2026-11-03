@@ -13,32 +13,14 @@ eleventyComputed:
     - name: "{{ title }}"
       url: "{{ page.url }}"
 ---
-<article class="main-article  ">
-  <div class="bg-dark has-light">{% include 'hero.njk' %} </div>
-  <div class="front-section bg-white">
-    <div class="container-11">
-      <div class="innermarkdown pt-32 ">
-        {{ content | safe }}</div>
-    </div>
+{% set heroSmall = true %}
+{% include 'hero.njk' %}
+
+<article class="section bg-white">
+  <div class="container">
+    <div class="prose">{{ content | safe }}</div>
   </div>
-  <div class="container-fluid l-top bg-white">
-    <div class="col-xs-12">
-      {% if next or previous%}
-      <div class="pagination">
-        {% if previous %}
-        <a href="{{ previous.url }} " class="pagination-item pagination-item-prev">
-          Previous post
-        </a>
-        {% endif %}
-        {% if next %}
-        <a href="{{ next.url }}" class="pagination-item pagination-item-next">
-          Next post
-        </a>
-        {% endif %}
-      </div>
-      {% endif %}
-    </div>
-  </div>
-  {% include "faq.njk" %}
-  {% include "banner.njk" %}
 </article>
+
+{% include "faq.njk" %}
+{% include "banner.njk" %}

@@ -6,24 +6,18 @@ eleventyComputed:
   metaTitle: "Mapa del sitio | HSG Service"
   metaRobots: "noindex, nofollow"
 ---
-<div class="container ptr-120">
-
-<div class="fluid-4-r mb-64 ">Páginas Realizadas</div>
-
-
-    <ul class="list-clear ">
-        {# Ordenar y listar todas las páginas por título, excluyendo las sin título #}
-        {% for page in collections.all | sort(attribute='data.metaTitle') %}
-            {% if page.data.metaTitle %}
-                <li>
-                    <a class="ttc" href="{{ page.url | url }}">{{ page.fileSlug }}  {{ page.data.realizada }}    </a>
-                </li>
-
-                <b>Seo Title: </b>{{ page.data.metaTitle }}  <br>
-                <b>Seo metaDescription: </b>{{ page.data.metaDescription }} 
-                <br>
-                <hr class="mt-32">
-            {% endif %}
-        {% endfor %}
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-head">
+      <h1>Mapa del sitio</h1>
+      <p class="t-lead">Índice interno de todas las páginas publicadas.</p>
+    </div>
+    <ul class="list-check">
+      {% for page in collections.all %}
+        {% if page.data.title and "/legal/" not in page.url %}
+        <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+        {% endif %}
+      {% endfor %}
     </ul>
-</div>
+  </div>
+</section>

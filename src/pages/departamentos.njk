@@ -1,7 +1,7 @@
 ---
 layout: base.njk 
-title: DEPARTAMENTOS
-subtitle: departamentos
+title: Departamentos
+subtitle: Todos los servicios del grupo, en un solo lugar
 permalink: /departamentos/
 image: /assets/static/tratamiento-0.webp
 eleventyComputed:
@@ -16,22 +16,29 @@ eleventyComputed:
       url: "/departamentos/"
 
 ---
+{% set heroSmall = true %}
+{% set eyebrow = "Servicios" %}
+{% include 'hero.njk' %}
 
-<div class="section  ">
-  <div class="bg-dark has-light">{% include 'hero.njk' %}</div>
-
-    <div class="bg-white front-section">
-      <div class="container pt-64 pb-64  ">
-        <ul role="list" class="list-clear flow">
-          {%- for departamentos in collections.departamentos -%}
-          {% include 'departamentos-loop.njk' %}
-          {%- endfor %}
-        </ul>
-      
-        </div>
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-head">
+      <h2>Todo lo que tu clínica necesita</h2>
+      <p class="t-lead">
+        Cada departamento resuelve una parte del coste o de la gestión de tu clínica.
+        Juntos, el ahorro es estructural.
+      </p>
     </div>
-
-
-</div>
+    <div class="grid grid--3">
+      {%- for departamento in collections.departamentos -%}
+      <a class="card" href="{{ departamento.url }}">
+        <h3 class="card__title">{{ departamento.data.title }}</h3>
+        <p class="card__text">{{ departamento.data.descripcion }}</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
 
 {% include "banner.njk" %}

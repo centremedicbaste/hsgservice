@@ -1,17 +1,14 @@
 <li>
-      <article class="mb-24">
-          <a href="{{ post.url }}"><img width="100%" height="100%" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="h1" loading="lazy"></a>
-          <div class="article-text mt-24">
-              {% if post.data.categoria %}
-              <div class=" tag-info ">
-                {{ post.data.categoria }}
-              </div>
-              {% endif %}
-              <h3 class="fluid-7-l"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-              <p class="mb-8">{{ post.data.date | postDate }}</p>
-              <p class="mb-24">{{ post.data.description }}</p>
-
-              <a href="{{ post.url }}" class="btn link-line"> Leer más</a>
-          </div>
-      </article>
+  <article class="post-card">
+    <a href="{{ post.url }}" tabindex="-1" aria-hidden="true">
+      <img class="post-card__img" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy">
+    </a>
+    <div class="post-card__body">
+      {% if post.data.categoria %}<span class="tag">{{ post.data.categoria }}</span>{% endif %}
+      <h3 class="post-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p class="t-small t-mute">{{ post.data.date | postDate }}</p>
+      <p class="t-small">{{ post.data.description }}</p>
+      <p class="mt-auto"><a class="link-arrow" href="{{ post.url }}">Leer más</a></p>
+    </div>
+  </article>
 </li>

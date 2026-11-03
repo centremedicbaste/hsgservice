@@ -5,15 +5,11 @@ eleventyComputed:
   metaDescription: "{{ title }} de hsgservice.es, plataforma de servicios para clínicas dentales y estéticas."
   metaRobots: "noindex, follow"
 ---
-<article class="bg-dark has-light main-article interior  ">
-  <div class="container-fluid pt-64">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="container-2">
-          <div class="innermarkdown">
-            {{ content | safe }}</div>
-        </div>
-      </div>
-    </div>
+{% set heroSmall = true %}
+{% include 'hero.njk' %}
+
+<article class="section bg-white">
+  <div class="container">
+    <div class="prose">{{ content | safe }}</div>
   </div>
 </article>
