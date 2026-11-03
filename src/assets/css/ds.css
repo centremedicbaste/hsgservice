@@ -519,6 +519,10 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
   border-color: var(--c-primary);
   box-shadow: 0 0 0 3px rgba(10,106,191,.15);
 }
+.input.is-error, .textarea.is-error, .select select.is-error {
+  border-color: var(--c-no);
+  box-shadow: 0 0 0 3px rgba(180,36,58,.12);
+}
 .input::placeholder, .textarea::placeholder { color: var(--c-ink-mute); }
 .select { position: relative; }
 .select::after {

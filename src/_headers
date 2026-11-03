@@ -1,0 +1,16 @@
+# Cabeceras que sirve Netlify. Un fichero por sitio, un bloque por patrón.
+
+/*
+  # El navegador respeta el Content-Type declarado y no lo adivina.
+  X-Content-Type-Options: nosniff
+  # Nadie puede meter el sitio en un iframe ajeno (clickjacking).
+  X-Frame-Options: SAMEORIGIN
+  # Al salir a otro dominio solo viaja el origen, nunca la ruta completa.
+  Referrer-Policy: strict-origin-when-cross-origin
+  # El sitio no usa ninguna de estas APIs: se deniegan de forma explícita.
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+# Las fotos y los favicons cambian muy de tarde en tarde. Un día de caché.
+# Si sustituyes una imagen conservando el nombre, tarda hasta 24 h en verse.
+/assets/static/*
+  Cache-Control: public, max-age=86400
