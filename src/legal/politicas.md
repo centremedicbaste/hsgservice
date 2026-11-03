@@ -1,65 +1,168 @@
 ---
 layout: legales
 title: Política de privacidad
-author: Hsg Service
-date: 2024-02-02
-tags: ["legal", "aaa"]
+author: HSG Service
+date: 2026-11-03
+tags: ["legal"]
 image: /assets/static/blog/article-1.webp
-imageAlt: politicas de privacidad
+imageAlt: Política de privacidad de HSG Service
 description: "Información legal de HSG Service."
 ---
 
-## POLÍTICA DE PRIVACIDAD
+## Política de privacidad
 
+**Última actualización:** 3 de noviembre de 2026
 
-### Política de privacidad 
-       
-       
-{{global.empresa_corto}} {{global.empresa_corto}}  en adelante, {{global.empresa_corto}}  , con DNI  {{global.empresa_dni}}, dirección en {{global.empresa_legal_direccion}} y correo electrónico  {{global.email}} , titular y propietario del website  {{global.website}}  desde ahora, “el website” , garantiza la protección de todos los datos de carácter personal que proporcione el usuario en el website. En cumplimiento de lo establecido en la Ley Orgánica de Protección de Datos y el Reglamento General de Protección de Datos europeo, informa en la presente página sobre la política de protección de datos del website. A tenor de lo establecido en el párrafo anterior, se le informa de que:
-```
-```
-1 - En cumplimiento de lo establecido en la Ley Orgánica de Protección de Datos de Carácter Personal y el Reglamento  UE  2016/679 del Parlamento Europeo y del Consejo le informamos que mediante la cumplimentación de los formularios presentes en el website estás dando el consentimiento expreso, así como de todos los datos de carácter personal que proporcione el usuario en el website , a que éstos queden incorporados y sean tratados en el registro de actividades de tratamiento de datos personales creado al efecto y mantenido bajo la responsabilidad de  {{global.empresa_corto}} con DNI  {{global.empresa_dni}}, cuyo domicilio se sitúa en {{global.empresa_legal_direccion}} 
-```
-```
+### 1. Quién trata tus datos
 
-2 -  Los datos que se recojan a través del website son los suficientes y necesarios para las siguientes finalidades: Envío por medios electrónicos de información de publicidad, noticias y novedades relacionadas con los productos y servicios profesionales del titular, como asesoría, marketing de contenidos o formación  formulario de suscripción a newsletter . El tiempo de conservación es mientras dure el tratamiento, salvo que el usuario ejerza sus derechos de cancelación antes. Envío de los artículos o posts del apartado de “blog” del sitio web  formulario de suscripción a newsletter . El tiempo de conservación es mientras dure el tratamiento, salvo que el usuario ejerza sus derechos de cancelación antes. Análisis, gestión y resolución de consultas formulario de contacto . El tiempo de conservación será mientras dure el tratamiento para la gestión de las consultas. Relación comercial con el cliente  formulario de contacto . El tiempo de conservación será el necesario para el tratamiento. Contratos y facturas cinco y diez años, respectivamente. Recogida y tratamiento automatizado de los datos personales, como consecuencia de la consulta, solicitud o suscripción de cualquier servicio/s de los ofrecidos por el propietario del website  formulario de suscripción a newsletter . El tiempo de conservación será mientras dure el tratamiento. Recogida y tratamiento automatizado de los datos personales, como consecuencia de la navegación por las páginas del website puede ver más abajo la política de cookies . 
-```
-```
+| | |
+|---|---|
+| **Responsable** | {{ global.empresa_legal }} (HSG Service) |
+| **NIF** | {{ global.empresa_dni }} |
+| **Domicilio** | {{ global.empresa_legal_direccion }} |
+| **Correo electrónico** | [{{ global.email }}](mailto:{{ global.email }}) |
+| **Sitio web** | {{ global.website }} |
 
-3 -  En la recogida y el tratamiento de los datos de carácter personal se han adoptado las medidas de seguridad adecuadas para evitar la pérdida, el acceso no autorizado o la manipulación de los mismos, de acuerdo con lo establecido en el Real Decreto 1720/2007, de 21 de diciembre.
-```
-```
-4 - El compromiso por parte del titular de proteger la información confidencial a la que tenga acceso. 
-```
-```
-5 - El titular se compromete a que, estos datos personales no serán compartidos o cedidos a terceros sin el consentimiento expreso de los usuarios. La prestación de ciertos servicios, no obstante, puede requerir de transferencias de datos a terceros países, por ejemplo, la gestión de los boletines electrónicos. En estos casos, se garantiza su alojamiento en países de la Unión Europea  y por tanto el cumplimiento del Reglamento General de Protección de Datos europeo  o que estén acogidos al acuerdo EU-US Privacy Shield, aprobado por el Comité Europeo de Protección de Datos  consulta la información aquí:    <a href="https://www.privacyshield.gov/list"> https://www.privacyshield.gov/list</a>. 
-```
-```
-6 -  En caso de facilitarnos datos de carácter personal de otras personas, lo hace con su consentimiento expreso y habiendo sido informado, con carácter previo, de los extremos contenidos en esta cláusula. Del mismo modo, rogamos nos comunique cualquier variación que pueda darse en los datos facilitados. El titular no se hace responsable de la cesión de datos de terceros que no hayan prestado su consentimiento ni tengan conocimiento de los contenidos de la presente cláusula, siendo responsabilidad de la persona que cede dichos datos al titular.
-```
-```
-7 -  En caso de no facilitar los datos requeridos, los servicios de la página web podrían no estar disponibles en su totalidad. El hecho de no facilitar el correo electrónico, requisito para la suscripción a la newsletter, o su incorrecta transcripción en el formulario, impediría realizar las comunicaciones que constituyen su finalidad  al no poderlas recibir el usuario. De no facilitar los datos requeridos en el formulario de contacto  nombre, email, asunto y mensaje , no se podrían llevar a cabo de forma satisfactoria los servicios solicitados. La negación a aceptar la política de cookies podría suponer la pérdida de funcionalidades de la página web.
-```
-```
-8 - El consentimiento expreso manifestado al rellenar el formulario de inscripción, comprende también lo siguiente: El titular se reserva el derecho a contratar a terceros para el tratamiento y gestión de las cuestiones de ámbito legislativo en general y, de lo relativo a protección de datos en concreto. En todos estos casos, el titular, obligará a la empresa contratada y/o profesional particular y a los encargados de la gestión del tratamiento de los datos personales cedidos, a firmar un documento de confidencialidad de datos personales para asegurar la privacidad de esta información. El titular se reserva el derecho a la subcontratación de empleados para la prestación de servicios de diversa índole, tales como el desarrollo, diseño y modificaciones del sitio web, así como cualquier otra actividad, para un conveniente desarrollo y organización del mismo. El usuario consiente en que se cedan sus datos personales cuando así sea requerido por las Autoridades administrativas competentes o por mandato judicial. 
-```
-```
-9 -  El Usuario certifica que es mayor de 14 años y que por lo tanto posee la capacidad legal necesaria para la prestación del consentimiento en cuenta al tratamiento de sus datos de carácter personal y todo ello, de conformidad con lo establecido en la presente Política de Privacidad. 
-```
-```
-10 -  El Usuario cuenta, en todo momento, con la posibilidad de ejercitar los derechos de acceso, rectificación, cancelación y oposición sobre sus datos personales enviando comunicación dirigida al propietario del website a la dirección de correo electrónico  {{global.email}}  o a través de los enlaces dispuestos a tal efecto en las notificaciones electrónicas.
-```
-```
-11 -  El interesado tiene derecho a recibir los datos personales que le conciernen, que haya facilitado a un responsable del tratamiento, en un formato estructurado, de uso común y legible por máquina y tiene derecho a transmitir dichos datos a otro responsable del tratamiento sin impedimentos del responsable del tratamiento al que haya facilitado los datos. 
-```
-```
-12 - En determinadas circunstancias, los interesados podrán solicitar la limitación del tratamiento de sus datos, en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de reclamaciones. 
-```
-```
-13 -  El usuario tiene derecho a retirar el consentimiento prestado.
-```
-```
-14 -  El usuario tiene derecho a reclamar ante la Autoridad de Control. 
-```
-```
-15 -  El Usuario autoriza al tratamiento de los datos personales cedidos al titular en los términos establecidos en la presente cláusula.
+Esta política explica qué datos personales recogemos a través de
+{{ global.website }}, para qué los usamos, durante cuánto tiempo los
+conservamos y qué derechos tienes sobre ellos.
+
+### 2. Para qué tratamos tus datos y con qué base legal
+
+#### a) Responder a tus consultas
+
+**Qué recogemos:** nombre, nombre de la clínica, correo electrónico, teléfono,
+tipo de consulta y el contenido del mensaje.
+
+**Para qué:** atender y resolver la consulta que nos planteas.
+
+**Base legal:** tu consentimiento al enviar el formulario, y la aplicación de
+medidas precontractuales a petición tuya cuando la consulta va dirigida a
+contratar nuestros servicios.
+
+**Cuánto tiempo:** mientras gestionamos la consulta y hasta un año después. Si
+de la consulta nace una relación comercial, se aplica el apartado siguiente.
+
+#### b) Tramitar el alta de tu clínica como socia
+
+Si solicitas el alta como socio, a través del formulario de alta o por
+cualquier otro medio, recogemos además la documentación necesaria para
+formalizar la relación.
+
+**Qué recogemos:**
+
+- **Datos identificativos:** nombre y apellidos del titular o administrador,
+  NIF o CIF, copia del DNI.
+- **Datos de contacto:** correo electrónico, teléfono y localidad.
+- **Datos profesionales:** tarjeta del Colegio Oficial de Odontólogos.
+- **Datos económicos y financieros:** certificado de titularidad de la cuenta
+  bancaria, alta en Hacienda (modelo 036 o 037), último recibo de autónomo,
+  declaración de IRPF o Impuesto de Sociedades del último ejercicio, escrituras
+  de constitución y de poderes.
+
+**Para qué:** verificar que cumples los requisitos para asociarte, formalizar el
+alta y gestionar la relación como socio.
+
+**Base legal:** la ejecución del contrato de alta como socio y la aplicación de
+medidas precontractuales a petición tuya (artículo 6.1.b del RGPD), y el
+cumplimiento de obligaciones legales de la entidad (artículo 6.1.c).
+
+**Cuánto tiempo:**
+
+- Si **no** llegas a asociarte, eliminamos la documentación a los **seis meses**
+  desde la última comunicación.
+- Si te asocias, conservamos la documentación **mientras dure la relación** y,
+  después, durante los plazos de prescripción legal: **seis años** para la
+  documentación mercantil y contable y **cuatro años** para las obligaciones
+  fiscales.
+
+**Es obligatorio facilitarla.** Sin esa documentación no podemos verificar los
+requisitos ni dar de alta a tu clínica.
+
+#### c) Enviarte comunicaciones comerciales
+
+**Qué recogemos:** nombre y correo electrónico.
+
+**Para qué:** enviarte información sobre nuestros servicios, novedades y
+formación.
+
+**Base legal:** tu consentimiento, que puedes retirar en cualquier momento
+desde el enlace de baja de cada envío o escribiéndonos.
+
+**Cuánto tiempo:** hasta que retires el consentimiento.
+
+#### d) Analizar el uso del sitio web
+
+Se trata en la [política de cookies](/legal/cookies/).
+
+### 3. Quién más accede a tus datos
+
+No vendemos tus datos ni los cedemos a terceros para sus propios fines.
+
+Para prestar el servicio trabajamos con proveedores que acceden a datos
+personales en calidad de **encargados del tratamiento**, con contrato firmado
+conforme al artículo 28 del RGPD:
+
+- **Alojamiento del sitio web y del formulario de contacto.** Proveedor de
+  alojamiento web con servidores en la Unión Europea.
+- **Alojamiento de la documentación de alta.** Servidor propio contratado en
+  **OVH**, con centro de datos en **Gravelines (Francia)**.
+- **Mantenimiento técnico y automatizaciones.** Proveedor de servicios
+  informáticos que da soporte a los sistemas anteriores.
+
+Además, podemos comunicar tus datos a las **Administraciones públicas,
+juzgados y tribunales** cuando exista una obligación legal.
+
+### 4. Transferencias fuera de la Unión Europea
+
+Los datos de la documentación de alta se alojan **exclusivamente en servidores
+situados en la Unión Europea**.
+
+El sitio web carga tipografías desde un servicio de terceros que puede recibir
+la dirección IP del visitante y está sujeto a transferencias internacionales
+amparadas en el Marco de Privacidad de Datos UE-EE. UU. Estamos trabajando para
+servir esas tipografías desde nuestro propio dominio y eliminar esa
+transferencia.
+
+### 5. Cómo protegemos tus datos
+
+- La documentación se transmite siempre **cifrada** mediante conexión segura.
+- Se almacena en un **servidor privado**, sin ninguna dirección pública que
+  permita acceder a los archivos.
+- Solo accede el **personal que tramita las altas**, con credenciales propias.
+- Mantenemos un **registro de los accesos** a la documentación.
+- Realizamos **copias de seguridad** periódicas, sujetas a los mismos plazos de
+  conservación descritos en el apartado 2.
+- Cuando vence el plazo de conservación, la documentación se **elimina**.
+
+### 6. Tus derechos
+
+Puedes ejercer en cualquier momento los derechos de **acceso, rectificación,
+supresión, oposición, limitación del tratamiento y portabilidad**, así como
+**retirar el consentimiento** que hayas prestado, sin que ello afecte a la
+licitud del tratamiento anterior.
+
+Para ejercerlos, escríbenos a [{{ global.email }}](mailto:{{ global.email }})
+indicando qué derecho quieres ejercer. Podemos pedirte que acredites tu
+identidad.
+
+Si consideras que no hemos atendido correctamente tu solicitud, puedes
+reclamar ante la **Agencia Española de Protección de Datos**
+(C/ Jorge Juan, 6, 28001 Madrid — [www.aepd.es](https://www.aepd.es)).
+
+### 7. Datos de terceras personas
+
+Si nos facilitas datos personales de otras personas —por ejemplo, de un
+administrador o de un socio de tu clínica— debes haberles informado
+previamente del contenido de esta política y contar con su consentimiento.
+
+### 8. Menores de edad
+
+Los servicios de este sitio web se dirigen a profesionales y empresas. No
+recogemos conscientemente datos de menores de 14 años.
+
+### 9. Cambios en esta política
+
+Podemos actualizar esta política para adaptarla a cambios legales o a nuevos
+servicios. La fecha de la última actualización figura al principio del
+documento.
