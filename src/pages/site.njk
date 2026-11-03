@@ -12,6 +12,7 @@ eleventyComputed:
       <h1>Mapa del sitio</h1>
       <p class="t-lead">Índice interno de todas las páginas publicadas.</p>
     </div>
+    <h2 class="t-h4 mb-6">Páginas publicadas</h2>
     <ul class="list-check">
       {% for page in collections.all %}
         {% if page.data.title and "/legal/" not in page.url %}

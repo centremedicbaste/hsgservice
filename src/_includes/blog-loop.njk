@@ -8,7 +8,7 @@
       <h3 class="post-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
       <p class="t-small t-mute">{{ post.data.date | postDate }}</p>
       <p class="t-small">{{ post.data.description }}</p>
-      <p class="mt-auto"><a class="link-arrow" href="{{ post.url }}">Leer más</a></p>
+      <p class="mt-auto"><a class="link-arrow" href="{{ post.url }}" aria-label="Leer más: {{ post.data.title }}">Leer más</a></p>
     </div>
   </article>
 </li>

@@ -6,7 +6,7 @@ date: 2024-02-02
 tags: ["legal", "aaa"]
 image: /assets/static/blog/article-1.webp
 imageAlt: politicas de privacidad
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
+description: "Información legal de HSG Service."
 ---
 
 ## POLÍTICA DE PRIVACIDAD

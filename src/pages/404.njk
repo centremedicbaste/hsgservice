@@ -1,0 +1,54 @@
+---
+layout: base.njk
+title: Esta página no existe
+subtitle: El enlace que has seguido ya no lleva a ninguna parte
+permalink: /404.html
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  metaTitle: "Página no encontrada | HSG Service"
+  metaDescription: "La página que buscas no existe o ha cambiado de dirección."
+  metaRobots: "noindex, follow"
+---
+{% set heroSmall = true %}
+{% set eyebrow = "Error 404" %}
+{% include 'hero.njk' %}
+
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-head">
+      <h2>Seguramente buscabas una de estas</h2>
+    </div>
+    <div class="grid grid--3">
+      <a class="card" href="/central-de-compras-dental/">
+        <h3 class="card__title">Central de compras dental</h3>
+        <p class="card__text">Material, implantes y maquinaria a precio de grupo.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/financiacion-para-clinicas/">
+        <h3 class="card__title">Financiación para clínicas</h3>
+        <p class="card__text">Para tus pacientes y para la inversión de la clínica.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/formacion/">
+        <h3 class="card__title">Formación</h3>
+        <p class="card__text">Masterclasses de primeras visitas y técnicas de venta.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/departamentos/">
+        <h3 class="card__title">Todos los servicios</h3>
+        <p class="card__text">El índice completo de lo que incluye el grupo.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/blog/">
+        <h3 class="card__title">Blog</h3>
+        <p class="card__text">Guías de gestión y rentabilidad para clínicas.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/contacta/">
+        <h3 class="card__title">Contacta</h3>
+        <p class="card__text">Si no encuentras lo que buscas, pregúntanos.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+    </div>
+  </div>
+</section>

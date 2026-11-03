@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: Mensaje recibido
+subtitle: Gracias por escribirnos
+permalink: /gracias/
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  metaTitle: "Mensaje recibido | HSG Service"
+  metaDescription: "Hemos recibido tu mensaje. Te responderemos lo antes posible."
+  metaRobots: "noindex, follow"
+---
+{% set heroSmall = true %}
+{% set eyebrow = "Recibido" %}
+{% include 'hero.njk' %}
+
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-head">
+      <h2>Te llamamos nosotros</h2>
+      <p class="t-lead">
+        Tu mensaje ya está en nuestra bandeja. Te responderemos lo antes posible,
+        normalmente el mismo día laborable. Ten el móvil cerca.
+      </p>
+    </div>
+
+    <div class="grid grid--3">
+      <a class="card" href="/central-de-compras-dental/">
+        <h3 class="card__title">Central de compras</h3>
+        <p class="card__text">Cómo funciona comprar con la fuerza de más de 360 clínicas.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/financiacion-para-clinicas/">
+        <h3 class="card__title">Financiación</h3>
+        <p class="card__text">Condiciones, plazos y cómo se tramita desde la clínica.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="card" href="/blog/">
+        <h3 class="card__title">Guías</h3>
+        <p class="card__text">Rentabilidad, KPIs, primeras visitas y costes de una clínica.</p>
+        <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>
+      </a>
+    </div>
+
+    <p class="mt-8">
+      ¿Prefieres hablar ya? Escríbenos a
+      <a href="mailto:{{ global.email }}">{{ global.email }}</a>
+      o llámanos al <a href="tel:+34936612492">93 661 24 92</a>.
+    </p>
+  </div>
+</section>

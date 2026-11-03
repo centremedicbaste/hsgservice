@@ -1,3 +1,4 @@
+const path = require("path");
 const { DateTime } = require("luxon");
 const pluginTOC = require("eleventy-plugin-toc");
 const markdownIt = require("markdown-it");
@@ -12,20 +13,42 @@ const mdOptions = {
   linkify: true,
   typographer: true,
 };
+// Solo ids en los encabezados. Los permalinks generaban un <a> con un espacio
+// por encabezado: invisible, sin nombre accesible y sin utilidad.
 const mdAnchorOpts = {
-  permalink: true,
-  permalinkClass: "anchor-link",
-  permalinkSymbol: " ",
+  permalink: false,
   level: [1, 2, 3, 4],
 };
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./src/css/style.css");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
-  eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/_redirects");
 
 
+
+  // Inyecta width/height en las <img> que no los declaran, leyendo el archivo real.
+  // Sin estos atributos el navegador no reserva el hueco y la página da saltos al cargar.
+  const imageSize = require("image-size");
+  const dimCache = new Map();
+  eleventyConfig.addTransform("imgDimensions", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/<img\b[^>]*>/g, (tag) => {
+      if (/\bwidth=/.test(tag) || /\bheight=/.test(tag)) return tag;
+      const m = tag.match(/src="(\/[^"]+)"/);
+      if (!m) return tag;
+      const file = path.join("src", m[1]);
+      if (!dimCache.has(file)) {
+        try {
+          const { width, height } = imageSize(file);
+          dimCache.set(file, width && height ? ` width="${width}" height="${height}"` : "");
+        } catch (e) {
+          dimCache.set(file, "");
+        }
+      }
+      const attrs = dimCache.get(file);
+      return attrs ? tag.replace(/<img\b/, `<img${attrs}`) : tag;
+    });
+  });
 
   eleventyConfig.addPairedShortcode("myShortcode", function (content) {
     // Method A: ✅ ideal para encapsular {% myShortcode %}  dfdfdf  {% endmyShortcode %}
