@@ -15,6 +15,7 @@ author: HSG Service
 date: 2026-11-03
 tags: ["departamentos"]
 image: /assets/static/ilustraciones/ortodoncia.webp
+ilustracion: ortodoncia
 imagemini: /assets/static/departamentos/mini-orto.webp
 imageAlt: Ortodoncia invisible con alineadores Suresmile
 duracion: 30 minutos

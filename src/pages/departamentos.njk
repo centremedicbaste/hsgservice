@@ -65,6 +65,9 @@ faq:
     <div class="grid grid--3">
       {%- for departamento in collections.departamentos -%}
       <a class="card" href="{{ departamento.url }}">
+        {%- if departamento.data.ilustracion %}
+        <img class="card__ilu" src="/assets/static/ilustraciones/icono/{{ departamento.data.ilustracion }}.webp" alt="" width="360" height="360" loading="lazy">
+        {%- endif %}
         <h3 class="card__title">{{ departamento.data.title }}</h3>
         <p class="card__text">{{ departamento.data.descripcion }}</p>
         <span class="card__foot"><span class="arrow-dot" aria-hidden="true">&#8594;</span></span>

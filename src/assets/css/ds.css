@@ -769,6 +769,17 @@ a.card:hover .arrow-dot { background: var(--c-primary-dk); transform: translateX
   margin-bottom: var(--s-2);
 }
 .card__icon svg { width: 28px; height: 28px; fill: #fff; }
+
+/* Ilustracion de la tarjeta. Los dibujos vienen sobre blanco y la tarjeta
+   casi nunca lo es, asi que el blanco se funde con el fondo en multiply en
+   vez de recortarse como un recuadro. El fichero trae su propio margen, por
+   eso aqui no lleva relleno. */
+.card__ilu {
+  width: 104px;
+  height: 104px;
+  margin-bottom: calc(var(--s-2) * -1);
+  mix-blend-mode: multiply;
+}
 .card__title { font-size: var(--t-h4); }
 .card__text { font-size: var(--t-small); color: var(--c-ink-soft); }
 .card__foot { margin-top: auto; padding-top: var(--s-4); display: flex; justify-content: flex-end; }

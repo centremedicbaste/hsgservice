@@ -15,6 +15,7 @@ author: HSG Service
 date: 2026-11-03
 tags: ["departamentos"]
 image: /assets/static/ilustraciones/implantes.webp
+ilustracion: implantes
 imagemini: /assets/static/departamentos/mini-implante.webp
 imageAlt: Implantes dentales de primeras marcas para clínicas
 
