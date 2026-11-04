@@ -8,6 +8,8 @@ service:
   publico: "Clínicas dentales"
 subtitle: Digitaliza tu clínica dental
 descripcion: "Maquinaria dental a precio de grupo con financiación para clínicas asociadas: sillones, TAC, autoclave y escáner intraoral para digitalizar tu clínica."
+eleventyComputed:
+  metaTitle: "Escáner intraoral y maquinaria dental | HSG Service"
 author: HSG Service
 date: 2026-11-03
 tags: ["departamentos"]

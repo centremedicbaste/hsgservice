@@ -3,39 +3,29 @@
   "lang": "es-ES",
   "footer": "",
   "url": "hsgservice.es",
-
   "tag_manager": "GTM-W9PXPCJQ",
   "ga4_id": "G-E6MK6V95JM",
   "ga4_delivery": "gtag",
   "meta_pixel_id": "",
-
   "about": "la clinica",
   "services": "Tratamientos",
   "blog": "Noticias",
-
-  "search_console":"IllkmM6aqWdIbzTFg57M6KKu-lJyOHM29gqoly4oPCU",
-
-
-
+  "search_console": "IllkmM6aqWdIbzTFg57M6KKu-lJyOHM29gqoly4oPCU",
   "empresa_legal": "JM CHAVARRIA SL",
-  "empresa_corto":  "JM CHAVARRIA SL",
+  "empresa_corto": "JM CHAVARRIA SL",
   "website": "https://hsgservice.es",
-  "telefono":" +34637764576",
+  "telefono": " +34637764576",
   "empresa_dni": "B63395933",
-  "email":"info@hsgservice.es",
+  "email": "info@hsgservice.es",
   "whatsapp": "+34637764576",
-
-
   "seo_title": "HSG Service | Plataforma de servicios para clínicas dentales",
-  "seo_description": "HSG Service une a clínicas dentales y estéticas privadas para que accedan a mejores precios en financiación, material y maquinaria, ortodoncia invisible, implantes y formación especializada. Aumenta la rentabilidad de tu clínica.",
+  "seo_description": "HSG Service une a clínicas dentales y estéticas para que accedan a mejores precios en financiación, material, maquinaria, implantes y formación.",
   "direction": "  Av. Diagonal, 442, 3º 2ª, Eixample, 08037 Barcelona",
   "empresa_legal_direccion": "Av. Diagonal, 442, 3º 2ª, 08037 Barcelona",
   "direction_link": "https://goo.gl/maps/Qe61x1CE2ER798Wq9",
-  "contacta_map":"https://www.google.com/maps/place/Centre+M%C3%A8dic+Bast%C3%A9/@41.3428709,2.0405011,17z/data=!3m1!4b1!4m6!3m5!1s0x12a49d9ee9d98c09:0x86e81b158e8d23ca!8m2!3d41.3428709!4d2.0405011!16s%2Fg%2F11v0gh3kc2?hl=es-419&entry=ttu",
-  
-  "social_linkedin":" https://www.linkedin.com/",
+  "contacta_map": "https://www.google.com/maps/place/Centre+M%C3%A8dic+Bast%C3%A9/@41.3428709,2.0405011,17z/data=!3m1!4b1!4m6!3m5!1s0x12a49d9ee9d98c09:0x86e81b158e8d23ca!8m2!3d41.3428709!4d2.0405011!16s%2Fg%2F11v0gh3kc2?hl=es-419&entry=ttu",
+  "social_linkedin": " https://www.linkedin.com/",
   "social_youtube": "https://www.youtube.com/",
-  "social_instagram" : "https://www.instagram.com/",
+  "social_instagram": "https://www.instagram.com/",
   "empresa_copyright": "HSG Service | Servicios para clínicas dentales y estética"
-
 }
