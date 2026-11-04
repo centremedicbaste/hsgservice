@@ -22,16 +22,18 @@
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Los vídeos pesan mucho y se sustituyen renombrando, nunca editando el mismo
-# fichero. Un año.
-/assets/static/video/*
-  Cache-Control: public, max-age=31536000, immutable
-
+# Netlify aplica la ÚLTIMA regla que casa, no la más específica: por eso
+# /assets/static/video/* va después de /assets/static/*.
 # Imágenes, iconos y favicons: 30 días. Ojo: si sustituyes una imagen
 # conservando el nombre, quien ya la tenga tardará hasta un mes en ver la
 # nueva. Renómbrala y se ve al instante.
 /assets/static/*
   Cache-Control: public, max-age=2592000
+
+# Los vídeos pesan mucho y se sustituyen renombrando, nunca editando el mismo
+# fichero. Un año.
+/assets/static/video/*
+  Cache-Control: public, max-age=31536000, immutable
 
 # El CSS y el JS se reescriben con el MISMO nombre en cada despliegue, así que
 # no pueden ir a un año: quien lo tuviera guardado se quedaría con la versión
