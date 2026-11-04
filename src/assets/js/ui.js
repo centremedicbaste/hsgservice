@@ -128,3 +128,24 @@
   if (document.readyState === 'complete') cuandoHayaHueco();
   else window.addEventListener('load', cuandoHayaHueco, { once: true });
 })();
+
+// Cabecera: transparente sobre el hero y blanca a partir de que se baja un
+// poco. El umbral son 24px para que el cambio no parpadee con el rebote del
+// scroll en macOS e iOS.
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var UMBRAL = 24;
+  var ultimo = null;
+  var pintar = function () {
+    var solida = window.scrollY > UMBRAL;
+    if (solida !== ultimo) {
+      header.classList.toggle('is-stuck', solida);
+      ultimo = solida;
+    }
+  };
+  pintar();
+  window.addEventListener('scroll', function () {
+    requestAnimationFrame(pintar);
+  }, { passive: true });
+})();

@@ -341,13 +341,45 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
 /* --------------------------------------------------------------------------
    6. CABECERA
    -------------------------------------------------------------------------- */
+/* Cabecera. Arranca transparente sobre el hero —que es oscuro en todas las
+   paginas— y se vuelve blanca al bajar. El cambio lo dispara .is-stuck desde
+   ui.js. Es fixed, no sticky, para que el hero empiece por debajo y el
+   degradado llegue hasta arriba del todo. */
 .site-header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 0; left: 0; right: 0;
   z-index: 100;
-  background: var(--c-white);
-  border-bottom: 1px solid var(--c-line);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
+.site-header .site-logo svg path { fill: #fff; transition: fill .3s ease; }
+.site-header .site-nav a,
+.site-header .nav-toggle { color: #fff; transition: color .3s ease; }
+.site-header .site-nav a[aria-current="page"] { color: #fff; border-bottom-color: #fff; }
+
+/* Con el menu movil abierto la cabecera se comporta como si estuviera
+   bajada: el panel es blanco y, si no, los enlaces en blanco quedaban sobre
+   fondo blanco y no se leia nada. */
+.site-header.is-stuck,
+.site-header:has(.site-nav.is-open) {
+  background: var(--c-white);
+  border-bottom-color: var(--c-line);
+  box-shadow: 0 2px 16px rgba(1,37,63,.08);
+}
+.site-header.is-stuck .site-logo svg path,
+.site-header:has(.site-nav.is-open) .site-logo svg path { fill: var(--c-deep); }
+.site-header.is-stuck .site-nav a,
+.site-header.is-stuck .nav-toggle,
+.site-header .site-nav.is-open a,
+.site-header:has(.site-nav.is-open) .nav-toggle { color: var(--c-ink); }
+.site-header.is-stuck .site-nav a[aria-current="page"],
+.site-header .site-nav.is-open a[aria-current="page"] { color: var(--c-primary); border-bottom-color: var(--c-primary); }
+
+/* El hero se mete por debajo de la cabecera, asi que reserva su altura. */
+.hero { padding-top: var(--header-h); }
+/* Las paginas que no empiezan por un hero, tambien. */
+main > :first-child:not(.hero) { padding-top: calc(var(--header-h) + var(--s-6)); }
 .site-header__inner {
   display: flex;
   align-items: center;
@@ -356,7 +388,7 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
 }
 .site-logo { flex: none; display: flex; align-items: center; }
 .site-logo svg { width: 150px; height: auto; }
-.site-logo svg path { fill: var(--c-deep); }
+/* El color del logo lo decide .site-header segun su estado. */
 
 .site-nav { margin-left: auto; }
 .site-nav ul { display: flex; align-items: center; gap: var(--s-6); }
@@ -442,6 +474,18 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
    un titular grande: centrado y a este tamano obliga al ojo a buscar el inicio
    de cada linea. La imagen va a la derecha, enmarcada, para que se lea como un
    objeto y no como parte del fondo. */
+/* Fondo de la portada: azul profundo a la izquierda y turquesa a la derecha,
+   en diagonal. Va en el CSS y no en el video para que sea SIEMPRE el mismo:
+   el video original cicla de color y, ademas, en movil no se carga. */
+.hero--split {
+  background:
+    linear-gradient(103deg,
+      var(--c-deep-2) 0%,
+      #023a62 32%,
+      #0a5f80 62%,
+      #157e99 82%,
+      #1b8ca6 100%);
+}
 .hero--split .hero__grid {
   display: grid;
   gap: var(--s-9);
@@ -567,6 +611,30 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
   .hero__card--3 { bottom: 7%; right: max(-16px, -4%); }
 }
 
+/* Animacion de las tarjetas: entran escalonadas al cargar y luego flotan muy
+   despacio. La entrada usa `transform` y el flotar usa `translate`, que son
+   propiedades distintas, asi que se componen en vez de pisarse. */
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .hero__card {
+    opacity: 0;
+    animation:
+      heroCardIn .7s cubic-bezier(.16,1,.3,1) forwards,
+      heroFloat  7s ease-in-out 1.3s infinite;
+  }
+  .hero__card--1 { animation-delay: .35s, 1.3s; }
+  .hero__card--2 { animation-delay: .55s, 1.7s; animation-duration: .7s, 8s; }
+  .hero__card--3 { animation-delay: .75s, 2.1s; animation-duration: .7s, 6.5s; }
+
+  @keyframes heroCardIn {
+    from { opacity: 0; transform: translateY(16px) scale(.96); }
+    to   { opacity: 1; transform: none; }
+  }
+  @keyframes heroFloat {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -9px; }
+  }
+}
+
 /* En movil la imagen va debajo del texto y mas baja, para que el titular y el
    boton entren en la primera pantalla. */
 @media (max-width: 899px) {
@@ -579,11 +647,23 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
 
 /* El video de fondo es decorativo: si el sistema pide menos animacion, no se
    carga (lo comprueba tambien el JS) y se queda el poster. */
-.hero__video { opacity: 0; transition: opacity .6s ease; }
+/* El 3D original cicla de color: a los 8 s es dorado y a los 12 morado. Lo
+   pasamos a gris y lo re-teñimos con el turquesa de marca, asi el movimiento
+   se conserva pero el color no se mueve nunca del azul-turquesa. sepia da un
+   tono unico (~40 deg) y el hue-rotate lo lleva al nuestro. */
+.hero__video {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  /* En gris y en soft-light solo aporta el relieve de las formas 3D: aclara
+     y oscurece el degradado de debajo sin teñirlo. Por eso da igual que el
+     original pase por dorado o morado. */
+  filter: grayscale(1) contrast(1.15);
+  mix-blend-mode: soft-light;
+}
+.hero__video.is-ready { opacity: .55; }
 /* Los radiales de .hero::before van por encima del video y le quitan el color
    de marca. Con video, se atenuan. */
 .hero--split:has(.hero__video)::before { opacity: .45; }
-.hero__video.is-ready { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   .hero__video { display: none; }
 }
@@ -593,10 +673,9 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
    ve el movimiento. Abajo se refuerza un poco para que el indicador de scroll
    y el borde de la seccion siguiente no queden sobre una zona clara. */
 @media (min-width: 900px) {
-  .hero--split:has(.hero__video) .hero__media::after {
+  .hero--split .hero__media::after {
     background:
-      linear-gradient(90deg, rgba(1,37,63,.93) 0%, rgba(1,37,63,.88) 42%, rgba(1,37,63,.46) 58%, rgba(1,37,63,.20) 74%, rgba(1,37,63,.16) 100%),
-      linear-gradient(180deg, transparent 50%, rgba(1,37,63,.40) 100%);
+      linear-gradient(90deg, rgba(2,30,52,.55) 0%, rgba(2,30,52,.30) 40%, transparent 65%);
   }
 }
 
@@ -814,8 +893,13 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
   font-size: var(--t-micro); font-weight: 600; letter-spacing: .02em;
 }
 
-.prose { max-width: var(--container-prose); }
+/* La columna de lectura va centrada. Sin margin-inline:auto quedaba pegada a
+   la izquierda de un contenedor de 1366px, con 734px de hueco a la derecha. */
+.prose { max-width: var(--container-prose); margin-inline: auto; }
 .prose > * + * { margin-top: var(--s-5); }
+/* El primer elemento no lleva margen propio: la separacion con lo de arriba
+   ya la pone el padding de la seccion, y sumados daban 181px de aire. */
+.prose > :first-child { margin-top: 0; }
 .prose h2 { margin-top: var(--s-10); margin-bottom: calc(var(--s-4) * -1 + var(--s-5)); font-size: var(--t-h2); }
 .prose h3 { margin-top: var(--s-8); font-size: var(--t-h3); }
 .prose h2 + *, .prose h3 + * { margin-top: var(--s-4); }
