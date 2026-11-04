@@ -635,6 +635,20 @@ main > :first-child:not(.hero) { padding-top: calc(var(--header-h) + var(--s-6))
   }
 }
 
+/* Con «reducir movimiento» activado en el sistema, el bloque de arriba entero
+   se salta y las tarjetas no entraban: simplemente estaban ahi desde el
+   principio. Se conserva la intencion sin mover nada: aparecen escalonadas,
+   solo opacidad. Un fundido no dispara el malestar vestibular que esa
+   preferencia trata de evitar, a diferencia del desplazamiento y el flotar. */
+@media (min-width: 900px) and (prefers-reduced-motion: reduce) {
+  .hero__card { opacity: 0; animation: heroCardFade .5s linear forwards; }
+  .hero__card--1 { animation-delay: .20s; }
+  .hero__card--2 { animation-delay: .35s; }
+  .hero__card--3 { animation-delay: .50s; }
+
+  @keyframes heroCardFade { to { opacity: 1; } }
+}
+
 /* En movil la imagen va debajo del texto y mas baja, para que el titular y el
    boton entren en la primera pantalla. */
 @media (max-width: 899px) {

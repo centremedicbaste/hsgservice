@@ -149,3 +149,29 @@
     requestAnimationFrame(pintar);
   }, { passive: true });
 })();
+
+// Las tarjetas del hero entran una vez al cargar, con la animacion del CSS. Si
+// alguien baja y vuelve arriba ya no pasaba nada, asi que la entrada se repite
+// cada vez que la portada vuelve a verse. Reiniciar una animacion de CSS exige
+// quitarla, forzar el reflujo y devolverla: sin el reflujo el navegador agrupa
+// los dos cambios y no reinicia nada.
+(function () {
+  var cards = document.querySelectorAll(".hero__card");
+  if (!cards.length || !("IntersectionObserver" in window)) return;
+
+  var zona = document.querySelector(".hero__visual-wrap") || document.querySelector(".hero");
+  if (!zona) return;
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      cards.forEach(function (c) {
+        c.style.animation = "none";
+        void c.offsetWidth;
+        c.style.animation = "";
+      });
+    });
+  }, { threshold: 0.4 });
+
+  io.observe(zona);
+})();
