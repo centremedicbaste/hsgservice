@@ -1,4 +1,11 @@
 # Cabeceras que sirve Netlify. Un fichero por sitio, un bloque por patrón.
+#
+# Sin este fichero Netlify manda todo con "max-age=0, must-revalidate", o sea
+# que el navegador vuelve a preguntar por cada fichero en cada navegación.
+# Aquí se le dice cuánto puede guardarse cada cosa.
+#
+# El HTML se queda fuera a propósito: no lleva Cache-Control, así que sigue
+# revalidándose siempre y un despliegue se ve al momento.
 
 /*
   # El navegador respeta el Content-Type declarado y no lo adivina.
@@ -10,7 +17,29 @@
   # El sitio no usa ninguna de estas APIs: se deniegan de forma explícita.
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
 
-# Las fotos y los favicons cambian muy de tarde en tarde. Un día de caché.
-# Si sustituyes una imagen conservando el nombre, tarda hasta 24 h en verse.
+# Las fuentes no cambian jamás sin cambiar de nombre: un año e inmutables,
+# que ahorra incluso la petición condicional.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Los vídeos pesan mucho y se sustituyen renombrando, nunca editando el mismo
+# fichero. Un año.
+/assets/static/video/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes, iconos y favicons: 30 días. Ojo: si sustituyes una imagen
+# conservando el nombre, quien ya la tenga tardará hasta un mes en ver la
+# nueva. Renómbrala y se ve al instante.
 /assets/static/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=2592000
+
+# El CSS y el JS se reescriben con el MISMO nombre en cada despliegue, así que
+# no pueden ir a un año: quien lo tuviera guardado se quedaría con la versión
+# vieja. Una hora es el equilibrio: ahorra la revalidación de cada navegación
+# dentro de una visita y cualquier despliegue se corrige solo en 60 minutos.
+# Para subirlo a un año habría que añadir una huella a la URL (style.css?v=…).
+/assets/css/*
+  Cache-Control: public, max-age=3600
+
+/assets/js/*
+  Cache-Control: public, max-age=3600
