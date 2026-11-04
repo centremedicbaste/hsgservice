@@ -56,7 +56,7 @@ No son excluyentes. Una central razonable negocia también con depósitos y te c
 
 ### ¿Qué puede comprar mi clínica a precio de grupo?
 
-- **Implantes** de primeras marcas, con [más de un 50 % de descuento](/departamentos/implantes/).
+- **Implantes** de primeras marcas, con [descuento a precio de grupo](/departamentos/implantes/).
 - **Depósito dental**: material fungible y desechable.
 - **Maquinaria y escáneres intraorales** con [financiación asequible](/departamentos/maquinaria/).
 - **Ortodoncia invisible** Suresmile a precio de grupo.

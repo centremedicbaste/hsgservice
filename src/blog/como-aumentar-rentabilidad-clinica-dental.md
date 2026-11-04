@@ -32,7 +32,7 @@ Estas son las siete palancas, ordenadas de la que antes da resultado a la que m�
 
 El material fungible y los implantes son una de las mayores partidas de gasto, y la única que puedes reducir **sin tocar nada de cómo trabajas**. No afecta al paciente, no afecta al equipo y no requiere aprender nada nuevo. Por eso es la primera.
 
-Comprando a través de una [central de compras dental](/blog/central-de-compras-dental/) accedes a precios de grupo: las condiciones se negocian con el volumen conjunto de todas las clínicas asociadas, no con el tuyo individual. En HSG Service los asociados obtienen más de un 50 % de descuento en [implantes de primeras marcas](/departamentos/implantes/).
+Comprando a través de una [central de compras dental](/blog/central-de-compras-dental/) accedes a precios de grupo: las condiciones se negocian con el volumen conjunto de todas las clínicas asociadas, no con el tuyo individual. En HSG Service los asociados obtienen descuento a precio de grupo en [implantes de primeras marcas](/departamentos/implantes/).
 
 **Cómo empezar:** coge las facturas de material e implantes de los últimos doce meses, suma el total y compáralo línea a línea con las condiciones de grupo. Ese cálculo, con tus cifras, te dice en una tarde si te compensa.
 

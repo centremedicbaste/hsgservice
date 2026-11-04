@@ -10,7 +10,7 @@ subtitle: Depósito dental e implantes para clínicas
 
 eleventyComputed:
   metaTitle: "Implantes dentales para clínicas | HSG Service"
-descripcion: "Implantes dentales de primeras marcas con más de un 50% de descuento para clínicas asociadas, y material fungible de depósito a precio de grupo."
+descripcion: "Implantes dentales de primeras marcas con descuento de asociado para clínicas, y material fungible de depósito a precio de grupo."
 author: HSG Service
 date: 2026-11-03
 tags: ["departamentos"]
@@ -20,7 +20,7 @@ imagemini: /assets/static/departamentos/mini-implante.webp
 imageAlt: Implantes dentales de primeras marcas para clínicas
 
 grid1: xx
-grid2: Hasta más de un 50% de descuento en implantes de primeras marcas.
+grid2: Descuento a precio de grupo en implantes de primeras marcas.
 grid3: xx
 grid4: Descuento de asociados en depósito dental de material fungible y desechable.
 grid5: implantes/implantes_.jpg
@@ -31,7 +31,7 @@ grid9: xx
 
 faq:
   - q: "¿Qué descuento tienen los implantes dentales con HSG Service?"
-    a: "Las clínicas asociadas a HSG Service reciben más de un 50% de descuento en implantes de primeras marcas, gracias a la compra agrupada a precio de grupo."
+    a: "Las clínicas asociadas a HSG Service reciben un descuento a precio de grupo en implantes de primeras marcas, gracias a la compra agrupada."
   - q: "¿Qué material de depósito dental puedo conseguir?"
     a: "Además de implantes, los asociados obtienen descuentos en depósito dental de material fungible y desechable, comprando a precio de grupo con las mejores marcas del mercado."
   - q: "¿Cómo consigo estos precios en implantes?"
@@ -41,7 +41,7 @@ Los **implantes dentales** están cambiando la forma en que las personas viven. 
 
 ## Ventajas para tu clínica
 
-- **Más de un 50% de descuento** en implantes de marcas reconocidas.
+- **Descuento a precio de grupo** en implantes de marcas reconocidas.
 - Descuentos de asociado en **depósito dental**: material fungible y desechable.
 - Compra a **precio de grupo**: cuanto mayor es el volumen, mayores son tus descuentos.
 - Acceso a las **mejores marcas** del mercado con la máxima calidad.
