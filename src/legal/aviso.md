@@ -9,9 +9,7 @@ imageAlt: aviso legal
 description: "Información legal de HSG Service."
 ---
 
-## AVISO LEGAL
-
-### PROPIEDAD DEL SITIO WEB
+## PROPIEDAD DEL SITIO WEB
 Titular del Website: J.M.Chavarria SL - CIF B63395933 - Clìnica Dental Bastè
 Dirección: C/ RIERA BASTE, 18-20. 08830, SANT BOI DE LLOBREGAT (Barcelona), España
 Contacto: Tel. 936354025 - Email: info@hsgservice.es
@@ -20,7 +18,7 @@ Email: info@adaptaliacorporacion.com
 Teléfono: 936549030
 Actividad: Salud / Profesionales / Odontología
 
-### CONDICIONES GENERALES DE USO
+## CONDICIONES GENERALES DE USO
 El portal web tiene como objeto facilitar al público, en general, el conocimiento de las actividades que esta organización realiza y de los productos y servicios que presta, para el desarrollo de su actividad.
 
 El uso de cualquiera de las funcionalidades del sitio Web implica la expresa y plena aceptación de las condiciones aquí expuestas, sin perjuicio de aquellas particulares que pudieran aplicarse a algunos de los servicios concretos ofrecidos a través del sitio Web.
@@ -29,7 +27,7 @@ El titular del sitio Web se reserva la facultad de efectuar, en cualquier moment
 
 Con el objeto de mantener actualizada la información publicada el portal Web, los contenidos del mismo podrán ser modificados, corregidos, eliminados o añadidos en cualquier momento, por lo que será conveniente comprobar la vigencia o exactitud de los mismos acudiendo a las fuentes oficiales.
 
-### PROPIEDAD INTELECTUAL, INDUSTRIAL Y FRAMES
+## PROPIEDAD INTELECTUAL, INDUSTRIAL Y FRAMES
 Todos los elementos que forman el sitio Web, así como su estructura, diseño, código fuente, así como los logos, marcas y demás signos distintivos que aparecen en la misma, son titularidad de J.M.CHAVARRIA SL, CLÍNICA DENTAL BASTÉ o de sus colaboradores y están protegidos por los correspondientes derechos de propiedad intelectual e industrial.
 
 Igualmente están protegidos por los correspondientes derechos de propiedad intelectual e industrial las imágenes y otros elementos gráficos contenidos en el sitio Web.
@@ -50,7 +48,7 @@ Respecto a las citas de productos y servicios de terceros, el titular del sitio 
 
 El titular del sitio Web declara su respeto a los derechos de propiedad intelectual e industrial de terceros; por ello, si considera que nuestro sitio Web pudieran estar violando sus derechos, rogamos se ponga en contacto con el titular del sitio Web.
 
-### RESPONSABILIDAD
+## RESPONSABILIDAD
 El titular del sitio Web no garantiza la inexistencia de errores en el acceso a la Web, en su contenido, ni que éste se encuentre actualizado, aunque el titular del sitio Web desarrollará sus mejores esfuerzos para, en su caso, evitarlos, subsanarlos o actualizarlos.
 
 Tanto el acceso al sitio Web, como el uso que pueda hacerse de la información contenida en los mismos, es de la exclusiva responsabilidad de quien lo realiza.
@@ -61,7 +59,7 @@ No obstante y en cumplimiento de lo dispuesto en la LSSI, el titular del sitio W
 
 El titular del sitio Web no se responsabiliza de las contestaciones que se realicen a través de las distintas direcciones de correo electrónico que aparecen en su sitio Web, por lo que en ningún caso podrá derivarse efecto jurídico vinculante de las mismas.
 
-### LINKS O HIPERENLACES
+## LINKS O HIPERENLACES
 Los enlaces contenidos en nuestro sitio Web pueden dirigir a contenidos Web de tercero. El objetivo de dichos enlaces es únicamente facilitarle la búsqueda de los recursos que le puedan interesar a través de Internet. No obstante, dichas páginas no pertenecen al titular del sitio Web, ni hace una revisión de sus contenidos y, por ello, el titular del sitio Web no asume ninguna responsabilidad por el contenido, informaciones o servicios que pudieran aparecer en dichos sitios, que tendrán exclusivamente carácter informativo y que en ningún caso implican relación alguna entre el titular del sitio Web y las personas o entidades titulares de tales contenidos o titulares de otros sitios donde se encuentren. El titular del sitio Web tampoco puede hacerse responsable del funcionamiento de la página enlazada o de los posibles daños que puedan derivarse del acceso o uso de la misma.
 
 Los enlaces al sitio Web deberán respetar las siguientes condiciones:
@@ -74,7 +72,7 @@ La página Web en la que se establezca el hiperenlace no podrá contener marca, 
 PROTECCIÓN DE DATOS PERSONALES
 Para aquellos casos que se recaben, traten o almacenen datos personales, se hará en conformidad con la Política de Privacidad publicada en el Website y que puede consultar en el pie o footer del sitio Web.
 
-### DERECHOS DE LOS INTERESADOS
+## DERECHOS DE LOS INTERESADOS
 La ley aplicable en caso de disputa o conflicto de interpretación de los términos que conforman este Aviso Legal, así como cualquier cuestión relacionada con los servicios del presente Portal, será la ley española.
 
 Para la resolución de cualquier conflicto que pueda surgir con ocasión de la visita al sitio Web o del uso de los servicios que en él se puedan ofertar, el titular del sitio Web y el Usuario acuerdan someterse a los Jueces y Tribunales de domicilio del Usuario, siempre que el mismo esté situado en territorio español y actúe en condición de consumidor. En caso contrario, la sumisión será a los juzgados y tribunales de la ciudad de Barcelona, España.

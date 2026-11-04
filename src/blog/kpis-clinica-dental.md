@@ -18,10 +18,6 @@ faq:
   - q: "¿Cómo puedo bajar el coste de material sin perder calidad?"
     a: "La vía más eficaz no es consumir menos ni bajar de gama, sino comprar mejor: agrupando el volumen de compra con otras clínicas se consiguen precios que una clínica sola no obtiene, manteniendo exactamente las mismas marcas."
 ---
-
-## KPIs de una clínica dental: qué medir y qué es normal
-___
-
 Muchas clínicas facturan bien y ganan poco. La diferencia casi nunca se ve en la cuenta de resultados a final de año: se ve **antes**, en un puñado de indicadores. Estos son los que de verdad importan.
 
 > ⚠️ Las horquillas de esta guía son **orientativas** y varían según el tipo de clínica, la especialidad y la zona. Úsalas para situarte, no como norma absoluta.

@@ -22,10 +22,6 @@ faq:
   - q: "¿Por dónde empiezo si solo puedo hacer una cosa este mes?"
     a: "Por medir la tasa de aceptación de presupuestos. Es el indicador que más dice sobre la salud comercial de la clínica, se calcula con lo que ya tienes en el software y casi siempre revela que el problema no es la falta de pacientes."
 ---
-
-## Cómo aumentar la rentabilidad de una clínica dental
-___
-
 Aumentar la rentabilidad de una clínica dental no siempre significa atender a más pacientes. En la mayoría de los casos, el margen se mejora **reduciendo costes ocultos, financiando tratamientos y optimizando la aceptación de presupuestos**.
 
 Conviene empezar por una distinción que se pasa por alto: **facturación y rentabilidad no son lo mismo**. Una clínica puede facturar un 20 % más y ganar menos que el año anterior, y es lo que ocurre a menudo. Si los costes crecen al mismo ritmo que los ingresos, trabajar más solo significa trabajar más.

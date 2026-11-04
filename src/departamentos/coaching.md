@@ -28,16 +28,13 @@ faq:
   - q: "¿Cómo se aplica la metodología de coaching?"
     a: "Empezamos con una auditoría de la situación inicial de tu clínica, diseñamos una estrategia a medida y, durante la ejecución, un coach acude a la clínica de forma semanal o quincenal para apoyar al odontólogo o gestor."
 ---
-##  Consultoría y gestión para clínicas dentales
-___
-
 ![Consultoría y coaching dental para la gestión de la clínica](/assets/static/otros/otros-1.webp)
 
 Hoy los **odontólogos y directores de clínica** no solo deben dominar las últimas técnicas de odontología: también tienen que ser gerentes, administradores y responsables de recursos humanos. Con la **consultoría y el coaching dental** de HSG Service te damos, a ti y a tu equipo, las herramientas y conocimientos necesarios para **dirigir tu clínica de forma eficaz y profesional**.
 
 {% br %}
 
-### Objetivos de la consultoría y el coaching dental
+## Objetivos de la consultoría y el coaching dental
 
 - Ayudar a desarrollar la clínica conjuntamente con la dirección de la empresa.
 - Mejorar la relación entre gerencia y equipo: cómo motivarlos, qué responsabilidades delegar y cómo incentivarlos.
@@ -48,7 +45,7 @@ Hoy los **odontólogos y directores de clínica** no solo deben dominar las últ
 
 {% br %}
 
-### Metodología que aplicamos
+## Metodología que aplicamos
 
 - Realizamos una **auditoría** de la situación inicial de tu clínica.
 - Diseñamos una **estrategia a medida** para dar solución a las necesidades detectadas.

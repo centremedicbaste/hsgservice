@@ -22,10 +22,6 @@ faq:
   - q: "¿Cuánto tiempo debe durar una primera visita?"
     a: "El suficiente para explorar, diagnosticar, explicar y presentar el plan sin prisa. Comprimir una primera visita para encajar más pacientes suele salir caro: se gana un hueco en la agenda y se pierde un tratamiento completo."
 ---
-
-## Cómo mejorar la aceptación de primeras visitas
-___
-
 La **primera visita** es el momento en el que se gana o se pierde al paciente. No depende solo del odontólogo: intervienen la recepción, la organización de la agenda y la forma de presentar el plan de tratamiento. Con un buen protocolo, la tasa de aceptación puede subir varios puntos.
 
 Y subir la aceptación es, con diferencia, **la palanca más barata que tiene una clínica**. No exige más pacientes, ni más horas, ni más inversión en publicidad. Exige convertir mejor a los que ya entran por la puerta.

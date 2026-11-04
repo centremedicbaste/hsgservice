@@ -20,10 +20,6 @@ faq:
   - q: "¿Cómo puedo reducir la inversión inicial?"
     a: "Comprando el equipamiento y el material a precio de grupo a través de una central de compras, financiando la maquinaria en lugar de pagarla al contado, y priorizando la inversión: primero lo que genera ingresos desde el primer día y después lo accesorio."
 ---
-
-## Cuánto cuesta abrir una clínica dental
-___
-
 Es la primera pregunta que se hace cualquier odontólogo que quiere dejar de trabajar por cuenta ajena. La respuesta honesta es: **depende de cuántos gabinetes, en qué local y con qué nivel de tecnología**. Pero sí se puede acotar.
 
 En el sector se maneja una horquilla amplia que va **desde unos 80.000 € hasta 300.000-400.000 €**. Vamos a desglosarla para que puedas situar tu proyecto.

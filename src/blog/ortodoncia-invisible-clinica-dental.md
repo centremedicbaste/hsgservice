@@ -22,10 +22,6 @@ faq:
   - q: "¿Puedo financiar la ortodoncia invisible a mis pacientes?"
     a: "Sí, y es muy recomendable por el importe medio del tratamiento. Con la financiación del grupo puedes presentar el caso en cuota mensual, con plazos de 3 a 72 meses, y cobrar la liquidación en 24-48 horas sin asumir el riesgo de impago."
 ---
-
-## Ortodoncia invisible: por qué ofrecerla en tu clínica
-___
-
 La **ortodoncia invisible** con alineadores se ha convertido en uno de los tratamientos más solicitados en la odontología privada. Es estética, cómoda y prácticamente imperceptible, y eso ha abierto la puerta a un paciente que durante años se quedó fuera: el adulto que necesitaba ortodoncia pero no estaba dispuesto a llevar brackets.
 
 Para la clínica es, además, un tratamiento de **alto valor y bajo tiempo de sillón**. Esa combinación es poco frecuente, y es la razón por la que conviene mirarlo con atención aunque hoy no lo ofrezcas.

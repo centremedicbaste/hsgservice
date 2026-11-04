@@ -9,11 +9,9 @@ imageAlt: Política de cookies de HSG Service
 description: "Información legal de HSG Service."
 ---
 
-## Política de cookies
-
 **Última actualización:** 4 de noviembre de 2026
 
-### 1. Qué es una cookie
+## 1. Qué es una cookie
 
 Una cookie es un pequeño archivo que un sitio web guarda en tu navegador
 cuando lo visitas. Sirve para reconocer tu equipo en visitas posteriores.
@@ -26,7 +24,7 @@ General de Protección de Datos. El responsable es
 {{ global.empresa_legal }}, con NIF {{ global.empresa_dni }} y domicilio en
 {{ global.empresa_legal_direccion }}.
 
-### 2. Qué cookies usa esta web
+## 2. Qué cookies usa esta web
 
 Solo dos cosas, y una de ellas depende de ti.
 
@@ -72,7 +70,7 @@ que permite la herramienta.
 Unidos, al amparo del Marco de Privacidad de Datos UE-EE. UU., del que Google
 LLC está certificada.
 
-### 3. Lo que esta web no hace
+## 3. Lo que esta web no hace
 
 Para que quede claro, porque muchas políticas de cookies dicen lo contrario
 por copiar plantillas:
@@ -87,7 +85,7 @@ La web carga tipografías desde Google Fonts, que no instala cookies pero sí
 recibe tu dirección IP al servir el archivo. Estamos trabajando para servirlas
 desde nuestro propio dominio y eliminar también esa conexión.
 
-### 4. Cómo aceptar, rechazar o cambiar de opinión
+## 4. Cómo aceptar, rechazar o cambiar de opinión
 
 Al entrar por primera vez verás un aviso con dos botones, **Aceptar** y
 **Rechazar**, con el mismo peso: rechazar es igual de fácil y de rápido que
@@ -109,7 +107,7 @@ Las cookies que ya estuvieran puestas puedes borrarlas desde tu navegador:
 También puedes configurar tu navegador para bloquear cookies de terceros con
 carácter general. Hacerlo no afecta al funcionamiento de esta web.
 
-### 5. Tus derechos
+## 5. Tus derechos
 
 Puedes ejercer los derechos de acceso, rectificación, supresión, oposición,
 limitación y portabilidad escribiéndonos a
@@ -119,7 +117,7 @@ Española de Protección de Datos** (C/ Jorge Juan, 6, 28001 Madrid —
 bien. Lo tienes desarrollado en nuestra
 [política de privacidad](/legal/politicas/).
 
-### 6. Cambios en esta política
+## 6. Cambios en esta política
 
 Si añadimos o quitamos alguna cookie, actualizaremos esta página y volveremos
 a pedirte el consentimiento cuando la ley lo exija. La fecha de la última

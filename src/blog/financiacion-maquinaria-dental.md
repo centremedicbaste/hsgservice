@@ -22,10 +22,6 @@ faq:
   - q: "¿Los socios de una central de compras financian en mejores condiciones?"
     a: "En una agrupación, sí, porque las condiciones se negocian con el volumen conjunto de todas las clínicas asociadas y no con el de una sola. Además, el precio de compra del equipo también sale negociado, de modo que el ahorro se produce en los dos lados de la operación."
 ---
-
-## Financiación de maquinaria dental: renueva sin descapitalizarte
-___
-
 Renovar la maquinaria de una clínica dental —sillón, escáner intraoral, TAC, autoclave— supone inversiones de miles de euros. Pagarlas al contado descapitaliza la clínica justo donde más duele: la tesorería. La **financiación de maquinaria dental** permite renovar equipos pagando una cuota mensual asumible mientras el propio equipo genera ingresos.
 
 ### ¿Por qué financiar en lugar de pagar al contado?

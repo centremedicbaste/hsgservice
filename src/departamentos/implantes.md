@@ -36,12 +36,9 @@ faq:
   - q: "¿Cómo consigo estos precios en implantes?"
     a: "Solo tienes que asociarte a HSG Service. Al unir tu clínica a nuestra central de compras accedes automáticamente a los descuentos de grupo en implantes y material dental."
 ---
-## Depósito dental e implantes para clínicas
-___
-
 Los **implantes dentales** están cambiando la forma en que las personas viven. Sabemos lo importante que es devolverle la sonrisa a tus pacientes; por eso te ofrecemos **implantes de primeras marcas al mejor coste** gracias a la compra agrupada de HSG Service.
 
-### Ventajas para tu clínica
+## Ventajas para tu clínica
 
 - **Más de un 50% de descuento** en implantes de marcas reconocidas.
 - Descuentos de asociado en **depósito dental**: material fungible y desechable.

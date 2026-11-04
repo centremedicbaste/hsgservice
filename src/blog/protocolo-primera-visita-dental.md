@@ -20,10 +20,6 @@ faq:
   - q: "¿Conviene llamar a los pacientes que no cerraron?"
     a: "Sí, y es de las acciones con mejor retorno que tiene una clínica. Buena parte de los pacientes que dijeron que se lo pensarían no dijeron que no: simplemente nadie volvió a contactarles."
 ---
-
-## Protocolo de primera visita dental, paso a paso
-___
-
 La diferencia entre una clínica con un 40% de aceptación y otra con un 80% rara vez está en el precio: está en **tener un protocolo de primera visita** y en que todo el equipo lo siga igual. Este es el guion, fase por fase.
 
 ### Fase 1 — La llamada: la primera visita empieza antes de la visita

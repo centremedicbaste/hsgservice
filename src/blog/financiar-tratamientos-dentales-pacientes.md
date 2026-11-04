@@ -24,10 +24,6 @@ faq:
   - q: "¿Sirve la financiación para clínicas que no son dentales?"
     a: "Sí. Funciona igual en clínicas estéticas, capilares y de fecundación humana asistida, porque comparten el mismo patrón: tratamientos de importe medio alto y una decisión que el paciente tiende a aplazar."
 ---
-
-## Cómo financiar tratamientos dentales a tus pacientes
-___
-
 El precio es la principal razón por la que un paciente no acepta un tratamiento. **Ofrecer financiación dental** convierte una cifra que asusta en una cuota mensual asumible, y eso se traduce directamente en más presupuestos aceptados.
 
 Pero la financiación no funciona sola. Funciona cuando está integrada en cómo se presenta el plan de tratamiento. Una clínica que tiene financiación contratada y la menciona solo cuando el paciente protesta por el precio está desaprovechando la mayor parte de su efecto.

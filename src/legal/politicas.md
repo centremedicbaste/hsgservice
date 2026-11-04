@@ -9,11 +9,9 @@ imageAlt: Política de privacidad de HSG Service
 description: "Información legal de HSG Service."
 ---
 
-## Política de privacidad
-
 **Última actualización:** 4 de noviembre de 2026
 
-### 1. Quién trata tus datos
+## 1. Quién trata tus datos
 
 | | |
 |---|---|
@@ -27,7 +25,7 @@ Esta política explica qué datos personales recogemos a través de
 {{ global.website }}, para qué los usamos, durante cuánto tiempo los
 conservamos y qué derechos tienes sobre ellos.
 
-### 2. Para qué tratamos tus datos y con qué base legal
+## 2. Para qué tratamos tus datos y con qué base legal
 
 #### a) Responder a tus consultas
 
@@ -95,7 +93,7 @@ desde el enlace de baja de cada envío o escribiéndonos.
 
 Se trata en la [política de cookies](/legal/cookies/).
 
-### 3. Quién más accede a tus datos
+## 3. Quién más accede a tus datos
 
 No vendemos tus datos ni los cedemos a terceros para sus propios fines.
 
@@ -116,7 +114,7 @@ conforme al artículo 28 del RGPD:
 Además, podemos comunicar tus datos a las **Administraciones públicas,
 juzgados y tribunales** cuando exista una obligación legal.
 
-### 4. Transferencias fuera de la Unión Europea
+## 4. Transferencias fuera de la Unión Europea
 
 Los datos de la documentación de alta se alojan **exclusivamente en servidores
 situados en la Unión Europea**.
@@ -131,7 +129,7 @@ Si aceptas las cookies de análisis, Google puede tratar los datos de medición
 en Estados Unidos al amparo de ese mismo marco. Si las rechazas, no se produce
 ninguna transferencia por este motivo.
 
-### 5. Cómo protegemos tus datos
+## 5. Cómo protegemos tus datos
 
 - La documentación se transmite siempre **cifrada** mediante conexión segura.
 - Se almacena en un **servidor privado**, sin ninguna dirección pública que
@@ -142,7 +140,7 @@ ninguna transferencia por este motivo.
   conservación descritos en el apartado 2.
 - Cuando vence el plazo de conservación, la documentación se **elimina**.
 
-### 6. Tus derechos
+## 6. Tus derechos
 
 Puedes ejercer en cualquier momento los derechos de **acceso, rectificación,
 supresión, oposición, limitación del tratamiento y portabilidad**, así como
@@ -157,18 +155,18 @@ Si consideras que no hemos atendido correctamente tu solicitud, puedes
 reclamar ante la **Agencia Española de Protección de Datos**
 (C/ Jorge Juan, 6, 28001 Madrid — [www.aepd.es](https://www.aepd.es)).
 
-### 7. Datos de terceras personas
+## 7. Datos de terceras personas
 
 Si nos facilitas datos personales de otras personas —por ejemplo, de un
 administrador o de un socio de tu clínica— debes haberles informado
 previamente del contenido de esta política y contar con su consentimiento.
 
-### 8. Menores de edad
+## 8. Menores de edad
 
 Los servicios de este sitio web se dirigen a profesionales y empresas. No
 recogemos conscientemente datos de menores de 14 años.
 
-### 9. Cambios en esta política
+## 9. Cambios en esta política
 
 Podemos actualizar esta política para adaptarla a cambios legales o a nuevos
 servicios. La fecha de la última actualización figura al principio del

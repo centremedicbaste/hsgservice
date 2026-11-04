@@ -22,10 +22,6 @@ faq:
   - q: "¿Cuánto tarda el equipo en manejarlo con soltura?"
     a: "La técnica de escaneo se aprende en días, pero integrarlo en el flujo diario lleva más. El cuello de botella casi nunca es el aparato: es el protocolo, es decir, quién escanea, en qué momento de la visita y qué se hace después con el archivo. Sin eso definido, el escáner acaba usándose a medias."
 ---
-
-## Escáner intraoral: ventajas y cómo elegirlo
-___
-
 El **escáner intraoral** es la puerta de entrada a la digitalización de la clínica dental. Sustituye las impresiones convencionales por un modelo digital preciso en segundos y abre un flujo de trabajo que ahorra tiempo, reduce visitas y mejora la experiencia del paciente.
 
 También es una de las inversiones que más se compra por entusiasmo y peor se amortiza, porque la decisión suele tomarse mirando el aparato en lugar de mirando los casos de la clínica. Este artículo intenta ayudarte con lo segundo.

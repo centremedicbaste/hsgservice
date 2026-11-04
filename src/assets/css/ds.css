@@ -694,7 +694,10 @@ main > :first-child:not(.hero) { padding-top: calc(var(--header-h) + var(--s-6))
 }
 
 /* Hero compacto para páginas interiores */
-.hero--page .hero__inner { padding-block: clamp(56px, 7vw, 104px); }
+/* Hero de paginas interiores: solo lleva titulo y subtitulo, asi que no
+   necesita el aire de la portada. Con la cabecera fija sumando su altura,
+   el padding de antes lo dejaba en el 43% de la pantalla. */
+.hero--page .hero__inner { padding-block: clamp(28px, 3vw, 44px) clamp(36px, 4vw, 60px); }
 .hero--page .hero__title { font-size: var(--t-h1); }
 
 /* --------------------------------------------------------------------------
@@ -891,8 +894,8 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 .on-dark .crumbs a:hover { text-decoration: underline; }
 /* Arriba del todo y pegadas al borde izquierdo del contenedor. El hueco que
    ocupan se le descuenta al bloque de texto para que el hero no crezca. */
-.hero__crumbs { position: relative; padding-top: var(--s-7); }
-.hero__crumbs + .hero__grid .hero__inner { padding-top: var(--s-8); }
+.hero__crumbs { position: relative; padding-top: var(--s-6); }
+.hero__crumbs + .hero__grid .hero__inner { padding-top: var(--s-5); }
 
 .post-card { display: flex; flex-direction: column; height: 100%; background: #fff; border: 1px solid var(--c-line); border-radius: var(--r-card); overflow: hidden; transition: box-shadow .25s var(--ease), transform .25s var(--ease); }
 .post-card:hover { box-shadow: var(--sh-2); transform: translateY(-3px); }
