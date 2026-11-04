@@ -76,3 +76,55 @@
     reveals.forEach(function (r) { io2.observe(r); });
   }
 })();
+
+// Vídeo de fondo del hero. Es decoración, así que no puede pagarlo la primera
+// carga: el poster y el texto se pintan solos y el vídeo entra después, cuando
+// la página ya está lista. Se salta en móvil (coste de datos sin beneficio: a
+// ese tamaño casi no se ve), si el sistema pide menos animación y si el
+// navegador avisa de conexión lenta o ahorro de datos.
+(function () {
+  var video = document.querySelector('[data-hero-video]');
+  if (!video) return;
+
+  var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var ancho = window.matchMedia('(min-width: 900px)');
+  var con = navigator.connection || {};
+  var lenta = con.saveData === true ||
+              /2g/.test(con.effectiveType || '');
+
+  if (motion.matches || !ancho.matches || lenta) return;
+
+  var cargar = function () {
+    var mp4 = video.getAttribute('data-hero-video');
+    var webm = video.getAttribute('data-hero-video-webm');
+    if (!mp4 && !webm) return;
+    if (video.dataset.cargado) return;
+    video.dataset.cargado = '1';
+    // El webm primero: pesa menos y el navegador que no lo entienda se queda
+    // con el mp4 de la siguiente linea.
+    [[webm, 'video/webm'], [mp4, 'video/mp4']].forEach(function (par) {
+      if (!par[0]) return;
+      var source = document.createElement('source');
+      source.src = par[0];
+      source.type = par[1];
+      video.appendChild(source);
+    });
+    video.load();
+    video.addEventListener('playing', function () {
+      video.classList.add('is-ready');
+    }, { once: true });
+    var p = video.play();
+    if (p && p.catch) p.catch(function () { /* autoplay denegado: queda el poster */ });
+  };
+
+  var cuandoHayaHueco = function () {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(cargar, { timeout: 2500 });
+    } else {
+      setTimeout(cargar, 1200);
+    }
+  };
+
+  if (document.readyState === 'complete') cuandoHayaHueco();
+  else window.addEventListener('load', cuandoHayaHueco, { once: true });
+})();

@@ -87,6 +87,10 @@
             Roboto, Helvetica, Arial, sans-serif;
 
   --t-display: clamp(2.5rem,  1.55rem + 3.8vw, 4rem);
+  /* Solo para el titular de la portada, que va a dos columnas y pide mas
+     cuerpo. El tope son 5.25rem (84px): por encima, un titular de ocho
+     palabras como el nuestro se come la pantalla y deja sin sitio al CTA. */
+  --t-hero:    clamp(2.75rem, 1.4rem + 4.6vw, 5.25rem);
   --t-h1:      clamp(2.125rem, 1.5rem + 2.5vw, 3rem);
   --t-h2:      clamp(1.75rem,  1.33rem + 1.7vw, 2.5rem);
   --t-h3:      clamp(1.375rem, 1.2rem + .7vw,  1.75rem);
@@ -433,6 +437,169 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
 }
 .hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-4); margin-top: var(--s-8); }
 
+/* --- Portada: hero partido en dos columnas --------------------------------
+   El texto deja de ir centrado y se alinea a la izquierda, que es lo que pide
+   un titular grande: centrado y a este tamano obliga al ojo a buscar el inicio
+   de cada linea. La imagen va a la derecha, enmarcada, para que se lea como un
+   objeto y no como parte del fondo. */
+.hero--split .hero__grid {
+  display: grid;
+  gap: var(--s-9);
+  align-items: center;
+  padding-block: clamp(56px, 8vw, 112px);
+}
+/* Casi toda la pantalla, pero no toda: se deja asomar el borde de la seccion
+   siguiente para que se vea que la pagina continua. Restamos la cabecera, que
+   es sticky y se come 72px. */
+@media (min-width: 900px) {
+  .hero--split .hero__grid { min-height: min(86vh, 820px); }
+}
+/* Indicador de scroll, abajo a la derecha. Es el contrapeso de un hero a
+   pantalla casi completa: sin el, mucha gente no baja. */
+.hero__scroll {
+  position: absolute;
+  right: var(--gutter);
+  bottom: var(--s-6);
+  display: none;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: var(--t-micro);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.65);
+}
+.hero__scroll::after {
+  content: "";
+  width: 1px; height: 48px;
+  background: linear-gradient(180deg, rgba(255,255,255,.65), transparent);
+}
+@media (min-width: 900px) { .hero__scroll { display: flex; } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero__scroll::after { animation: heroScroll 2.2s ease-in-out infinite; transform-origin: top; }
+  @keyframes heroScroll { 0%,100% { transform: scaleY(.4); opacity:.4 } 50% { transform: scaleY(1); opacity:1 } }
+}
+.hero--split .hero__inner {
+  max-width: none;
+  margin-inline: 0;
+  text-align: left;
+  padding-block: 0;
+}
+.hero--split .hero__title {
+  font-size: var(--t-hero);
+  /* 16 caracteres por linea como minimo: evita que en tabletas el titular se
+     parta en palabras sueltas. */
+  max-width: 15ch;
+}
+.hero--split .hero__lead { margin-inline: 0; max-width: 46ch; }
+.hero--split .hero__actions { justify-content: flex-start; }
+
+.hero__visual-wrap { position: relative; }
+.hero__visual {
+  margin: 0;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  /* El borde claro despega la foto del fondo oscuro; la sombra le da el peso
+     de tarjeta que tiene el panel blanco de la referencia. */
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 32px 64px rgba(0,0,0,.45);
+}
+.hero__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 900px) {
+  .hero--split .hero__grid {
+    /* 7/5: el texto manda y la imagen acompana. A 50/50 el titular se parte
+       demasiado pronto. Dejamos un respiro a la derecha para que las tarjetas
+       puedan salirse del borde de la foto sin tocar el borde de la pantalla. */
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: var(--s-11);
+  }
+  .hero__visual img { aspect-ratio: 5 / 4; }
+}
+
+/* --- Ventajas flotantes sobre la foto ------------------------------------- */
+.hero__cards { display: grid; gap: var(--s-3); margin-top: var(--s-5); }
+.hero__card {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  background: #fff;
+  color: var(--c-ink);
+  border-radius: var(--r-pill);
+  padding: 12px 20px;
+  box-shadow: 0 16px 36px rgba(0,0,0,.28);
+}
+.hero__card-dato {
+  flex: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--c-primary);
+  font-variant-numeric: tabular-nums;
+}
+.hero__card-texto { font-size: var(--t-small); line-height: 1.35; color: var(--c-ink-soft); }
+
+@media (min-width: 900px) {
+  /* Flotan sobre los bordes de la foto, nunca sobre el centro: ahi estan el
+     sillon y el mobiliario, que es lo que se quiere ensenar. */
+  .hero__cards { display: block; margin: 0; }
+  .hero__card {
+    position: absolute;
+    width: max-content;
+    max-width: 17rem;
+    display: grid;
+    gap: 2px;
+    padding: 14px 20px;
+    border-radius: var(--r-card);
+  }
+  .hero__card-dato { font-size: 1.5rem; }
+  /* El voladizo va en porcentaje para que acompane al tamano de la foto, pero
+     con tope en pixeles: .hero recorta lo que se salga, y en porcentaje puro
+     las tarjetas se cortaban por la derecha entre 960 y 1400 px de ancho.
+     max() con negativos devuelve el menos negativo, es decir, el tope. */
+  .hero__card--1 { top: 7%;    right: max(-24px, -6%); }
+  .hero__card--2 { top: 45%;   left:  max(-72px, -14%); }
+  .hero__card--3 { bottom: 7%; right: max(-16px, -4%); }
+}
+
+/* En movil la imagen va debajo del texto y mas baja, para que el titular y el
+   boton entren en la primera pantalla. */
+@media (max-width: 899px) {
+  /* El titular y el boton primero: en movil la foto delante empuja el mensaje
+     fuera de la primera pantalla. */
+  .hero--split .hero__visual-wrap { order: 2; }
+  .hero--split .hero__inner       { order: 1; }
+  .hero__visual img { aspect-ratio: 16 / 10; }
+}
+
+/* El video de fondo es decorativo: si el sistema pide menos animacion, no se
+   carga (lo comprueba tambien el JS) y se queda el poster. */
+.hero__video { opacity: 0; transition: opacity .6s ease; }
+/* Los radiales de .hero::before van por encima del video y le quitan el color
+   de marca. Con video, se atenuan. */
+.hero--split:has(.hero__video)::before { opacity: .45; }
+.hero__video.is-ready { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .hero__video { display: none; }
+}
+/* Con video, el velo plano de .hero__media::after lo tapaba entero. Lo
+   sustituimos por un degradado lateral: opaco a la izquierda, donde va el
+   texto y hace falta contraste, y casi limpio a la derecha, que es donde se
+   ve el movimiento. Abajo se refuerza un poco para que el indicador de scroll
+   y el borde de la seccion siguiente no queden sobre una zona clara. */
+@media (min-width: 900px) {
+  .hero--split:has(.hero__video) .hero__media::after {
+    background:
+      linear-gradient(90deg, rgba(1,37,63,.93) 0%, rgba(1,37,63,.88) 42%, rgba(1,37,63,.46) 58%, rgba(1,37,63,.20) 74%, rgba(1,37,63,.16) 100%),
+      linear-gradient(180deg, transparent 50%, rgba(1,37,63,.40) 100%);
+  }
+}
+
 /* Hero compacto para páginas interiores */
 .hero--page .hero__inner { padding-block: clamp(56px, 7vw, 104px); }
 .hero--page .hero__title { font-size: var(--t-h1); }
@@ -621,11 +788,18 @@ a.card--outline:hover { background: #fff; border-color: var(--c-primary); }
 /* --------------------------------------------------------------------------
    14. MIGAS / BLOG / PROSA
    -------------------------------------------------------------------------- */
-.crumbs { display: flex; flex-wrap: wrap; gap: var(--s-2); font-size: var(--t-micro); color: var(--c-ink-mute); margin-bottom: var(--s-5); }
+.crumbs { display: flex; flex-wrap: wrap; gap: var(--s-2); font-size: var(--t-micro); color: var(--c-ink-mute); margin: 0; padding: 0; list-style: none; }
 .crumbs a { color: var(--c-ink-mute); }
 .crumbs li + li::before { content: "/"; margin-right: var(--s-2); color: var(--c-line); }
-.on-dark .crumbs, .on-dark .crumbs a { color: rgba(255,255,255,.7); }
-.hero__inner .crumbs { justify-content: center; }
+/* Sobre el hero van en blanco puro. La barra separadora, a media opacidad:
+   marca la jerarquia sin pelearse con los nombres. */
+.on-dark .crumbs, .on-dark .crumbs a { color: #fff; }
+.on-dark .crumbs li + li::before { color: rgba(255,255,255,.45); }
+.on-dark .crumbs a:hover { text-decoration: underline; }
+/* Arriba del todo y pegadas al borde izquierdo del contenedor. El hueco que
+   ocupan se le descuenta al bloque de texto para que el hero no crezca. */
+.hero__crumbs { position: relative; padding-top: var(--s-7); }
+.hero__crumbs + .hero__grid .hero__inner { padding-top: var(--s-8); }
 
 .post-card { display: flex; flex-direction: column; height: 100%; background: #fff; border: 1px solid var(--c-line); border-radius: var(--r-card); overflow: hidden; transition: box-shadow .25s var(--ease), transform .25s var(--ease); }
 .post-card:hover { box-shadow: var(--sh-2); transform: translateY(-3px); }

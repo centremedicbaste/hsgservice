@@ -19,8 +19,22 @@ faq:
     a: "Por el precio de una limpieza bucal puedes disfrutar de todos nuestros servicios. Contamos con un plan Premium para clínicas pequeñas y medianas y un plan VIP para clínicas de grandes dimensiones. Contáctanos para conocer las condiciones."
 ---
 {% set eyebrow = "Plataforma de servicios odontológicos" %}
-{% set heroImage = "/assets/static/home/gabinete-clinica-dental.webp" %}
-{% set heroImageAlt = "Gabinete de una clínica dental equipado por HSG Service" %}
+{# La foto del gabinete pasa de fondo a panel derecho: enmarcada se lee como
+   una imagen con intención, y de fondo quedaba tapada por el degradado. #}
+{# El 3D de marca que la portada tuvo hasta el rediseño del 3 de noviembre.
+   Recuperado del historial y recomprimido: el original pesaba 8,1 MB a 1080p
+   y aquí van 635 KB en mp4 y 305 KB en webm a 1280px. #}
+{% set heroVideo = "/assets/static/satin.mp4" %}
+{% set heroVideoWebm = "/assets/static/satin.webm" %}
+{% set heroVisual = "/assets/static/home/gabinete-clinica-dental.webp" %}
+{% set heroVisualAlt = "Gabinete de una clínica dental equipado por HSG Service" %}
+{# Las tres cifras que ya se publican en el sitio. Nada nuevo: estan en la
+   central de compras, en el departamento de implantes y en financiacion. #}
+{% set heroCards = [
+  { dato: "+360", texto: "clínicas comprando a precio de grupo" },
+  { dato: "−50%", texto: "en implantes de primeras marcas" },
+  { dato: "24-48 h", texto: "y cobras tú la financiación del paciente" }
+] %}
 {% set heroCta = { url: "/contacta/", text: "Empieza a ahorrar" } %}
 {% set heroCta2 = { url: "/central-de-compras-dental/", text: "Ver central de compras" } %}
 {% include 'hero.njk' %}

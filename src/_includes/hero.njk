@@ -1,27 +1,83 @@
-<section class="hero{% if heroSmall %} hero--page{% endif %}">
-  {% if heroImage %}
-  <div class="hero__media">
-    <img src="{{ heroImage }}" alt="{{ heroImageAlt | default('') }}" loading="eager" fetchpriority="high">
+{#
+  Hero. Dos variantes:
+    · Portada: rejilla a dos columnas, texto grande a la izquierda y una imagen
+      enmarcada a la derecha (heroVisual).
+    · Resto de páginas (heroSmall): una sola columna, como hasta ahora.
+
+  El fondo se construye por capas, de atrás hacia delante:
+    1. El degradado de marca de .hero::before, que siempre está.
+    2. heroPoster, si hay, como imagen de fondo.
+    3. heroVideo, si hay, que se carga DESPUÉS de que la página esté pintada y
+       solo en pantallas anchas. Nunca es el LCP: la métrica la marca el texto
+       o la imagen de la derecha, que sí van en el HTML inicial.
+#}
+<section class="hero{% if heroSmall %} hero--page{% endif %}{% if heroVisual %} hero--split{% endif %}">
+
+  {% if heroPoster or heroVideo %}
+  <div class="hero__media" aria-hidden="true">
+    {% if heroVideo %}
+    <video class="hero__video" muted loop playsinline preload="none"
+           {% if heroPoster %}poster="{{ heroPoster }}"{% endif %}
+           data-hero-video="{{ heroVideo }}"
+           {% if heroVideoWebm %}data-hero-video-webm="{{ heroVideoWebm }}"{% endif %}></video>
+    {% elif heroPoster %}
+    <img src="{{ heroPoster }}" alt="" loading="eager" fetchpriority="high">
+    {% endif %}
   </div>
   {% endif %}
+
   <div class="container">
-    <div class="hero__inner on-dark">
-      {% if breadcrumbs and breadcrumbs.length > 1 %}
+    {# Las migas van ancladas arriba a la izquierda del hero, fuera de la
+       columna centrada del texto: son orientacion, no contenido, y su sitio
+       es la esquina. En <nav> con nombre, que es lo que espera un lector de
+       pantalla y lo que ya declara el BreadcrumbList de los datos
+       estructurados. #}
+    {% if breadcrumbs and breadcrumbs.length > 1 %}
+    <nav class="hero__crumbs on-dark" aria-label="Ruta">
       <ul class="crumbs">
         {% for crumb in breadcrumbs %}
-        <li>{% if not loop.last %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% else %}<span>{{ crumb.name }}</span>{% endif %}</li>
+        <li>{% if not loop.last %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% else %}<span aria-current="page">{{ crumb.name }}</span>{% endif %}</li>
         {% endfor %}
       </ul>
-      {% endif %}
-      {% if eyebrow %}<span class="eyebrow">{{ eyebrow }}</span>{% endif %}
-      <h1 class="hero__title">{{ title }}</h1>
-      {% if subtitle %}<p class="hero__lead">{{ subtitle }}</p>{% endif %}
-      {% if heroCta %}
-      <div class="hero__actions">
-        <a class="btn btn--light btn--lg" href="{{ heroCta.url }}">{{ heroCta.text }}</a>
-        {% if heroCta2 %}<a class="btn btn--ghost btn--lg" href="{{ heroCta2.url }}">{{ heroCta2.text }}</a>{% endif %}
+    </nav>
+    {% endif %}
+
+    <div class="hero__grid">
+
+      <div class="hero__inner on-dark">
+        {% if eyebrow %}<span class="eyebrow">{{ eyebrow }}</span>{% endif %}
+        <h1 class="hero__title">{{ title }}</h1>
+        {% if subtitle %}<p class="hero__lead">{{ subtitle }}</p>{% endif %}
+        {% if heroCta %}
+        <div class="hero__actions">
+          <a class="btn btn--light btn--lg" href="{{ heroCta.url }}">{{ heroCta.text }}</a>
+          {% if heroCta2 %}<a class="btn btn--ghost btn--lg" href="{{ heroCta2.url }}">{{ heroCta2.text }}</a>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+      {% if heroVisual %}
+      <div class="hero__visual-wrap">
+        <figure class="hero__visual">
+          <img src="{{ heroVisual }}" alt="{{ heroVisualAlt | default('') }}" loading="eager" fetchpriority="high">
+        </figure>
+        {# Ventajas flotando sobre la foto. En escritorio van colocadas en los
+           bordes, sin tapar el centro de la imagen; en movil se convierten en
+           una lista debajo, porque superpuestas no se leerian. #}
+        {% if heroCards %}
+        <ul class="hero__cards list-plain">
+          {% for c in heroCards %}
+          <li class="hero__card hero__card--{{ loop.index }}">
+            <span class="hero__card-dato">{{ c.dato }}</span>
+            <span class="hero__card-texto">{{ c.texto }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </div>
       {% endif %}
+
     </div>
   </div>
+  {% if heroVisual %}<span class="hero__scroll" aria-hidden="true">Scroll</span>{% endif %}
 </section>
