@@ -59,7 +59,16 @@
       {% if heroVisual %}
       <div class="hero__visual-wrap">
         <figure class="hero__visual">
-          <img src="{{ heroVisual }}" alt="{{ heroVisualAlt | default('') }}" loading="eager" fetchpriority="high">
+          {# srcset para que el movil no baje la version de 1920px: ahi se bajaba
+             la foto entera (111 KB) para pintarla a 634px. El <link rel=preload>
+             que arranca la descarga antes lo pone base.njk con estos mismos
+             valores, que por eso viven en el front matter y no en un {% set %}. #}
+          <img src="{{ heroVisual }}"
+               {%- if heroVisualSrcset %}
+               srcset="{{ heroVisualSrcset }}"
+               sizes="{{ heroVisualSizes }}"
+               {%- endif %}
+               alt="{{ heroVisualAlt | default('') }}" loading="eager" fetchpriority="high">
         </figure>
         {# Ventajas flotando sobre la foto. En escritorio van colocadas en los
            bordes, sin tapar el centro de la imagen; en movil se convierten en

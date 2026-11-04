@@ -17,6 +17,17 @@ faq:
     a: "Solo tienes que darte de alta como socio. Consulta la documentación necesaria para autónomos o empresas en la página 'Date de alta' y nuestro equipo te acompañará en todo el proceso, sin compromiso."
   - q: "¿Cuánto cuesta ser socio de HSG Service?"
     a: "Por el precio de una limpieza bucal puedes disfrutar de todos nuestros servicios. Contamos con un plan Premium para clínicas pequeñas y medianas y un plan VIP para clínicas de grandes dimensiones. Contáctanos para conocer las condiciones."
+heroVisual: /assets/static/home/gabinete-clinica-dental.webp
+heroVisualAlt: Gabinete de una clínica dental equipado por HSG Service
+# La foto mide el LCP en movil: se sirve en cinco anchos para que el telefono
+# no baje los 1920px. Las comillas no son decorativas, el valor lleva ": ".
+heroVisualSrcset: >-
+  /assets/static/home/gabinete-clinica-dental-480.webp 480w,
+  /assets/static/home/gabinete-clinica-dental-720.webp 720w,
+  /assets/static/home/gabinete-clinica-dental-960.webp 960w,
+  /assets/static/home/gabinete-clinica-dental-1280.webp 1280w,
+  /assets/static/home/gabinete-clinica-dental.webp 1920w
+heroVisualSizes: "(min-width: 1440px) 530px, (min-width: 900px) 38vw, calc(100vw - 48px)"
 ---
 {% set eyebrow = "Plataforma de servicios odontológicos" %}
 {# La foto del gabinete pasa de fondo a panel derecho: enmarcada se lee como
@@ -26,8 +37,6 @@ faq:
    y aquí van 635 KB en mp4 y 305 KB en webm a 1280px. #}
 {% set heroVideo = "/assets/static/satin.mp4" %}
 {% set heroVideoWebm = "/assets/static/satin.webm" %}
-{% set heroVisual = "/assets/static/home/gabinete-clinica-dental.webp" %}
-{% set heroVisualAlt = "Gabinete de una clínica dental equipado por HSG Service" %}
 {# Lo que ya se publica en el resto del sitio, nada nuevo. El de implantes no
    lleva cifra a proposito: el descuento depende de la marca. #}
 {% set heroCards = [

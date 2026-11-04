@@ -35,13 +35,16 @@
 /assets/static/video/*
   Cache-Control: public, max-age=31536000, immutable
 
-# El CSS y el JS se reescriben con el MISMO nombre en cada despliegue, así que
-# no pueden ir a un año: quien lo tuviera guardado se quedaría con la versión
-# vieja. Una hora es el equilibrio: ahorra la revalidación de cada navegación
-# dentro de una visita y cualquier despliegue se corrige solo en 60 minutos.
-# Para subirlo a un año habría que añadir una huella a la URL (style.css?v=…).
+# El CSS ya no se pide: va dentro del HTML (ver src/_data/estilos.js). El
+# fichero se sigue publicando por si algún navegador guarda un HTML viejo que
+# lo enlaza, y por eso se queda en una hora: no lleva huella en la URL.
 /assets/css/*
   Cache-Control: public, max-age=3600
 
+# El JS sí lleva huella: las plantillas lo piden como ui.js?v=3f9a1c2b, con el
+# sha1 del contenido, así que la URL cambia sola cuando cambia el fichero. Eso
+# permite el año e inmutable sin riesgo de servir una versión vieja.
+# OJO: un <script> nuevo SIN su ?v={{ activos.<nombre> }} se quedaría pegado en
+# el navegador del visitante durante un año.
 /assets/js/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=31536000, immutable

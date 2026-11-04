@@ -13,4 +13,9 @@
   delivery: "{{ cfg.ga4_delivery | default('gtag') }}",
   hosts: ["{{ dominio }}", "www.{{ dominio }}"]
 };</script>
-<script src="/assets/js/measurement.js"></script>
+{# defer: este fichero bloqueaba la pintura 450 ms en movil y no tiene ninguna
+   prisa. Solo escucha clics y envios delegados en document, que con defer ya
+   existe, y no manda nada hasta que hay consentimiento. El orden se mantiene:
+   los defer se ejecutan en el orden del documento, asi que measurement.js
+   sigue yendo antes que ui.js y consentimiento.js. #}
+<script src="/assets/js/measurement.js?v={{ activos.measurement }}" defer></script>

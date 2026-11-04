@@ -25,6 +25,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/_redirects");
   eleventyConfig.addPassthroughCopy("src/_headers");
 
+  // ds.css ya no se enlaza: lo incrusta base.njk leyendolo desde
+  // src/_data/estilos.js. Sin esto, en `npm start` habria que reiniciar el
+  // servidor para ver un cambio de estilos.
+  eleventyConfig.addWatchTarget("./src/assets/css/ds.css");
+
 
 
   // --- SEO: atributos de imagen inyectados en build -------------------------

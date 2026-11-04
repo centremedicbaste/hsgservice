@@ -28,9 +28,27 @@
   <link rel="apple-touch-icon" href="/assets/static/favicons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  {# --- Tipografía y hoja de estilos del design system --- #}
+  {# --- Imagen que mide el LCP ----------------------------------------------
+     Solo en las paginas que declaran heroVisualSrcset en el front matter. Va
+     delante de las fuentes a proposito: es lo que cronometra el LCP, y las
+     tipografias llevan font-display:swap, asi que no retienen la pintura. #}
+  {%- if heroVisualSrcset %}
+  <link rel="preload" as="image" href="{{ heroVisual }}"
+        imagesrcset="{{ heroVisualSrcset }}" imagesizes="{{ heroVisualSizes }}"
+        fetchpriority="high">
+  {%- endif %}
+
+  {# --- Tipografía y hoja de estilos del design system ----------------------
+     Se precargan los subconjuntos latinos de 400 y 700, que son los de la
+     primera pantalla: cuerpo y titular. El 600 y los latin-ext se piden solo
+     cuando hacen falta; precargarlos serian 86 KB compitiendo con la foto del
+     hero, y el castellano entra entero en el subconjunto latino.
+
+     La hoja va DENTRO del HTML, no en un <link>. El porque esta escrito en
+     src/_data/estilos.js. #}
   <link rel="preload" href="/assets/fonts/source-sans-3/source-sans-3-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/ds.css">
+  <link rel="preload" href="/assets/fonts/source-sans-3/source-sans-3-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <style>{{ estilos.ds | safe }}</style>
 
   {# --- Open Graph --- #}
   <meta property="og:site_name" content="HSG Service">
@@ -209,8 +227,8 @@
   </main>
   {% include 'footer.njk' %}
   {% include 'consentimiento.njk' %}
-  <script src="/assets/js/ui.js" defer></script>
-  {% if global.ga4_id %}<script src="/assets/js/consentimiento.js" defer></script>{% endif %}
+  <script src="/assets/js/ui.js?v={{ activos.ui }}" defer></script>
+  {% if global.ga4_id %}<script src="/assets/js/consentimiento.js?v={{ activos.consentimiento }}" defer></script>{% endif %}
   <script>
     const handleSubmit = (event) => {
       event.preventDefault();
