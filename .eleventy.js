@@ -27,27 +27,75 @@ module.exports = function (eleventyConfig) {
 
 
 
-  // Inyecta width/height en las <img> que no los declaran, leyendo el archivo real.
-  // Sin estos atributos el navegador no reserva el hueco y la página da saltos al cargar.
+  // --- SEO: atributos de imagen inyectados en build -------------------------
+  // Recorre el HTML final y, para cada <img>:
+  //   * normaliza width/height invalidos: el atributo HTML solo admite enteros,
+  //     asi que width="150px" pasa a width="150" y width="100%" se mueve a
+  //     style="width:100%" para no cambiar como se ve.
+  //   * anade width y height leidos del fichero real, manteniendo la proporcion
+  //     si ya habia uno de los dos, para que el navegador reserve el hueco y la
+  //     pagina no de saltos al cargar (CLS). Requiere img{height:auto} en CSS.
+  //   * anade loading y decoding: la primera imagen de cada pagina se marca
+  //     eager y con prioridad alta porque suele ser la que mide el LCP; el
+  //     resto van en diferido.
+  // Identico en hsgservice.es, centredentalbaste.com y centremedicbaste.com.
   const imageSize = require("image-size");
   const dimCache = new Map();
+  const realSize = (src) => {
+    const file = require("path").join("src", src.trim());
+    if (!dimCache.has(file)) {
+      try {
+        const { width, height } = imageSize(file);
+        dimCache.set(file, width && height ? { width, height } : null);
+      } catch (e) {
+        dimCache.set(file, null);
+      }
+    }
+    return dimCache.get(file);
+  };
   eleventyConfig.addTransform("imgDimensions", function (content) {
     if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    let n = 0;
     return content.replace(/<img\b[^>]*>/g, (tag) => {
-      if (/\bwidth=/.test(tag) || /\bheight=/.test(tag)) return tag;
-      const m = tag.match(/src="(\/[^"]+)"/);
-      if (!m) return tag;
-      const file = path.join("src", m[1]);
-      if (!dimCache.has(file)) {
-        try {
-          const { width, height } = imageSize(file);
-          dimCache.set(file, width && height ? ` width="${width}" height="${height}"` : "");
-        } catch (e) {
-          dimCache.set(file, "");
+      n += 1;
+      let out = tag;
+      const num = (name) => {
+        const m = out.match(new RegExp(`\\b${name}\\s*=\\s*"([^"]*)"`));
+        if (!m) return null;
+        const v = m[1].trim();
+        if (/^\d+$/.test(v)) return parseInt(v, 10);
+        const px = v.match(/^(\d+(?:\.\d+)?)px$/);
+        if (px) {
+          out = out.replace(m[0], `${name}="${Math.round(parseFloat(px[1]))}"`);
+          return Math.round(parseFloat(px[1]));
+        }
+        // valor no expresable como entero (100%, auto, 10em): fuera del atributo
+        out = out.replace(m[0], "");
+        if (v !== "auto") {
+          out = /\bstyle\s*=\s*"/.test(out)
+            ? out.replace(/\bstyle\s*=\s*"/, `style="${name}:${v};`)
+            : out.replace(/<img\b/, `<img style="${name}:${v}"`);
+        }
+        return null;
+      };
+      let w = num("width");
+      let h = num("height");
+      if (w === null || h === null) {
+        const m = out.match(/src="\s*(\/[^"]+)\s*"/);
+        const real = m ? realSize(m[1]) : null;
+        if (real) {
+          if (w === null && h === null) { w = real.width; h = real.height; }
+          else if (h === null) h = Math.round(w * real.height / real.width);
+          else w = Math.round(h * real.width / real.height);
+          if (!/\bwidth\s*=/.test(out)) out = out.replace(/<img\b/, `<img width="${w}"`);
+          if (!/\bheight\s*=/.test(out)) out = out.replace(/<img\b/, `<img height="${h}"`);
         }
       }
-      const attrs = dimCache.get(file);
-      return attrs ? tag.replace(/<img\b/, `<img${attrs}`) : tag;
+      if (!/\bloading\s*=/.test(out)) {
+        out = out.replace(/<img\b/, n === 1 ? '<img loading="eager" fetchpriority="high"' : '<img loading="lazy"');
+      }
+      if (!/\bdecoding\s*=/.test(out)) out = out.replace(/<img\b/, '<img decoding="async"');
+      return out.replace(/\s{2,}/g, " ");
     });
   });
 

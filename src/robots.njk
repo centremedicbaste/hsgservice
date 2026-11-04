@@ -9,4 +9,26 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /site/
 
+# Bots de IA: se les permite rastrear para poder ser citados en respuestas
+# generadas. Repetimos aqui los Disallow porque un robot solo obedece al
+# grupo mas especifico que le aplica: si este grupo solo dijera "Allow: /",
+# estos bots ignorarian las exclusiones del grupo *.
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Claude-SearchBot
+User-agent: Google-Extended
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /site/
+
+# Crawler de entrenamiento que no genera citaciones
+User-agent: CCBot
+Disallow: /
+
 Sitemap: {{ global.website }}/sitemap.xml

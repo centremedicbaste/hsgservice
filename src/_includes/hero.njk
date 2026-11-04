@@ -1,7 +1,7 @@
 <section class="hero{% if heroSmall %} hero--page{% endif %}">
   {% if heroImage %}
   <div class="hero__media">
-    <img src="{{ heroImage }}" alt="" loading="eager" fetchpriority="high">
+    <img src="{{ heroImage }}" alt="{{ heroImageAlt | default('') }}" loading="eager" fetchpriority="high">
   </div>
   {% endif %}
   <div class="container">
