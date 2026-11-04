@@ -14,7 +14,7 @@ descripcion: "Implantes dentales de primeras marcas con más de un 50% de descue
 author: HSG Service
 date: 2026-11-03
 tags: ["departamentos"]
-image: /assets/static/departamentos/mini-implante.webp
+image: /assets/static/ilustraciones/implantes.webp
 imagemini: /assets/static/departamentos/mini-implante.webp
 imageAlt: Implantes dentales de primeras marcas para clínicas
 

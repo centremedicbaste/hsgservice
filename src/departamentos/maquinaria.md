@@ -13,7 +13,7 @@ eleventyComputed:
 author: HSG Service
 date: 2026-11-03
 tags: ["departamentos"]
-image: /assets/static/departamentos/mini-maquinaria.webp
+image: /assets/static/ilustraciones/maquinaria.webp
 imagemini: /assets/static/departamentos/mini-maquinaria.webp
 imageAlt: Maquinaria dental y escáneres intraorales para clínicas
 duracion: 30 minutos

@@ -14,7 +14,7 @@ eleventyComputed:
 author: HSG Service
 date: 2026-11-03
 tags: ["departamentos"]
-image: /assets/static/departamentos/mini-coaching.webp
+image: /assets/static/ilustraciones/alta-clinica.webp
 imagemini: /assets/static/departamentos/mini-coaching.webp
 imageAlt: Coaching dental para la gestión de clínicas
 duracion: 30 minutos

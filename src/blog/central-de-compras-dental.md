@@ -5,8 +5,8 @@ date: 2026-06-18
 description: "Una central de compras dental agrupa el volumen de muchas clínicas para lograr mejores precios en material, implantes y maquinaria. Así funciona."
 eleventyComputed:
   metaTitle: "Qué es una central de compras dental | HSG Service"
-image: /assets/static/departamentos/mini-implante.webp
-imageAlt: Central de compras dental para clínicas
+image: /assets/static/ilustraciones/central-de-compras.webp
+imageAlt: Caja de material dental de depósito con espejo, guantes y consumibles
 categoria: Compra agrupada
 faq:
   - q: "¿Qué diferencia hay entre una central de compras y un depósito dental?"

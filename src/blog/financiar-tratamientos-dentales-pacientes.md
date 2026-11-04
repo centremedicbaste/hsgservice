@@ -5,8 +5,8 @@ date: 2026-06-24
 description: "La financiación de tratamientos dentales ayuda a que más pacientes acepten su presupuesto. Cómo ofrecerla en tu clínica y qué plazos funcionan."
 eleventyComputed:
   metaTitle: "Cómo financiar tratamientos dentales a pacientes"
-image: /assets/static/departamentos/mini-financiacion.webp
-imageAlt: Cómo financiar tratamientos dentales a los pacientes
+image: /assets/static/ilustraciones/implantes.webp
+imageAlt: Implante dental con su corona junto a unas monedas
 categoria: Financiación
 faq:
   - q: "¿Cómo puedo ofrecer financiación en mi clínica dental?"

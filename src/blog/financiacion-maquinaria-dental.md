@@ -5,8 +5,8 @@ date: 2026-07-03
 description: "¿Necesitas renovar el sillón, el escáner o el TAC de tu clínica? Opciones para financiar maquinaria dental y renovar equipos sin descapitalizar la clínica."
 eleventyComputed:
   metaTitle: "Financiación de maquinaria dental para clínicas"
-image: /assets/static/maquinaria/maquinaria-1.webp
-imageAlt: Financiación de maquinaria dental para clínicas
+image: /assets/static/ilustraciones/rentabilidad.webp
+imageAlt: Monedas apiladas y una flecha al alza junto a un diente
 categoria: Financiación
 faq:
   - q: "¿Es mejor financiar la maquinaria dental o comprarla al contado?"

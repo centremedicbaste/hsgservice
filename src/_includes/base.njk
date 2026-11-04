@@ -9,7 +9,7 @@
   {# --- Título y descripción (con fallback al global) --- #}
   {%- set pageTitle = (metaTitle or title or global.seo_title) | trim -%}
   {%- set pageDescription = (metaDescription or description or global.seo_description) | trim -%}
-  {%- set pageImage = global.website + (image or "/assets/static/about-0.webp") -%}
+  {%- set pageImage = global.website + (image or "/assets/static/home/gabinete-clinica-dental.webp") -%}
   {%- set pageUrl = global.website + (page.url | url) -%}
 
   <title>{{ pageTitle }}</title>
@@ -98,7 +98,7 @@
         "@type": "ProfessionalService",
         "@id": "{{ global.website }}/#localbusiness",
         "name": "HSG Service",
-        "image": "{{ global.website }}/assets/static/about-0.webp",
+        "image": "{{ global.website }}/assets/static/home/gabinete-clinica-dental.webp",
         "url": "{{ global.website }}",
         "telephone": "{{ global.telefono | trim }}",
         "email": "{{ global.email | trim }}",

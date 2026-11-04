@@ -5,8 +5,8 @@ date: 2026-06-10
 description: "7 estrategias reales para aumentar la rentabilidad de tu clínica dental: reducir costes de material, financiar pacientes y mejorar la aceptación."
 eleventyComputed:
   metaTitle: "Rentabilidad de una clínica dental: 7 estrategias"
-image: /assets/static/home/inicio-1.webp
-imageAlt: Cómo aumentar la rentabilidad de una clínica dental
+image: /assets/static/ilustraciones/rentabilidad.webp
+imageAlt: Monedas apiladas y una flecha al alza junto a un diente
 categoria: Gestión dental
 faq:
   - q: "¿Por qué mi clínica factura más cada año y gana lo mismo?"

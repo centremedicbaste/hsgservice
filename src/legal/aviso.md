@@ -4,7 +4,6 @@ title: Aviso legal
 author: Hsg Service
 date: 2024-02-02
 tags: ["legal", "aaa"]
-image: /assets/static/blog/article-1.webp
 imageAlt: aviso legal
 description: "Información legal de HSG Service."
 ---

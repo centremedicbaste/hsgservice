@@ -4,7 +4,6 @@ title: Política de cookies
 author: HSG Service
 date: 2026-11-04
 tags: ["legal"]
-image: /assets/static/blog/article-1.webp
 imageAlt: Política de cookies de HSG Service
 description: "Información legal de HSG Service."
 ---

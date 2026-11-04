@@ -5,8 +5,8 @@ date: 2026-07-22
 description: "Guía de costes para abrir una clínica dental: obra, equipamiento, licencias, software y circulante. Partidas orientativas y cómo financiar la inversión inicial."
 eleventyComputed:
   metaTitle: "Cuánto cuesta abrir una clínica dental | HSG Service"
-image: /assets/static/maquinaria/maquinaria-1.webp
-imageAlt: Cuánto cuesta abrir una clínica dental
+image: /assets/static/ilustraciones/maquinaria.webp
+imageAlt: Gabinete dental equipado con sillón, escáner y monitor
 categoria: Abrir clínica
 faq:
   - q: "¿Cuánto cuesta abrir una clínica dental en España?"

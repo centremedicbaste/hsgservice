@@ -5,7 +5,6 @@ permalink: /contacta/
 
 subtitle: Empieza a ahorrar - Sin compromiso
 
-image: /assets/static/contacta-0.webp
 author: Hsg Service 
 date: 2024-02-02
 tags: ["page"]

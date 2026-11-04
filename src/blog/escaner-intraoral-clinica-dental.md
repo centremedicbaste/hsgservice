@@ -5,8 +5,8 @@ date: 2026-07-01
 description: "El escáner intraoral reduce el tiempo de tratamiento y mejora la experiencia del paciente. Ventajas y claves para elegir el adecuado."
 eleventyComputed:
   metaTitle: "Escáner intraoral: ventajas y cómo elegirlo"
-image: /assets/static/departamentos/mini-maquinaria.webp
-imageAlt: Escáner intraoral para la clínica dental
+image: /assets/static/ilustraciones/maquinaria.webp
+imageAlt: Sillón dental con escáner intraoral y monitor con la arcada escaneada
 categoria: Digitalización
 faq:
   - q: "¿Merece la pena un escáner intraoral en una clínica pequeña?"

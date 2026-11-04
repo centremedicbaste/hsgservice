@@ -5,8 +5,8 @@ date: 2026-07-02
 description: "La ortodoncia invisible es de los tratamientos más demandados y rentables. Por qué ofrecer alineadores en tu clínica y cómo hacerlo a precio de grupo."
 eleventyComputed:
   metaTitle: "Ortodoncia invisible para tu clínica dental"
-image: /assets/static/departamentos/mini-orto.webp
-imageAlt: Ortodoncia invisible con alineadores para clínicas dentales
+image: /assets/static/ilustraciones/ortodoncia.webp
+imageAlt: Alineador transparente de ortodoncia invisible en su estuche
 categoria: Ortodoncia
 faq:
   - q: "¿Necesito ser ortodoncista para ofrecer alineadores invisibles?"
