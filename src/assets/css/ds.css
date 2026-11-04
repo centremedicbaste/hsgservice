@@ -780,6 +780,16 @@ a.card:hover .arrow-dot { background: var(--c-primary-dk); transform: translateX
   margin-bottom: calc(var(--s-2) * -1);
   mix-blend-mode: multiply;
 }
+
+/* La misma ilustracion abriendo la ficha del servicio, mas grande. Va fuera
+   de .prose para no heredar su margen ni su radio de imagen. */
+.ilu-lead {
+  display: block;
+  width: 168px;
+  height: 168px;
+  margin: 0 auto var(--s-6);
+  mix-blend-mode: multiply;
+}
 .card__title { font-size: var(--t-h4); }
 .card__text { font-size: var(--t-small); color: var(--c-ink-soft); }
 .card__foot { margin-top: auto; padding-top: var(--s-4); display: flex; justify-content: flex-end; }

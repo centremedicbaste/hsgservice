@@ -18,6 +18,10 @@ eleventyComputed:
 
 <article class="section bg-white">
   <div class="container">
+    {%- if ilustracion %}
+    <img class="ilu-lead" src="/assets/static/ilustraciones/icono/{{ ilustracion }}.webp"
+         alt="" width="360" height="360" loading="lazy">
+    {%- endif %}
     <div class="prose">{{ content | safe }}</div>
   </div>
 </article>
