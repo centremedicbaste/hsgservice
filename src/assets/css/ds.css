@@ -353,6 +353,22 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
   border-bottom: 1px solid transparent;
   transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
+/* El video del hero pasa por debajo de la cabecera transparente y en algunos
+   fotogramas sube tanto de claridad que el blanco de los enlaces se queda en
+   2,3:1. Un velo degradado, que se apaga en cuanto la cabecera se vuelve
+   blanca, los mantiene por encima de 5:1 sin llegar a taparlo. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(1,37,63,.62) 0%, rgba(1,37,63,.38) 60%, transparent 100%);
+  transition: opacity .3s ease;
+}
+.site-header.is-stuck::before,
+.site-header:has(.site-nav.is-open)::before { opacity: 0; }
+
 .site-header .site-logo svg path { fill: #fff; transition: fill .3s ease; }
 .site-header .site-nav a,
 .site-header .nav-toggle { color: #fff; transition: color .3s ease; }
@@ -381,6 +397,8 @@ h4, .t-h4   { font-size: var(--t-h4); letter-spacing: -.01em; }
 /* Las paginas que no empiezan por un hero, tambien. */
 main > :first-child:not(.hero) { padding-top: calc(var(--header-h) + var(--s-6)); }
 .site-header__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: var(--s-6);
@@ -403,6 +421,19 @@ main > :first-child:not(.hero) { padding-top: calc(var(--header-h) + var(--s-6))
 }
 .site-nav a:hover { color: var(--c-primary); border-bottom-color: var(--c-primary); text-decoration: none; }
 .site-nav a[aria-current="page"] { color: var(--c-primary); border-bottom-color: var(--c-primary); }
+/* Mientras la cabecera es transparente el enlace esta sobre el hero, y ahi el
+   azul del hover se queda en 1,03:1 de contraste contra el fondo medido: por
+   eso el hover no se veia. El fondo ademas cambia con el video, asi que el
+   unico color fiable es el blanco; el aviso lo da el subrayado. */
+.site-header:not(.is-stuck):not(:has(.site-nav.is-open)) .site-nav a:hover,
+.site-header:not(.is-stuck):not(:has(.site-nav.is-open)) .site-nav a:focus-visible {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+/* Y con la cabecera ya blanca el color del estado la pisaba, asi que solo se
+   movia el subrayado y el texto se quedaba igual. */
+.site-header.is-stuck .site-nav a:hover,
+.site-header .site-nav.is-open a:hover { color: var(--c-primary); }
 
 .nav-toggle { display: none; align-items: center; gap: var(--s-2); margin-left: auto;
   font-weight: 700; font-size: .9375rem; }
